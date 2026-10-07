@@ -3,16 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home · Region 7 Sai Centers (Mockup A)</title>
+  <title>Home · Region 7 Sai Centers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="mockup-banner">Mockup A · teal · modern layout · local only</div>
-
-    <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
@@ -29,14 +27,8 @@
       <nav class="primary" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li class="has-sub"><a href="about.html" aria-haspopup="true">About<span class="caret" aria-hidden="true"></span></a>
-            <ul class="sub-menu" aria-label="About pages">
-              <li><a href="about-baba.html"><img src="images/about/about_swami.png" alt="" width="40" height="40" />Sri Sathya Sai Baba</a></li>
-              <li><a href="about-region7.html"><img src="images/about/organization.jpg" alt="" width="40" height="40" />USA Region 7</a></li>
-              <li><a href="about-organization.html"><img src="images/about/newissoimg.png" alt="" width="40" height="40" />Sai Organization</a></li>
-              <li><a href="about-resources.html"><img src="images/about/newissoimg.png" alt="" width="40" height="40" />SSIO Resources</a></li>
-            </ul>
-          </li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="sai-centers.html">Sai Centers</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="initiatives.html">Initiatives</a></li>
           <li><a href="events.html">Events</a></li>
@@ -47,7 +39,8 @@
     </div>
   </header>
 
-  <section class="hero hero-solo" aria-label="Welcome">
+  <main>
+  <section class="hero hero-solo">
     <div class="hero-inner">
       <div>
         <span class="hero-kicker">Sri Sathya Sai International Organization · USA</span>
@@ -61,28 +54,23 @@
     <div class="section-inner">
       <div class="split-wide-side">
         <div>
-          <div class="section-head">
-            <p class="section-label">Announcements</p>
-            <h2>News and updates</h2>
-            <p>Short notes so you can find what matters.</p>
-          </div>
+      <div class="section-head">
+        <p class="section-label">Announcements</p>
+        <h2>News and updates</h2>
+        <p>Short notes so you can find what matters.</p>
+      </div>
           <div class="event-list">
-            <article class="event-row">
-              <div class="event-date">
-                <span class="month">Nov</span>
-                <span class="day">14–15</span>
-              </div>
+            <article class="event-row" id="news-next">
+              <div class="event-date"><span class="month">Oct</span><span class="day">20</span></div>
               <div>
-                <h3>Akhanda Bhajan is coming (GAB 2026)</h3>
-                <p>Global Akhanda Bhajans for Region 7. Venue, schedule, and signup live on the GAB site.</p>
+                <p class="next-label">Coming up next · Oct 20, 2026</p>
+                <h3>Avatar Declaration Day</h3>
+                <p>We mark Avatar Declaration Day with devotion and study across centers.</p>
               </div>
-              <a class="btn btn-sm btn-outline" href="https://gab.region7saicenters.org/" target="_blank" rel="noopener">GAB site</a>
+              <a class="btn btn-sm btn-outline" href="events.html">All events</a>
             </article>
             <article class="event-row">
-              <div class="event-date">
-                <span class="month">Care</span>
-                <span class="day">24/7</span>
-              </div>
+              <div class="event-date"><span class="month">Care</span><span class="day">24/7</span></div>
               <div>
                 <h3>SaiCares is here for you</h3>
                 <p>Need a listening ear? Call 1-857-DIAL-SAI for non-emergency support.</p>
@@ -96,14 +84,8 @@
           <p>Come for bhajans, seva, and study with neighbors who share the same path.</p>
           <div class="divider"></div>
           <div class="stat-row">
-            <div class="stat">
-              <strong>20</strong>
-              <span>Centers and groups</span>
-            </div>
-            <div class="stat">
-              <strong>SSIO</strong>
-              <span>USA Region 7</span>
-            </div>
+            <div class="stat"><strong>20</strong><span>Centers and groups</span></div>
+            <div class="stat"><strong>SSIO</strong><span>USA Region 7</span></div>
           </div>
         </aside>
       </div>
@@ -112,15 +94,12 @@
 
   <section class="section section-alt" id="events">
     <div class="section-inner">
-      <div class="section-head row">
-        <div class="text">
-          <p class="section-label">Gatherings</p>
-          <h2>Upcoming events</h2>
-          <p>Next three dated gatherings. As of Oct 6, 2026. More on the <a href="events.html">Events</a> page.</p>
-        </div>
+      <div class="section-head">
+        <p class="section-label">Gatherings</p>
+        <h2>Upcoming events</h2>
+        <p>The next three events, as of <span id="events-asof">Oct 7, 2026</span>. More on the <a href="events.html">Events</a> page.</p>
       </div>
-
-      <div class="card-grid-3">
+      <div class="card-grid-3" id="upcoming-events">
         <article class="card">
           <span class="tag">Oct 20, 2026</span>
           <h3>Avatar Declaration Day</h3>
@@ -129,7 +108,8 @@
         <article class="card">
           <span class="tag">Nov 14–15, 2026</span>
           <h3>Global Akhanda Bhajans</h3>
-          <p>Regional 24-hour akhanda bhajan. Details and signup are in News above.</p>
+          <p>Regional 24-hour akhanda bhajan at Aria University, Milpitas.</p>
+          <a class="card-link" href="https://gab.region7saicenters.org/" target="_blank" rel="noopener">GAB site</a>
         </article>
         <article class="card">
           <span class="tag">Nov 23, 2026</span>
@@ -142,135 +122,17 @@
 
   <section class="section" id="centers">
     <div class="section-inner">
-      <div class="section-head row">
-        <div class="text">
-          <p class="section-label">Find a center</p>
-          <h2>Sai Centers in the region</h2>
-          <p>20 centers and groups across Northern California and Nevada. Explore the map, then open the full list when you need addresses and times.</p>
-        </div>
+      <div class="section-head">
+        <p class="section-label">Find a center</p>
+        <h2>Sai Centers in the region</h2>
       </div>
-
-      <div class="map-wrap">
-        <div class="map-frame" role="region" aria-label="Sai Centers map">
-          <div class="map-badge">
-            <span class="map-badge-dot" aria-hidden="true"></span>
-            Sai Centers of Region 7, USA
-          </div>
-          <iframe
-            title="Sai Centers in Region 7"
-            src="https://www.google.com/maps/d/embed?mid=1MfiIPATCF1k9J67KVyL2YibLrM_WIno2&ehbc=0F766E"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen=""
-            loading="eager"></iframe>
-        </div>
-        <p class="map-footnote">Interactive Google My Maps · red pins mark centers and groups · <a href="https://www.google.com/maps/d/viewer?mid=1MfiIPATCF1k9J67KVyL2YibLrM_WIno2" target="_blank" rel="noopener">Open full map</a></p>
-      </div>
-
-      <div class="centers-teaser">
-        <p class="centers-teaser-text">Pins on the map mark our centers and groups from the Bay Area to Reno and Fresno. Times can change, so please call ahead for a first visit.</p>
-        <details class="centers-details">
-          <summary class="centers-summary">
-            <span class="centers-summary-label">View all 20 centers and groups</span>
-            <span class="centers-summary-hint" aria-hidden="true">Expand</span>
-          </summary>
-          <div class="centers-grid">
-        <article class="center-card">
-          <h3>Central San Jose</h3>
-          <p class="center-meta">Sundays 5:00–6:15 PM · Center for Spiritual Living, 1195 Clark St, San Jose</p>
-          <p class="center-note">SSE Sundays 3:00–4:30 PM (Sep–Jun)</p>
-        </article>
-        <article class="center-card">
-          <h3>Elk Grove</h3>
-          <p class="center-meta">Thursdays 7:30–9:15 PM · 7495 Elder Creek Rd, Sacramento</p>
-          <p class="center-note">SSE Sundays 10:30–11:30 AM · (916) 317-5564</p>
-        </article>
-        <article class="center-card">
-          <h3>Evergreen (Group)</h3>
-          <p class="center-meta">Thursdays 7:00–8:00 PM · 3208 Vernazza Ave, San Jose, CA 95135</p>
-        </article>
-        <article class="center-card">
-          <h3>Fremont</h3>
-          <p class="center-meta">Sundays 3:00–5:15 PM · 40086 Paseo Padre Pkwy, Fremont</p>
-          <p class="center-note">Study circle and SSE 3:00–4:00 · Bhajans 4:15–5:15</p>
-        </article>
-        <article class="center-card">
-          <h3>Fresno</h3>
-          <p class="center-meta">Thursdays 6:30–8:00 PM · 9647 N. Willey Court, Fresno, CA 93720</p>
-        </article>
-        <article class="center-card">
-          <h3>Marin (Group)</h3>
-          <p class="center-meta">Fridays 7:30–9:30 PM · Sausalito, CA 94965</p>
-          <p class="center-note">Call 415-272-3806 to confirm location</p>
-        </article>
-        <article class="center-card">
-          <h3>Monterey Peninsula (Group)</h3>
-          <p class="center-meta">Thursdays 7:00–8:30 PM · 25881 Rancho Alto Drive, Carmel, CA 93923</p>
-        </article>
-        <article class="center-card">
-          <h3>Tracy / Mountain House</h3>
-          <p class="center-meta">Sundays · 244 W Grant Line Rd, Tracy, CA 95376</p>
-          <p class="center-note">SSE and study 4:20 PM · Bhajans 5:30 PM</p>
-        </article>
-        <article class="center-card">
-          <h3>Oakland</h3>
-          <p class="center-meta">Sundays 6:25–7:50 PM · Oakland, CA 94602</p>
-          <p class="center-note">Call 510-914-8904 to confirm location</p>
-        </article>
-        <article class="center-card">
-          <h3>Peninsula</h3>
-          <p class="center-meta">Sundays · Lodge Building, 40 Twin Pines Lane, Belmont, CA 94002</p>
-          <p class="center-note">SSE 2:45–3:45 · Study 1st and 3rd · Bhajans 4:00–5:15</p>
-        </article>
-        <article class="center-card">
-          <h3>Reno, NV</h3>
-          <p class="center-meta">Sundays 6:00–7:30 PM · Reno, NV 89511</p>
-          <p class="center-note">Call (573) 368-9172 to confirm location</p>
-        </article>
-        <article class="center-card">
-          <h3>Sacramento</h3>
-          <p class="center-meta">Sundays 2:00–5:00 PM · Sai Seva Sadan, 3079 Kilgore Rd, Suite A, Rancho Cordova</p>
-        </article>
-        <article class="center-card">
-          <h3>San Bruno (Group)</h3>
-          <p class="center-meta">Contact: 650-504-8584</p>
-        </article>
-        <article class="center-card">
-          <h3>San Francisco</h3>
-          <p class="center-meta">Thursdays 7:00–9:15 PM · 573 South Van Ness Ave, San Francisco, CA 94110</p>
-        </article>
-        <article class="center-card">
-          <h3>San Jose</h3>
-          <p class="center-meta">1st and 3rd Sundays 3:30–5:00 PM · Shiv Durga Temple, 1170 Kern Ave, Sunnyvale</p>
-          <p class="center-note">2nd Sundays 2:45–4:30 PM · 6502 Springpath Ln, San Jose</p>
-        </article>
-        <article class="center-card">
-          <h3>Santa Cruz</h3>
-          <p class="center-meta">Sundays 5:30–7:00 PM · Shambhala Center, 920 41st Ave, Santa Cruz, CA 95062</p>
-        </article>
-        <article class="center-card">
-          <h3>Santa Rosa</h3>
-          <p class="center-meta">Sundays 7:00–8:30 PM · Santa Rosa, CA 95403</p>
-          <p class="center-note">Call 707-849-3151 to confirm location</p>
-        </article>
-        <article class="center-card">
-          <h3>Stockton</h3>
-          <p class="center-meta">Fridays 7:30–9:30 PM · 4809 Bridgewater Circle, Stockton, CA 95219</p>
-        </article>
-        <article class="center-card">
-          <h3>Tri-Valley</h3>
-          <p class="center-meta">Sundays 9:30 AM–12:00 noon · 4036 Ghiotti Ct, Pleasanton</p>
-          <p class="center-note">SSE 11:00–12:00 · 4444 Sandalwood Dr, Pleasanton</p>
-        </article>
-        <article class="center-card">
-          <h3>West San Jose (Group)</h3>
-          <p class="center-meta">Devotion every other month, Saturday 4:30–6:00 PM · 55558 Castle Glen Ave, San Jose 95129</p>
-          <p class="center-note">Service Saturdays 9:00 AM</p>
-        </article>
-      </div>
-        </details>
+      <div class="card callout centers-teaser-card">
+        <p>20 Sai Centers and Groups across Northern California and Nevada meet each week for devotion, study, and service.</p>
+        <a class="btn btn-teal" href="sai-centers.html">Find a Sai Center</a>
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="footer-logos" aria-label="SSIO related links">
@@ -307,8 +169,9 @@
         </a>
       </div>
     </div>
-    <div class="footer-bottom">Mockup A · local preview only. Not the live site.</div>
   </footer>
   <script src="nav.js" defer></script>
+  <script src="events-data.js" defer></script>
+  <script src="events.js" defer></script>
 </body>
 </html>
