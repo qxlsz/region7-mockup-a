@@ -4,24 +4,39 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home · Region 7 Sai Centers (Mockup A)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="mockup-banner">Mockup A · teal · modern layout · local only</div>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="header-inner">
       <div class="brand">
-        <a href="index.html" class="brand-mark" aria-hidden="true">R7</a>
+        <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
+          <img src="images/new_logo2.png" alt="" class="brand-logo" width="48" height="50" />
+        </a>
         <a href="index.html" class="brand-text">
           <strong>Region 7 Sai Centers</strong>
           <span>Northern California and Nevada</span>
         </a>
       </div>
-      <nav class="primary" aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
+      </button>
+      <nav class="primary" id="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li class="has-sub"><a href="about.html" aria-haspopup="true">About<span class="caret" aria-hidden="true"></span></a>
+            <ul class="sub-menu" aria-label="About pages">
+              <li><a href="about-baba.html"><img src="images/about/about_swami.png" alt="" width="40" height="40" />Sri Sathya Sai Baba</a></li>
+              <li><a href="about-region7.html"><img src="images/about/organization.jpg" alt="" width="40" height="40" />USA Region 7</a></li>
+              <li><a href="about-organization.html"><img src="images/about/newissoimg.png" alt="" width="40" height="40" />Sai Organization</a></li>
+              <li><a href="about-resources.html"><img src="images/about/newissoimg.png" alt="" width="40" height="40" />SSIO Resources</a></li>
+            </ul>
+          </li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="initiatives.html">Initiatives</a></li>
           <li><a href="events.html">Events</a></li>
@@ -61,7 +76,7 @@
                 <h3>Akhanda Bhajan is coming (GAB 2026)</h3>
                 <p>Global Akhanda Bhajans for Region 7. Venue, schedule, and signup live on the GAB site.</p>
               </div>
-              <a class="go" href="https://gab.region7saicenters.org/" target="_blank" rel="noopener">GAB site</a>
+              <a class="btn btn-sm btn-outline" href="https://gab.region7saicenters.org/" target="_blank" rel="noopener">GAB site</a>
             </article>
             <article class="event-row">
               <div class="event-date">
@@ -72,7 +87,7 @@
                 <h3>SaiCares is here for you</h3>
                 <p>Need a listening ear? Call 1-857-DIAL-SAI for non-emergency support.</p>
               </div>
-              <a class="go" href="initiatives.html">Learn more</a>
+              <a class="btn btn-sm btn-outline" href="initiatives.html">Learn more</a>
             </article>
           </div>
         </div>
@@ -152,7 +167,7 @@
       </div>
 
       <div class="centers-teaser">
-        <p class="centers-teaser-text">Pins on the map mark our centers and groups from the Bay Area to Reno and Fresno. Times can change — call ahead for a first visit.</p>
+        <p class="centers-teaser-text">Pins on the map mark our centers and groups from the Bay Area to Reno and Fresno. Times can change, so please call ahead for a first visit.</p>
         <details class="centers-details">
           <summary class="centers-summary">
             <span class="centers-summary-label">View all 20 centers and groups</span>
@@ -258,41 +273,42 @@
   </section>
 
   <footer>
-  <div class="footer-logos" aria-label="SSIO related links">
-    <div class="footer-logos-inner">
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai International Organization">
-        <img src="images/ssioot.png" width="52" height="52" alt="Sathya Sai International Organization" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Unity">
-        <img src="images/ssuot.png" width="52" height="52" alt="Sathya Sai Unity" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Human Rights">
-        <img src="images/sshrot.png" width="52" height="52" alt="Sathya Sai Human Rights" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Cast">
-        <img src="images/saicastot.png" width="52" height="52" alt="Sai Cast" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Love in Action">
-        <img src="images/sailoveinactionot.png" width="52" height="52" alt="Sai Love in Action" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sri Sathya Sai Books and Publications">
-        <img src="images/ssbptot.png" width="52" height="52" alt="Sri Sathya Sai Books and Publications" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Radio Sai">
-        <img src="images/raiosaiot.png" width="52" height="52" alt="Radio Sai" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Educare">
-        <img src="images/educareot.png" width="52" height="52" alt="Educare" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Vidya Vahini">
-        <img src="images/ssvvot.png" width="52" height="52" alt="Sathya Sai Vidya Vahini" />
-      </a>
-      <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Preport">
-        <img src="images/preportot.png" width="52" height="52" alt="Preport" />
-      </a>
+    <div class="footer-logos" aria-label="SSIO related links">
+      <div class="footer-logos-inner">
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai International Organization">
+          <img src="images/ssioot.png" width="52" height="52" alt="Sathya Sai International Organization" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Unity">
+          <img src="images/ssuot.png" width="52" height="52" alt="Sathya Sai Unity" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Human Rights">
+          <img src="images/sshrot.png" width="52" height="52" alt="Sathya Sai Human Rights" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Cast">
+          <img src="images/saicastot.png" width="52" height="52" alt="Sai Cast" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Love in Action">
+          <img src="images/sailoveinactionot.png" width="52" height="52" alt="Sai Love in Action" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sri Sathya Sai Books and Publications">
+          <img src="images/ssbptot.png" width="52" height="52" alt="Sri Sathya Sai Books and Publications" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Radio Sai">
+          <img src="images/raiosaiot.png" width="52" height="52" alt="Radio Sai" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Educare">
+          <img src="images/educareot.png" width="52" height="52" alt="Educare" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Vidya Vahini">
+          <img src="images/ssvvot.png" width="52" height="52" alt="Sathya Sai Vidya Vahini" />
+        </a>
+        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Preport">
+          <img src="images/preportot.png" width="52" height="52" alt="Preport" />
+        </a>
+      </div>
     </div>
-  </div>
     <div class="footer-bottom">Mockup A · local preview only. Not the live site.</div>
   </footer>
+  <script src="nav.js" defer></script>
 </body>
 </html>

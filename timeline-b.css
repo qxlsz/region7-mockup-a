@@ -1,0 +1,88 @@
+/* Option B (vertical timeline). Comparison page about-baba-timeline-b.html only. Not used by the real site. */
+/* ==========================================================
+   B · Vertical timeline
+   ========================================================== */
+.tlb {
+  list-style: none;
+  position: relative;
+  padding: 10px 0 20px;
+}
+.tlb::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  background: linear-gradient(180deg, rgba(13, 148, 136, 0), var(--teal-mid) 40px, var(--teal-mid) calc(100% - 40px), rgba(13, 148, 136, 0));
+  opacity: 0.55;
+}
+.tlb-item {
+  position: relative;
+  width: 50%;
+  padding-right: 44px;
+}
+.tlb-item:nth-child(even) {
+  margin-left: 50%;
+  padding-right: 0;
+  padding-left: 44px;
+}
+.tlb-item + .tlb-item { margin-top: -54px; }
+.tlb-dot {
+  position: absolute;
+  top: calc(50% - 8px);
+  right: -8px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 3px solid var(--teal);
+  box-shadow: 0 0 0 5px rgba(13, 148, 136, 0.14);
+  z-index: 1;
+}
+.tlb-item:nth-child(even) .tlb-dot { right: auto; left: -8px; }
+.tlb-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px 14px 14px;
+  background: #eaf7f3;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 118, 110, 0.10);
+  box-shadow: 0 6px 18px rgba(4, 47, 46, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.tlb-card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(4, 47, 46, 0.10); }
+.tlb-item:nth-child(even) .tlb-card { background: #e8f6f2; }
+.tlb-card img {
+  flex: 0 0 auto;
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+.tlb-text { min-width: 0; }
+.tlb-year {
+  font-size: 1.85rem;
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.tlb-text p {
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+@media (max-width: 720px) {
+  .tlb::before { left: 9px; margin-left: 0; }
+  .tlb-item,
+  .tlb-item:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 0 34px; }
+  .tlb-item + .tlb-item { margin-top: 16px; }
+  .tlb-dot,
+  .tlb-item:nth-child(even) .tlb-dot { left: 2px; right: auto; top: calc(50% - 8px); }
+  .tlb-card { gap: 14px; padding: 12px 14px 12px 12px; }
+  .tlb-card img { width: 84px; height: 84px; border-radius: 12px; }
+  .tlb-year { font-size: 1.5rem; margin-bottom: 4px; }
+  .tlb-text p { font-size: 0.92rem; }
+}
