@@ -2428,3 +2428,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .member-mail { overflow-wrap: normal; word-break: normal; }
 @media (max-width: 720px) { .member-mail { overflow-wrap: anywhere; } }
 .live-prose li:has(details) { list-style: none; }
+
+/* CONSISTENCY WITH ABOUT/HOME: rows and cards on the live-content pages use the About sizes */
+.link-row { padding: 18px 22px; }
+.disclosure-list > .disclosure.subpage > summary .d-title, .disclosure-list > .link-row .d-title { font-weight: 600; font-size: 1.06rem; }
+.ev-feature.card { background: #eaf7f3; border: 1px solid rgba(15, 118, 110, 0.12); padding: 22px 22px 24px; }
+.section-alt .ev-feature.card { background: var(--white); }
+@media (max-width: 720px) { .link-row { padding: 15px 16px; } }
