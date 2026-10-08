@@ -6,7 +6,7 @@
   <title>Home · Region 7 Sai Centers</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -39,13 +39,28 @@
   </header>
 
   <main>
-  <section class="hero hero-solo">
+  <section class="hero hero-solo hero-with-photo">
+    <div class="hero-glow" aria-hidden="true"></div>
     <div class="hero-inner">
-      <div>
+      <div class="hero-text">
         <span class="hero-kicker">Sri Sathya Sai International Organization · USA</span>
         <h1>A home for Sai Centers across our region</h1>
+        <span class="hero-orn"><svg class="lotus-line" viewBox="0 0 220 28" aria-hidden="true" focusable="false"><path d="M2 18 H84" /><path d="M136 18 H218" /><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z" /><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z" /><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z" /><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z" /><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z" /></svg></span>
         <p class="lead">We gather for devotion, service, and friendship in Northern California and Nevada. You are welcome here.</p>
       </div>
+      <figure class="hero-photo"><img src="images/home/swami-hero.jpg" alt="Sri Sathya Sai Baba" width="445" height="341" fetchpriority="high" /></figure>
+    </div>
+  </section>
+
+  <section class="section thought-section" id="thought">
+    <div class="section-inner">
+      <figure class="thought" data-thought aria-live="polite">
+        <span class="thought-orn"><svg class="lotus-line" viewBox="0 0 220 28" aria-hidden="true" focusable="false"><path d="M2 18 H84" /><path d="M136 18 H218" /><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z" /><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z" /><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z" /><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z" /><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z" /></svg></span>
+        <p class="thought-label">Thought for the day</p>
+        <blockquote class="thought-text">There is only one Caste, the Caste of Humanity; There is only one Religion, the Religion of Love; There is only one Language, the Language of the Heart; There is only One God, and He is Omnipresent.</blockquote>
+        <figcaption class="thought-cite">Sathya Sai Baba</figcaption>
+        <button class="thought-next" type="button">Another thought</button>
+      </figure>
     </div>
   </section>
 
@@ -169,5 +184,8 @@
   <script src="nav.js" defer></script>
   <script src="events-data.js" defer></script>
   <script src="events.js" defer></script>
+  <script src="thoughts-data.js" defer></script>
+  <script src="thought.js" defer></script>
+  <script src="anim.js" defer></script>
 </body>
 </html>
