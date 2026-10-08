@@ -50,3 +50,31 @@
     if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", fromHash); else fromHash();
   }
 })();
+
+/* C21 (Raj, Oct 8): layout A topic groups open and close like an accordion. One group open per list; the first is open at the start.
+   A #link to a group (e.g. programs.html#p-dev-altar) opens that group. Without this script every group stays open. */
+(function () {
+  document.documentElement.classList.add("a-acc-ready");
+  function set(g, open, instant) {
+    if (instant) g.classList.add("a-instant");
+    g.classList.toggle("a-open", open);
+    var b = g.querySelector(".a-head"); if (b) b.setAttribute("aria-expanded", open ? "true" : "false");
+    if (instant) { void g.offsetHeight; g.classList.remove("a-instant"); }
+  }
+  function sibs(g) { return Array.prototype.filter.call(g.parentNode.children, function (x) { return x.classList && x.classList.contains("a-group"); }); }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest(".a-head"); if (!b) return;
+    var g = b.closest(".a-group"), was = g.classList.contains("a-open");
+    var top = b.getBoundingClientRect().top;
+    sibs(g).forEach(function (x) { if (x !== g && x.classList.contains("a-open")) set(x, false, true); });
+    var shift = b.getBoundingClientRect().top - top;   /* a group above closed: keep the clicked header where it was */
+    if (shift) window.scrollBy(0, shift);
+    set(g, !was, false);
+  });
+  function fromHash() {
+    var id = location.hash.length > 1 && decodeURIComponent(location.hash.slice(1)); if (!id) return;
+    var el = document.getElementById(id); var g = el && el.closest && el.closest(".a-group"); if (!g) return;
+    sibs(g).forEach(function (x) { set(x, x === g, true); });
+  }
+  fromHash(); window.addEventListener("hashchange", fromHash);
+})();
