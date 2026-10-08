@@ -7,8 +7,51 @@
 (function () {
   /* open every closed <details> around an element (carried live pages are nested disclosures) */
   function openTo(el) {
-    for (var p = el; p; p = p.parentElement) if (p.tagName === "DETAILS" && !p.open) p.open = true;
+    for (var p = el; p; p = p.parentElement) {
+      if (p.tagName === "DETAILS" && !p.open) p.open = true;
+      if (p.hasAttribute && p.hasAttribute("data-cat-panel") && p.hidden) catPick(p.closest("[data-cats]"), p.id, {});
+    }
   }
+  /* Category menus (Programs and Initiatives resources): a vertical list of categories that switches the list beside it.
+     role=tablist (vertical), roving tabindex, Up/Down/Home/End keys. Links into a hidden category open it (openTo). */
+  function catPick(box, panelId, opts) {
+    if (!box) return;
+    var btns = box.querySelectorAll(".cat-menu .cat");
+    Array.prototype.forEach.call(btns, function (b) {
+      var on = b.getAttribute("aria-controls") === panelId;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+      var pnl = document.getElementById(b.getAttribute("aria-controls"));
+      if (pnl) pnl.hidden = !on;
+      if (on && opts.focus) b.focus();
+      if (on) {
+        var m = b.parentElement;
+        if (m.scrollWidth > m.clientWidth + 2) m.scrollTo({ left: b.offsetLeft - m.clientWidth / 2 + b.offsetWidth / 2, behavior: "smooth" });
+      }
+    });
+    if (opts.scroll) {
+      var hd = document.querySelector(".site-header"), tb = document.querySelector("[data-tabbar]");
+      var off = (hd ? hd.offsetHeight : 0) + (tb ? tb.offsetHeight : 0) + 12;
+      var top = box.getBoundingClientRect().top;
+      if (top < off) window.scrollTo({ top: top + window.scrollY - off, behavior: "auto" });
+    }
+  }
+  Array.prototype.forEach.call(document.querySelectorAll("[data-cats]"), function (box) {
+    var btns = Array.prototype.slice.call(box.querySelectorAll(".cat-menu .cat"));
+    btns.forEach(function (b, i) {
+      b.addEventListener("click", function () { catPick(box, b.getAttribute("aria-controls"), { scroll: true }); });
+      b.addEventListener("keydown", function (e) {
+        var n = null;
+        if (e.key === "ArrowDown" || e.key === "ArrowRight") n = (i + 1) % btns.length;
+        if (e.key === "ArrowUp" || e.key === "ArrowLeft") n = (i - 1 + btns.length) % btns.length;
+        if (e.key === "Home") n = 0;
+        if (e.key === "End") n = btns.length - 1;
+        if (n === null) return;
+        e.preventDefault();
+        catPick(box, btns[n].getAttribute("aria-controls"), { focus: true });
+      });
+    });
+  });
   var bar = document.querySelector("[data-tabbar]");
   if (!bar) {
     var go = function () {

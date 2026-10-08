@@ -2460,3 +2460,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .section-inner > .live-prose { font-size: 1.02rem; line-height: 1.75; }
 .disclosure .d-body.live-prose { font-size: 0.96rem; line-height: 1.7; }
 @media (max-width: 720px) { .quote-panel { padding: 24px 22px; } .intro-more { margin-top: 30px; } }
+
+/* C7: category menu for each tab's resources (idea from the live side menus, in our design).
+   Laptop: vertical list of categories on the left switches the list on the right. Phone: a row of chips. */
+.cats { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 32px; align-items: start; }
+.cat-menu { position: sticky; top: calc(var(--header-h, 72px) + 88px); display: flex; flex-direction: column; gap: 4px; background: var(--white); border: 1px solid rgba(15, 118, 110, 0.12); border-radius: 18px; padding: 10px; box-shadow: 0 4px 14px rgba(4, 47, 46, 0.05); }
+.cat { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; text-align: left; font: inherit; font-size: 0.98rem; font-weight: 500; color: var(--ink); background: transparent; border: 0; border-radius: 12px; padding: 11px 14px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease; }
+.cat:hover { background: var(--teal-wash); color: var(--teal-dark); }
+.cat[aria-selected="true"] { background: var(--teal); color: var(--white); font-weight: 600; box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25); }
+.cat:focus-visible { outline: 2px solid var(--teal-mid); outline-offset: 2px; }
+.cat-n { flex: none; min-width: 26px; padding: 2px 8px; border-radius: 999px; font-size: 0.74rem; font-weight: 600; text-align: center; background: var(--teal-wash); color: var(--teal-dark); }
+.cat[aria-selected="true"] .cat-n { background: rgba(255, 255, 255, 0.22); color: var(--white); }
+.cat-panels { min-width: 0; }
+.cat-title { font-size: 1.2rem; font-weight: 600; color: var(--teal-dark); margin: 4px 0 14px; letter-spacing: 0.01em; }
+.cat-panel > .tab-note:first-of-type { margin-top: 0; }
+.cat-panel > .disclosure-list + .disclosure-list, .cat-panel > .live-prose + .disclosure-list, .cat-panel > .disclosure-list + .live-prose { margin-top: 18px; }
+@media (max-width: 860px) {
+  .cats { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+  .cat-menu { position: static; flex-direction: row; overflow-x: auto; gap: 8px; padding: 8px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .cat-menu::-webkit-scrollbar { display: none; }
+  .cat { width: auto; flex: none; white-space: nowrap; padding: 9px 14px; font-size: 0.92rem; }
+  .cat-title { font-size: 1.08rem; }
+}
