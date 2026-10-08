@@ -2536,3 +2536,90 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .ev-feature, .ev-feature.card { grid-template-columns: minmax(0, 1fr); }
   .ev-feature .ev-photo { min-height: 0; aspect-ratio: 16 / 9; }
 }
+
+/* C9: design pass. One rhythm, equal cards, no half-empty rows, readable type. */
+/* rhythm: same section padding and head spacing on every page */
+.section { padding: 60px 28px; }
+.section-head.ribbon-head { margin-bottom: 26px; }
+.section-head p { font-size: 1rem; color: var(--muted); max-width: 70ch; }
+.live-prose, .section-inner > .live-prose { font-size: 1rem; line-height: 1.7; }
+.live-prose p, .prose p, .disclosure .d-body > p { max-width: 70ch; }
+.tab-note { font-size: 0.94rem; color: #4b5563; }
+@media (max-width: 960px) { .section { padding: 44px 20px; } }
+
+/* category sets: short sets as one grouped list, longer sets with a menu (merged groups get subheadings) */
+.cat-groups { display: grid; gap: 26px; }
+.cat-group > .cat-title { margin-top: 0; }
+.cat-group > .disclosure-list + .link-cards, .cat-panel > .disclosure-list + .link-cards, .cat-sub-group > .disclosure-list + .link-cards { margin-top: 14px; }
+.cat-sub-group + .cat-sub-group { margin-top: 22px; }
+.cat-sub { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); margin: 0 0 10px; }
+.cats { align-items: stretch; }
+.cat-menu { align-self: start; }
+.cat-panel > .link-cards:first-of-type, .cat-group > .link-cards:first-of-type { margin-top: 0; }
+
+/* link cards for outside websites */
+.link-cards { display: grid; gap: 12px; grid-template-columns: repeat(var(--lc-cols, 3), minmax(0, 1fr)); }
+.link-cards.lc-cols-1 { --lc-cols: 1; max-width: 520px; }
+.link-cards.lc-cols-2 { --lc-cols: 2; }
+.link-cards.lc-cols-3 { --lc-cols: 3; }
+.link-cards.lc-span-last > .link-card:last-child { grid-column: 1 / -1; }
+.link-card { display: flex; align-items: center; gap: 14px; min-height: 76px; padding: 14px 16px; background: var(--white); border: 1px solid rgba(15, 118, 110, 0.14); border-radius: 14px; box-shadow: 0 4px 14px rgba(4, 47, 46, 0.05); color: var(--ink); text-decoration: none; transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease; }
+.link-card:hover { border-color: var(--teal-mid); box-shadow: 0 8px 22px rgba(15, 118, 110, 0.12); transform: translateY(-1px); text-decoration: none; }
+.link-card:hover .lc-name { text-decoration: underline; text-underline-offset: 3px; }
+.link-card:focus-visible { outline: 2px solid var(--teal-mid); outline-offset: 2px; }
+.lc-logo, .lc-badge { flex: none; width: 44px; height: 44px; border-radius: 12px; }
+.lc-logo { object-fit: contain; background: var(--teal-wash); padding: 4px; }
+.lc-badge { display: grid; place-items: center; background: var(--teal-wash); color: var(--teal-dark); font-weight: 700; font-size: 1.1rem; border: 1px solid rgba(15, 118, 110, 0.14); }
+.lc-text { display: grid; gap: 2px; min-width: 0; flex: 1 1 auto; }
+.lc-name { font-size: 1rem; font-weight: 600; line-height: 1.3; }
+.lc-domain { font-size: 0.86rem; color: #4b5563; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lc-ext { flex: none; color: var(--teal); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 640px) { .link-cards { grid-template-columns: minmax(0, 1fr); } .link-cards.lc-span-last > .link-card:last-child { grid-column: auto; } }
+
+/* Events: upcoming list and calendar in one aligned column, tidy date badges */
+.ev-upcoming { max-width: none; }
+.ev-upcoming .event-list { background: var(--white); border: 1px solid rgba(15, 118, 110, 0.12); border-radius: 18px; padding: 8px 22px; box-shadow: 0 4px 14px rgba(4, 47, 46, 0.05); }
+.ev-upcoming .event-row, .ev-upcoming .event-row:first-child, .ev-upcoming .event-row:last-child { padding: 16px 0; }
+.ev-upcoming .event-row { grid-template-columns: 72px minmax(0, 1fr) auto; gap: 18px; }
+.ev-upcoming .event-date { width: 72px; height: 72px; padding: 0; display: flex; flex-direction: column; justify-content: center; }
+.ev-upcoming .event-row p { font-size: 0.95rem; color: #4b5563; }
+.ev-upcoming .ev-cal { margin-top: 16px; }
+@media (max-width: 640px) {
+  .ev-upcoming .event-list { padding: 4px 16px; }
+  .ev-upcoming .event-row { grid-template-columns: 60px minmax(0, 1fr); gap: 14px; }
+  .ev-upcoming .event-date { width: 60px; height: 60px; }
+  .ev-upcoming .event-row .btn { grid-column: 2; }
+}
+
+/* Events: yearly cards with the same layout and photo size; actions sit at the bottom */
+.ev-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.ev-feature, .ev-feature.card { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 18px; align-items: start; padding: 16px; overflow: visible; }
+.ev-feature .ev-photo { position: relative; min-height: 0; aspect-ratio: 4 / 3; border-radius: 12px; overflow: hidden; background: var(--teal-wash); }
+.ev-feature .ev-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0; margin: 0; }
+.ev-feature .ev-text { padding: 0; display: flex; flex-direction: column; height: 100%; font-size: 0.98rem; }
+.ev-feature .ev-text h3 { font-size: 1.1rem; line-height: 1.3; margin: 0 0 8px; }
+.ev-feature .ev-text p { margin: 0 0 10px; }
+.ev-feature .ev-text .tab-note { font-size: 0.88rem; }
+.ev-foot { margin-top: auto; padding-top: 6px; }
+.ev-foot > .btn + .ev-more, .ev-foot > .ev-more + .btn { margin-top: 8px; }
+.ev-more[open] { width: 100%; }
+@media (max-width: 860px) { .ev-list { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 520px) {
+  .ev-feature, .ev-feature.card { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .ev-feature .ev-photo { aspect-ratio: 16 / 9; }
+}
+
+/* Contact: column count follows the number of people, so no row has a lone card */
+.contact-row.cr-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.contact-row.cr-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.contact-row.cr-cols-1 { grid-template-columns: minmax(0, 420px); }
+@media (max-width: 860px) { .contact-row.cr-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .contact-row.cr-cols-2, .contact-row.cr-cols-3 { grid-template-columns: minmax(0, 1fr); } }
+.ev-upcoming .event-date .day { white-space: nowrap; letter-spacing: -0.02em; }
+@media (max-width: 640px) { .ev-upcoming .event-date .day { font-size: 1.08rem; } }
+/* sign-in notes: one full-width card, text left and button right */
+.section .signin-card { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 28px; row-gap: 8px; }
+.section .signin-card .tag { grid-column: 1 / -1; justify-self: start; }
+.section .signin-card p { margin: 0; max-width: 70ch; }
+@media (max-width: 640px) { .section .signin-card { grid-template-columns: minmax(0, 1fr); } .section .signin-card .btn { justify-self: start; } }
