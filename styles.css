@@ -3548,3 +3548,12 @@ body.r7-page-enter, body.r7-page-leave { opacity: 0; }
 /* C21: event pictures at their own shape, as on the live page */
 .sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo img, .sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo picture img { aspect-ratio: auto; height: auto; object-fit: initial; display: block; }
 .sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo picture { display: block; }
+
+/* C22 (Raj, Oct 8): accordion headers show the topic title and the arrow only (no item count); same layout on Media */
+.sanctuary .a-head { grid-template-columns: minmax(0, 1fr) 36px; }
+.sanctuary .a-head .a-count, .sanctuary .a-head .a-line { display: none; }
+@media (max-width: 760px) {
+  .sanctuary .a-head { grid-template-columns: minmax(0, 1fr) 32px; }
+  .sanctuary .a-chev { grid-column: 2; grid-row: 1; }
+}
+.sanctuary .a-k-audio .a-ico, .sanctuary .a-k-video .a-ico { background: rgba(15, 118, 110, .1); color: var(--teal); }
