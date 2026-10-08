@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="timeline-b.css" />
 </head>
@@ -29,7 +30,6 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="sai-centers.html">Sai Centers</a></li>
           <li><a href="programs.html">Programs</a></li>
           <li><a href="initiatives.html">Initiatives</a></li>
           <li><a href="events.html">Events</a></li>
@@ -46,7 +46,7 @@
       <div>
         <span class="hero-kicker">About</span>
         <h1>About</h1>
-        <p class="lead">Sri Sathya Sai Baba, our region, the Sai Organization, and resources for officers.</p>
+        <p class="lead">Sri Sathya Sai Baba, our region, the Sai Organization, resources for officers, and our Sai Centers.</p>
       </div>
     </div>
   </section>
@@ -57,6 +57,7 @@
       <a class="tab" role="tab" id="tab-region7" href="#region7" aria-controls="panel-region7" aria-selected="false" tabindex="-1">USA Region 7</a>
       <a class="tab" role="tab" id="tab-organization" href="#organization" aria-controls="panel-organization" aria-selected="false" tabindex="-1">Sai Organization</a>
       <a class="tab" role="tab" id="tab-resources" href="#resources" aria-controls="panel-resources" aria-selected="false" tabindex="-1">SSIO Resources</a>
+      <a class="tab" role="tab" id="tab-centers" href="#centers" aria-controls="panel-centers" aria-selected="false" tabindex="-1">Sai Centers</a>
     </div>
   </nav>
   <noscript><style>.tab-panel[hidden] { display: block; }</style></noscript>
@@ -234,21 +235,6 @@
       <!-- timeline:end -->
     </div>
   </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Region 7 at a glance</span></h2>
-      </div>
-        <ul class="facts">
-          <li><span>States</span><strong>California, Nevada</strong></li>
-          <li><span>Sai Centers</span><strong>15</strong></li>
-          <li><span>Groups</span><strong>3</strong></li>
-          <li><span>Wings</span><strong>Devotion, SSE, Service, YA</strong></li>
-          <li><span>Yearly Events</span><strong>7</strong></li>
-        </ul>
-    </div>
-  </section>
   </div>
   <div class="tab-panel" role="tabpanel" id="panel-region7" aria-labelledby="tab-region7" data-hash="region7" hidden>
   <section class="section">
@@ -307,7 +293,7 @@
       </div>
       <div class="card callout">
         <p>See every Sai Center and Group on one map, with meeting times and addresses.</p>
-        <a class="btn btn-teal" href="sai-centers.html">Find a Sai Center</a>
+        <a class="btn btn-teal" href="about.html#centers">Find a Sai Center</a>
       </div>
     </div>
   </section>
@@ -520,6 +506,216 @@
     </div>
   </section>
   </div>
+  <div class="tab-panel" role="tabpanel" id="panel-centers" aria-labelledby="tab-centers" data-hash="centers" hidden>
+  <section class="section" id="map">
+    <div class="section-inner">
+      <div class="section-head ribbon-head">
+        <h2 class="ribbon"><span>Centers on the map</span></h2>
+      </div>
+      <div class="leaflet-frame"><div id="centers-map" role="region" aria-label="Map of Sai Centers in Region 7"></div></div>
+      <p class="map-note">Select a teal pin to see the center, its address, and directions. 15 centers and 5 groups.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="list">
+    <div class="section-inner">
+      <div class="section-head ribbon-head">
+        <h2 class="ribbon"><span>Centers and groups</span></h2>
+        <p>Meeting times, addresses, and service activities for each center.</p>
+      </div>
+        <div class="centers-grid2">
+          <article class="center-card2" id="central-san-jose">
+            <div class="cc-head"><h3>Central San Jose</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Central San Jose</p>
+            <ul class="cc-info"><li>Devotional Service: Sundays - 5 PM to 6:15 PM</li><li>Location: Center for Spiritual Living, 1195 Clark St, San Jose, CA</li><li>Sai Spiritual Education: Sundays - 3 PM to 4:30 PM (September to June)</li><li>For Service and Other Activities check center communication</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3111366,-121.8913987" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="central-san-jose">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circles</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Weekly food services at San Jose Homefirst &amp; Sunnyvale shelters</li><li>Weekly tutoring at San Jose Family shelter and Morgan Hill library</li><li>STEM summer course</li><li>Back to School kits</li></ul></div><div class="act-group"><p>Elder Care</p><ul><li>Monthly convalescent home singing (SSE)</li><li>Center grandparents service</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Cleanup of Parks in San Jose</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter and care kits distribution</li><li>Halloween costume collection drive</li><li>Habitat for Humanity</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Caroling at multiple locations</li><li>Christmas play by Morgan Hill tutoring kids</li><li>93-day house bhajans for Swami’s birthday</li></ul></div><div class="act-group"><p>Study circles</p><ul><li>Sai Parenting &amp; Gita Vahini</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="elk-grove">
+            <div class="cc-head"><h3>Elk Grove</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Elk Grove</p>
+            <ul class="cc-info"><li>Location: 7495 Elder Creek Rd, Sacramento, CA</li><li>Please call (916) 317-5564 or email elkgrove_sai@yahoo.com for directions and parking instructions.</li><li>Devotion: Thursdays 7:30 pm to 9:15 pm</li><li>SSE: Sundays 10:30 am - 11:30 am</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5106237,-121.4161808" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="elk-grove">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li></ul><div class="act-group"><p>Environment Services</p><ul><li>Tree Planting and Reforestation (Sacramento Tree Foundation)</li><li>Elk Grove Creek Cleanup (Sacramento Area Creeks Council)</li><li>Wildlife Care Association of Sacramento Facility Maintenance</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Cold weather kits distribution to local homeless population</li></ul></div><div class="act-group"><p>Education</p><ul><li>Toys, School, Medical supplies (Children&#x27;s Receiving Home of Sacramento)</li><li>Operation Backpack - School backpacks and supplies for disadvantaged children</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="evergreen">
+            <div class="cc-head"><h3>Evergreen</h3><span class="doc-type">Group</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Group of Evergreen</p>
+            <ul class="cc-info"><li>Location: 3208 Vernazza Ave, San Jose, CA 95135</li><li>Meeting Time: Thursdays 7:00 pm to 8:00 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3150295,-121.7715236" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="evergreen">Show on map</button></div>
+          </article>
+          <article class="center-card2" id="fremont">
+            <div class="cc-head"><h3>Fremont</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Fremont</p>
+            <ul class="cc-info"><li>Location: 40086 Paseo Padre Pkwy, Fremont, CA</li><li>Meeting Time: Sundays 3 pm to 5:15 pm</li><li>3 to 4 pm - Study Circle, SSE, Parenting Circle</li><li>4:15 to 5:15 pm - Devotional Singing</li><li>2nd and 4th Thursday house bhajans virtual via zoom</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5455262,-121.980857" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="fremont">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Light Meditation</li><li>Study circle</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food</p><ul><li>Sandwich preparation and distribution (monthly)</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary, Hayward (weekly)</li><li>Ad-hoc projects with schools in Hayward, San Leandro, San Lorenzo</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Community gardens</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="fresno">
+            <div class="cc-head"><h3>Fresno</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Fresno</p>
+            <ul class="cc-info"><li>Location: 9647 N. Willey Court Fresno, CA 93720</li><li>Meeting Time: Thursdays 6:30 pm to 8 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.876437,-119.743644" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="fresno">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circle</li><li>Community service activities</li></ul><div class="act-group"><p>Animal Service</p><ul><li>Donations to animal shelter for Swami’s Birthday and Mahasamadhi</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>Akhanda Bhajans</li><li>Celebrate Guru Purnima, Swami’s birthday, Shivarathri, New Years Day</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="marin">
+            <div class="cc-head"><h3>Marin</h3><span class="doc-type">Group</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Group of Marin</p>
+            <ul class="cc-info"><li>Location: Sausalito CA 94965</li><li>Please call 415-272-3806 to confirm location</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li><li>Note: Occasionally we meet on a different day of the week. Please call to confirm</li></ul>
+            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="marin">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li></ul><div class="act-group"><p>Food Service</p><ul><li>Support St Vincent Dining Hall in San Rafael (Organization provides meals twice a day every day)</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Greeting cards for any organization in Marin including Serving Shelters, Nursing homes, Halfway houses</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="monterey-peninsula">
+            <div class="cc-head"><h3>Monterey Peninsula</h3><span class="doc-type">Group</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Group of Monterey Peninsula</p>
+            <ul class="cc-info"><li>Location: 25881 Rancho Alto Drive Carmel, CA 93923</li><li>Meeting Time: Thursdays 7:00 pm to 8:30 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.525145,-121.808468" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="monterey-peninsula">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study Circles</li><li>Community service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Lunch for homeless men in ihelp program at local church (3rd thursdays)</li><li>Lunch service for Gathering for women - homeless (3rd week)</li></ul></div><div class="act-group"><p>Devotion</p><ul><li>Weekly study circle - Bhagawad Gita: A walkthrough for Westerners</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="tracy-mountain-house">
+            <div class="cc-head"><h3>Tracy/Mountain House</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Tracy/Mountain House</p>
+            <ul class="cc-info"><li>Location: Sri Sathya Sai Baba Abode of Supreme Peace @ 244 W Grant Line Rd, Tracy, CA 95376</li><li>Meeting Time: Every Sunday: 4:20 pm - SSE/ Study Circle. 5:30 pm - Devotional Singing</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7540512,-121.4283601" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="tracy-mountain-house">Show on map</button></div>
+          </article>
+          <article class="center-card2" id="oakland">
+            <div class="cc-head"><h3>Oakland</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Oakland</p>
+            <ul class="cc-info"><li>Location: Oakland, CA 94602</li><li>Please call 510-914-8904 to confirm location</li><li>Meeting Time: Sundays 6:25 pm to 7:50 pm</li></ul>
+            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="oakland">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Prayers and Singing</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Bagged lunches (weekly) for East Bay Community Recovery Project, serving those struggling with homelessness, addiction and/or mental health issues</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Multi-Culturally Friendly Format</p><ul><li>We offer our love through unison, mostly English language devotional songs and prayers</li><li>We also include devotional music from around the world, including, of course, our beloved Indian style Bhajans</li><li>On special occasions we follow our program with a potluck dinner</li><li>We are pet friendly, and Go-Ji is a regular member of our Center</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="peninsula">
+            <div class="cc-head"><h3>Peninsula</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Peninsula</p>
+            <ul class="cc-info"><li>Location: Lodge Building - 40 Twin Pines Lane Belmont, CA 94002</li><li>SSE: All Sundays (except summer months) 02:45 pm to 03:45 pm</li><li>Study Circle: 1st and 3rd Sundays: 03:00 pm to 03:55 pm</li><li>Devotional Program: All Sundays: 4:00 pm to 5:15 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5168177,-122.2776792" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="peninsula">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich distribution to homeless in San Francisco (weekly)</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Career</p><ul><li>Job search coaching at LifeMoves Network Shelter (monthly)</li></ul></div><div class="act-group"><p>Environment Care</p><ul><li>Local park cleanup</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Devonshire Oaks Nursing Center</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter kits - Blankets Collection and Distribution to Homeless in San Francisco</li><li>Habitat for Humanity - Santa Rosa Fire Rebuild</li><li>Hygiene Care Kits for Homeless</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="reno-nv">
+            <div class="cc-head"><h3>Reno, NV</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Reno, NV</p>
+            <ul class="cc-info"><li>Location: Reno, NV 89511</li><li>Please call (573) 368-9172 to confirm location</li><li>Meeting Time: Sundays 6 pm to 7:30 pm</li></ul>
+            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="reno-nv">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner service at Ronald McDonald Home (monthly)</li><li>MS Walk</li></ul></div><div class="act-group"><p>Education</p><ul><li>Backpack Project - School supplies for 600-1000 backpacks</li><li>School beautification project</li><li>School cleaning</li></ul></div><div class="act-group"><p>Community</p><ul><li>Adopt a family</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="sacramento">
+            <div class="cc-head"><h3>Sacramento</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Sacramento</p>
+            <ul class="cc-info"><li>Location: Sai Seva Sadan, 3079 Kilgore Rd, Suite A, Rancho Cordova, CA 95670</li><li>Meeting Time: Sundays 2 pm to 5 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5913216,-121.2702503" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="sacramento">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner Services at Salvation Army, St. John Womens Shelter (monthly)</li></ul></div><div class="act-group"><p>Career</p><ul><li>Computer skills training (Job search, Resume writing, MS office, Google) at St. John Womens Shelter</li></ul></div><div class="act-group"><p>Living</p><ul><li>Care Kits and Winter kits (blankets) distribution</li></ul></div><div class="act-group"><p>Education</p><ul><li>Back to School drive - Backpack Distribution (192)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>EarthDay - Park Cleaning</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Christmas Caroling at Next Move</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="san-bruno">
+            <div class="cc-head"><h3>San Bruno</h3><span class="doc-type">Group</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Group of San Bruno</p>
+            <ul class="cc-info"><li>Contact details: 650-504-8584</li></ul>
+            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-bruno">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food preparation and serving</li><li>Samaritan House Shelter</li><li>Safe Harbor Shelter</li><li>First Step Shelter for Families (Shelter Network)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Clean up at City of San Bruno</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="san-francisco">
+            <div class="cc-head"><h3>San Francisco</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of San Francisco</p>
+            <ul class="cc-info"><li>Location: 573 South Van Ness Ave San Francisco, CA 94110</li><li>Meeting: Thursdays 7 pm to 9:15 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7639754,-122.417283" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-francisco">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich service for homeless in streets of San Francisco (weekly)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Toiletries and Sundries for battered women shelter</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="san-jose">
+            <div class="cc-head"><h3>San Jose</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of San Jose</p>
+            <ul class="cc-info"><li>1st &amp; 3rd Sundays (3:30PM to 5PM) at 1170 Kern Ave, Sunnyvale, CA 94085 (Shiv Durga Temple)</li><li>2nd Sundays (2:45PM to 4:30PM) at 6502 Springpath Ln, San Jose, CA 95120</li><li>Special Festivals at Shiv Durga Temple and Shirdi Sai Darbar Temple</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3823586,-121.9971944" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-jose">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service (Bhajans)</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Breakfast service at San Jose Home Shelter (Family Supportive Housing at King Road, San Jose)</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li></ul></div><div class="act-group"><p>Community</p><ul><li>Outreach activities at devotional and service locations (VVGC Ganapathi Temple, Shiv Durga Temple, Shirdi Sai Darbar), libraries and stores</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="santa-cruz">
+            <div class="cc-head"><h3>Santa Cruz</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Santa Cruz</p>
+            <ul class="cc-info"><li>Location: Shambhala Center 920 41st Ave Santa Cruz, CA 95062</li><li>Meeting Time: Sundays 5:30 pm to 7 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.9654708,-121.9643504" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="santa-cruz">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Sandwich and clothing distribution to the homeless</li><li>Singing Seva at Sunshine Villa Senior Living</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Donations to Recuperative Care Center</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li><li>Sandwich, Fruit &amp; Snacks for homeless</li><li>Food serving at Day on the Beach</li></ul></div><div class="act-group"><p>Living</p><ul><li>Clothing drive for Homeless</li><li>Winter kits for homeless</li><li>First aid kits / hygiene kits</li></ul></div><div class="act-group"><p>Medical</p><ul><li>Ashland Free Medical Clinic volunteering</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Senior Home Singing - Sunshine Villa</li></ul></div><div class="act-group"><p>Disaster relief</p><ul><li>Disaster relief support - Kerala</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="santa-rosa">
+            <div class="cc-head"><h3>Santa Rosa</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Santa Rosa</p>
+            <ul class="cc-info"><li>Location: Santa Rosa 95403</li><li>Please call 707-849-3151 to confirm location</li><li>Meeting Time: Sundays 7 pm to 8:30 pm</li></ul>
+            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="santa-rosa">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Preparation and Serving at a local homeless shelter</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Crafts and Knitting Projects</li><li>Winter Projects</li><li>Knitting and distributing beanies, scarf and socks for the homeless</li></ul></div><div class="act-group"><p>Animal Care</p><ul><li>Making and delivering animal toys at the Animal Rescue Shelter</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="stockton">
+            <div class="cc-head"><h3>Stockton</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Stockton</p>
+            <ul class="cc-info"><li>Location: 4809 Bridgewater Circle Stockton, CA 95219</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.979984,-121.365378" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="stockton">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Homeless feeding at St. Marys dining hall, Stockton (monthly)</li></ul></div><div class="act-group"><p>Community</p><ul><li>Volunteering at building of Shiva Vishnu temple, Stockton</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>House bhajans (once in 2 months)</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="tri-valley">
+            <div class="cc-head"><h3>Tri-Valley</h3><span class="doc-type">Center</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Center of Tri-Valley</p>
+            <ul class="cc-info"><li>Meeting Time: Sundays 9:30 am - 12 noon</li><li>Devotional Singing &amp; Study Circle: 9:30 am to 12 noon;</li><li>Location: 4036 Ghiotti ct, Pleasanton, CA</li><li>SSE: 11 am to 12 noon;</li><li>Location: 4444 Sandalwood Dr, Pleasanton, CA</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.6944225,-121.8916298" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="tri-valley">Show on map</button></div>
+            <details class="disclosure disclosure-inline">
+              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
+              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circles</li><li>Sai Spiritual Education (SSE)</li><li>Community Service</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich preparation and distribution at Modesto Shelter (Monthly - 3rd Saturday)</li><li>Dinner service at Modesto Shelter (Bi-Weekly - 1st and 3rd Saturdays)</li><li>Dinner service at Fremont Homeless Shelter (Monthly - 2nd Sunday)</li><li>Dinner service at San Leandro (Monthly - 2nd Saturday)</li><li>Lunch service at Concord Shelter (Monthly - 2nd Sunday)</li><li>Breakfast service at Stockton Shelter (Monthly - 2nd Saturday)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Hygiene kits, Care packs, Winter kits for homeless (Oakland/Berkeley, April Showers, Concord shelter)</li><li>Food, paper products, Fruits - Livermore Shepherds gate Shelter</li><li>Soap and Shampoo making and distribution</li><li>Ad-hoc projects and services for special occasions</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary School, Hayward (weekly)</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Carols at Modesto Homeless Shelter- SSE kids</li></ul></div><div class="act-group"><p>Environmental</p><ul><li>Parks &amp; trails cleanup at Tri-Valley Area</li><li>Vegetable garden service at Hayward school</li></ul></div><div class="act-group"><p>Animal care</p><ul><li>Pet toys &amp; blankets for animal shelter</li></ul></div></div>
+            </details>
+          </article>
+          <article class="center-card2" id="west-san-jose">
+            <div class="cc-head"><h3>West San Jose</h3><span class="doc-type">Group</span></div>
+            <p class="cc-full">Sri Sathya Sai Baba Group of West San Jose</p>
+            <ul class="cc-info"><li>Location: 55558 Castle Glen Avenue, San Jose 95129</li><li>Devotion: Every other month-Saturday 4:30 to 6 pm</li><li>Service: Saturdays 9:00 am</li></ul>
+            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3025664,-122.0017583" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="west-san-jose">Show on map</button></div>
+          </article>
+        </div>
+    </div>
+  </section>
+  </div>
   </main>
 
   <footer>
@@ -559,6 +755,9 @@
     </div>
   </footer>
   <script src="nav.js" defer></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="centers-data.js" defer></script>
+  <script src="centers-map.js" defer></script>
   <script src="tabs.js" defer></script>
   <script src="about.js" defer></script>
   <script src="timeline.js" defer></script>

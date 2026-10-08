@@ -2306,3 +2306,16 @@ footer { padding-bottom: 0; }
   .section-head h2.ribbon { font-size: 0.9rem; letter-spacing: 0.1em; }
   .ribbon > span { padding: 10px calc(var(--ribbon-point) + 16px) 10px calc(var(--ribbon-hang) + 10px); }
 }
+
+/* ==========================================================
+   NO UNDERLINES (site-wide): links, nav, tabs, buttons, footer.
+   Hover = color change; keyboard focus = visible teal ring.
+   ========================================================== */
+a, a:link, a:visited, a:hover, a:active, a:focus, a:focus-visible,
+a span, a:hover span, .leaflet-container a, .leaflet-container a:hover { text-decoration: none !important; }
+a:hover { color: var(--teal-dark); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--teal-mid); outline-offset: 2px; border-radius: 6px; }
+.doc-link a span, .doc-link a:hover span, .tab-live a, .tab-live a:hover { border-bottom: 0 !important; }
+.doc-link a:hover, .tab-live a:hover, .r7-pop-links a:hover, .card-link:hover { color: var(--teal-dark) !important; opacity: 0.85; }
+/* anchors inside tab panels land below the sticky header + tab bar */
+.tab-panel [id] { scroll-margin-top: calc(var(--header-h, 72px) + 84px); }

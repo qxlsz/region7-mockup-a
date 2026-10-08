@@ -36,7 +36,16 @@
     var m = L.marker([c.lat, c.lon], { icon: pin(c.kind), title: c.name, alt: c.name, riseOnHover: true }).addTo(map).bindPopup(html, { maxWidth: 260 });
     markers[c.id] = m; pts.push([c.lat, c.lon]);
   });
-  map.fitBounds(pts, { paddingTopLeft: [40, 60], paddingBottomRight: [40, 24] });
+  var fitted = false;
+  function fit() {
+    if (!el.offsetWidth) return;              /* hidden tab: wait until shown */
+    map.invalidateSize();
+    if (!fitted) { map.fitBounds(pts, { paddingTopLeft: [40, 60], paddingBottomRight: [40, 24] }); fitted = true; }
+  }
+  map.setView([38.2, -121.4], 7);
+  fit();
+  /* About page: the map sits in the Sai Centers tab; re-measure when that tab is shown */
+  document.addEventListener("tab:shown", function (e) { if (e.detail && e.detail.panel && e.detail.panel.contains(el)) setTimeout(fit, 30); });
   map.on('click', function () { map.scrollWheelZoom.enable(); });
   map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
 
@@ -46,6 +55,7 @@
     var m = markers[b.getAttribute('data-show-on-map')];
     if (!m) return;
     el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    fit();
     map.setView(m.getLatLng(), 13, { animate: true });
     m.openPopup();
   });
