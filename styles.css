@@ -2266,3 +2266,43 @@ footer { padding-bottom: 0; }
 @media (max-width: 640px) {
   .tabbar-inner { -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }
 }
+
+/* ==========================================================
+   RIBBON SECTION HEADERS (all pages; Raj liked the live site's ribbons)
+   Teal ribbon that hangs past the content edge, pointed right end,
+   folded corner under the left end. Markup:
+   <div class="section-head ribbon-head"><h2 class="ribbon"><span>Title</span></h2><p>…</p></div>
+   ========================================================== */
+:root { --ribbon-hang: 18px; --ribbon-fold: 10px; --ribbon-point: 18px; }
+.section-head.ribbon-head { max-width: 46em; }
+.section-head h2.ribbon {
+  position: relative;
+  display: block; width: fit-content;
+  max-width: calc(100% + var(--ribbon-hang));
+  margin: 0 0 16px calc(-1 * var(--ribbon-hang));
+  font-size: 1.08rem; font-weight: 600; line-height: 1.35;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--white);
+  filter: drop-shadow(0 3px 4px rgba(4, 47, 46, 0.18));
+}
+.ribbon > span {
+  display: block;
+  padding: 13px calc(var(--ribbon-point) + 30px) 13px calc(var(--ribbon-hang) + 16px);
+  background: linear-gradient(90deg, #0d9488 0%, #0f766e 100%);
+  clip-path: polygon(0 0, calc(100% - var(--ribbon-point)) 0, 100% 50%, calc(100% - var(--ribbon-point)) 100%, 0 100%);
+  text-shadow: 0 1px 1px rgba(4, 47, 46, 0.25);
+}
+/* folded corner: the part of the ribbon that wraps behind the content edge */
+.ribbon::before {
+  content: ""; position: absolute; left: 0; top: 100%;
+  width: 0; height: 0;
+  border-top: var(--ribbon-fold) solid #042f2e;
+  border-left: var(--ribbon-hang) solid transparent;
+}
+.ribbon-head p { margin-top: 2px; }
+.ribbon-head.row .ribbon, .split-wide-side .ribbon { max-width: calc(100% + var(--ribbon-hang)); }
+@media (max-width: 640px) {
+  :root { --ribbon-hang: 12px; --ribbon-fold: 8px; --ribbon-point: 14px; }
+  .section-head h2.ribbon { font-size: 0.9rem; letter-spacing: 0.1em; }
+  .ribbon > span { padding: 10px calc(var(--ribbon-point) + 16px) 10px calc(var(--ribbon-hang) + 10px); }
+}
