@@ -76,6 +76,34 @@
         '<div><p class="next-label">' + range(x.s, x.e) + '</p><h3>' + esc(ev.title) + '</h3><p>' + esc(ev.text) + '</p></div>' + link + '</article>';
     }).join('');
   });
+  /* C23: the regional calendar pop-up on Events (.js-calendar): every event of the next data-months months, by month. */
+  var FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var DOW = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  function when(s, e) {
+    var a = DOW[s.getDay()] + ', ' + MON[s.getMonth()] + ' ' + s.getDate();
+    if (+s === +e) return a + ', ' + s.getFullYear();
+    return a + ' to ' + DOW[e.getDay()] + ', ' + MON[e.getMonth()] + ' ' + e.getDate() + ', ' + e.getFullYear();
+  }
+  Array.prototype.forEach.call(document.querySelectorAll('.js-calendar'), function (box) {
+    var n = +box.getAttribute('data-months') || 12;
+    var stop = new Date(t.getFullYear(), t.getMonth() + n, 1);
+    var list = upcoming(t, 999).filter(function (x) { return x.s < stop; });
+    if (!list.length) return;
+    var out = '', cur = null;
+    list.forEach(function (x) {
+      var k = x.s.getFullYear() * 12 + x.s.getMonth(), ev = x.ev;
+      if (k !== cur) {
+        if (cur !== null) out += '</ol></section>';
+        cur = k;
+        out += '<section class="cal-month"><h4 class="cal-mh">' + FULL[x.s.getMonth()] + ' ' + x.s.getFullYear() + '</h4><ol class="cal-evs">';
+      }
+      var link = ev.link ? '<a class="cal-link" href="' + esc(ev.link) + '" target="_blank" rel="noopener">' + esc(ev.linkLabel || 'Event site') + '</a>' : '';
+      out += '<li class="cal-ev"><span class="cal-date"><span class="cal-m">' + MON[x.s.getMonth()] + '</span><span class="cal-d">' + badgeDay(x.s, x.e) + '</span></span>' +
+        '<span class="cal-tx"><span class="cal-when">' + when(x.s, x.e) + '</span><span class="cal-t">' + esc(ev.title) + '</span>' +
+        '<span class="cal-p">' + esc(ev.text) + '</span>' + link + '</span></li>';
+    });
+    box.innerHTML = out + '</ol></section>';
+  });
   Array.prototype.forEach.call(document.querySelectorAll('.js-asof'), function (el) {
     el.textContent = MON[t.getMonth()] + ' ' + t.getDate() + ', ' + t.getFullYear();
   });
