@@ -2435,3 +2435,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
 .ev-feature.card { background: #eaf7f3; border: 1px solid rgba(15, 118, 110, 0.12); padding: 22px 22px 24px; }
 .section-alt .ev-feature.card { background: var(--white); }
 @media (max-width: 720px) { .link-row { padding: 15px 16px; } }
+
+/* C6: tab intros on Programs and Initiatives follow About's Baba tab (photo on one side, text on the other) */
+.tab-intro .intro-side { display: grid; gap: 22px; align-content: start; min-width: 0; }
+.intro-photo img { display: block; width: 100%; height: auto; }
+.quote-panel { background: linear-gradient(135deg, var(--teal-deep) 0%, #0b4f4a 55%, var(--teal) 100%); color: #e6fffa; border-radius: 18px; padding: 30px 32px 28px; box-shadow: 0 8px 24px rgba(4, 47, 46, 0.10); }
+.quote-panel .qb-item blockquote { font-size: 1.02rem; line-height: 1.7; }
+.quote-panel .qb-item + .qb-item { border-left: 0; padding-left: 0; border-top: 1px solid rgba(204, 251, 241, 0.25); margin-top: 22px; padding-top: 24px; }
+.prose .intro-title, .intro-cards h3, .intro-card h3 { font-size: 1.08rem; font-weight: 600; color: var(--ink); margin: 0 0 8px; line-height: 1.4; }
+.prose * + .intro-title { margin-top: 24px; }
+.prose a:not(.btn) { color: var(--teal); font-weight: 500; }
+.prose .quote-panel + .doc-link { margin-top: 20px !important; }
+.intro-more { margin-top: 40px; }
+.intro-cards { margin-top: 36px; max-width: none; }
+.intro-cards .card p { font-size: 0.96rem; line-height: 1.7; margin: 0 0 10px; }
+.intro-card ul { list-style: none !important; margin: 6px 0 0 !important; padding: 0; }
+.intro-card li { font-size: 0.96rem; line-height: 1.65; }
+.contact-lines { list-style: none !important; margin: 6px 0 0 !important; padding: 0; }
+.contact-lines li { margin: 0 0 8px; font-size: 0.94rem; line-height: 1.55; }
+.card-actions { margin-top: 16px !important; }
+.intro-close { margin-top: 26px; }
+.tab-intro ~ .linked-pages { margin-top: 32px; }
+/* body text the same size as About: page text like About's .prose, text inside disclosures like About's disclosures */
+.section-inner > .live-prose { font-size: 1.02rem; line-height: 1.75; }
+.disclosure .d-body.live-prose { font-size: 0.96rem; line-height: 1.7; }
+@media (max-width: 720px) { .quote-panel { padding: 24px 22px; } .intro-more { margin-top: 30px; } }
