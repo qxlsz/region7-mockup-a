@@ -3369,3 +3369,66 @@ body.r7-page-enter, body.r7-page-leave { opacity: 0; }
   .sanctuary .sx-yearly .ev-feature.ev-has-photo > .ev-text { grid-column: 1 !important; grid-row: 2 !important; }
   .sanctuary .sx-yearly .ev-feature.ev-has-photo .ev-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
 }
+
+/* =====================================================================
+   C18 ICON BESIDE THE TITLE (Raj: "The icon should be beside the title")
+   Every card with an icon: a small light circle (36px) on the left of the title, same row (.rd-ihead); the description
+   runs below across the full card width. A wrapping title stays aligned to the icon on its first line.
+   ===================================================================== */
+.sanctuary .rd-ihead { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 var(--s2); width: 100%; }
+.sanctuary .rd-ihead > h2, .sanctuary .rd-ihead > h3 { margin: 0 !important; min-width: 0; flex: 1; }
+.sanctuary .rd-ihead .rd-medal, .sanctuary .rd-ihead .rd-media-ico, .sanctuary .rd-ihead .ev-ico-sm {
+  flex: none; position: relative; width: 36px; height: 36px; margin: 0; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(15, 118, 110, .08); border: 1px solid rgba(201, 138, 43, .3); box-shadow: none; color: var(--teal); }
+.sanctuary .rd-ihead .rd-medal .ico, .sanctuary .rd-ihead .rd-media-ico .ico, .sanctuary .rd-ihead .ev-ico-sm .ico { width: 18px; height: 18px; stroke-width: 1.7; }
+.sanctuary .rd-ihead .rd-medal::before, .sanctuary .rd-ihead .rd-medal::after { display: none; }
+/* the icon sits on the first line of the title: nudge it so its middle meets the first line's middle */
+.sanctuary .rd-card .rd-ihead > h3 { font-size: 1.45rem; line-height: 1.2; padding-top: 3px; }
+.sanctuary .sx-pair-item .rd-ihead > h3 { font-size: 1.75rem; line-height: 1.15; padding-top: 1px; }
+.sanctuary .sx-yearly .rd-ihead > h3 { font-size: 1.7rem; line-height: 1.15; padding-top: 2px; }
+.sanctuary .rd-step .rd-ihead > h3 { font-size: 1.45rem; line-height: 1.2; padding-top: 3px; text-align: left; }
+/* dark media cards (Region 7 Sai Centers, Devotion, SSE, members): light circle on the dark card */
+.sanctuary .rd-media-noimg { grid-template-columns: minmax(0, 1fr); }
+.sanctuary .rd-media-text .rd-ihead { align-items: center; }
+.sanctuary .rd-media-text .rd-ihead .rd-media-ico { width: 40px; height: 40px; background: rgba(255, 255, 255, .1); border-color: rgba(243, 223, 184, .4); color: var(--gold-lt); }
+/* values cards (About Baba): left aligned, icon beside the value */
+.sanctuary .rd-values .rd-card { align-items: flex-start; text-align: left; padding: var(--s3) var(--s3); }
+.sanctuary .rd-values .rd-ihead { align-items: center; margin-bottom: var(--s1); }
+.sanctuary .rd-values .rd-card .rd-ihead > h3 { font-size: 1.35rem; padding-top: 0; }
+/* One on One steps: number badge on the small icon, title beside it, text below (left aligned cards) */
+.sanctuary .rd-steps::before { display: none; }
+.sanctuary .rd-step { align-items: flex-start; text-align: left; padding: var(--s4) var(--s3); border-radius: 22px; background: #fffdf8; border: 1px solid rgba(154, 100, 24, .16); }
+.sanctuary .rd-step p { max-width: none; }
+.sanctuary .rd-step .rd-ihead .rd-step-n { position: absolute; top: -8px; right: -8px; left: auto; width: 20px; height: 20px; font-size: .7rem; line-height: 1; border: 2px solid #fffdf8; box-sizing: content-box; }
+.sanctuary .rd-step .rd-step-links { align-self: stretch; text-align: left; }
+.sanctuary .rd-step .rd-step-links li { justify-content: flex-start; text-align: left; }
+/* Home Sai Centers: kicker, then icon + heading centered on one row */
+.sx-centers-cta .rd-ihead { justify-content: center; align-items: center; width: auto; }
+/* events: the yearly icon row */
+.sanctuary .sx-yearly .rd-ihead { margin-bottom: var(--s2); }
+/* resource tiles and PDF cards on laptop/tablet: icon beside the title (phones already use an icon-left row) */
+@media (min-width: 641px) {
+  .sanctuary .rd-tile { display: grid; grid-template-columns: 36px minmax(0, 1fr); grid-template-areas: "ico k" "ico t" "b b" "m m"; grid-template-rows: auto auto 1fr auto; column-gap: 12px; row-gap: 0; align-items: center; }
+  .sanctuary .rd-doc { grid-template-areas: "ico k" "ico t" "b b" "a a"; grid-template-rows: auto auto auto auto; }
+  .sanctuary .rd-tile-ico { grid-area: ico; width: 36px; height: 36px; margin: 0; align-self: center; }
+  .sanctuary .rd-tile-ico .ico { width: 18px; height: 18px; }
+  .sanctuary .rd-tile-k { grid-area: k; align-self: end; }
+  .sanctuary .rd-tile-t { grid-area: t; align-self: center; font-size: 1.35rem; line-height: 1.2; }
+  .sanctuary .rd-tile-b { grid-area: b; align-self: start; margin-top: 12px; }
+  .sanctuary .rd-tile-m { grid-area: m; }
+  .sanctuary .rd-doc .rd-doc-acts { grid-area: a; }
+}
+@media (max-width: 640px) {
+  .sanctuary .rd-doc { grid-template-areas: "ico k" "ico t" "b b" "a a"; align-items: center; }
+  .sanctuary .rd-doc .rd-tile-ico { align-self: center; margin-top: 0; }
+  .sanctuary .rd-doc .rd-tile-b { margin-top: 8px; }
+  .sanctuary .rd-card .rd-ihead > h3, .sanctuary .rd-step .rd-ihead > h3 { font-size: 1.32rem; padding-top: 5px; }
+  .sanctuary .sx-pair-item .rd-ihead > h3, .sanctuary .sx-yearly .rd-ihead > h3 { font-size: 1.5rem; padding-top: 2px; }
+  .sanctuary .rd-media-text .rd-ihead > h2 { font-size: 1.7rem; }
+}
+.sx-centers-cta .rd-ihead > h2 { flex: 0 1 auto; text-align: left; }
+@media (max-width: 640px) {
+  .sanctuary .rd-card { padding: 20px 20px 18px; }
+  .sanctuary .rd-card p:last-child { margin-bottom: 0; }
+  .sanctuary .rd-card .rd-ihead { margin-bottom: 10px; }
+}
