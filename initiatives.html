@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
@@ -40,6 +39,7 @@
     </div>
   </header>
 
+  <main>
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Initiatives</p>
@@ -48,9 +48,17 @@
     </div>
   </section>
 
-  <main class="section">
+  <nav class="tabbar" aria-label="Initiatives" data-tabbar>
+    <div class="tabbar-inner" role="tablist" aria-label="Initiatives">
+      <a class="tab" role="tab" id="tab-saicares" href="#saicares" aria-controls="panel-saicares" aria-selected="true" tabindex="0">SaiCares</a>
+      <a class="tab" role="tab" id="tab-one-on-one" href="#one-on-one" aria-controls="panel-one-on-one" aria-selected="false" tabindex="-1">One on One</a>
+    </div>
+  </nav>
+  <noscript><style>.tab-panel[hidden] { display: block; }</style></noscript>
+  <div class="tab-panel" role="tabpanel" id="panel-saicares" aria-labelledby="tab-saicares" data-hash="saicares">
+  <section class="section">
     <div class="section-inner">
-      <div class="card-grid-2">
+      <div class="tab-stub">
         <article class="card card-featured">
           <span class="tag">Support</span>
           <h3>SaiCares</h3>
@@ -61,15 +69,31 @@
           </ul>
           <a class="card-link" href="https://region7saicenters.org/region7new/saicares.html">SaiCares details →</a>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/region7new/saicares.html" target="_blank" rel="noopener">View on current site</a></p>
+      </div>
+    </div>
+  </section>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="panel-one-on-one" aria-labelledby="tab-one-on-one" data-hash="one-on-one" hidden>
+  <section class="section">
+    <div class="section-inner">
+      <div class="tab-stub">
         <article class="card">
           <span class="tag">Devotion</span>
           <h3>One on One</h3>
           <p>Personal spiritual coaching through the devotion wing. Ask us if you want to learn more.</p>
           <a class="card-link" href="contact.html">Ask about One on One →</a>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/devotion/oneononecoaching.html" target="_blank" rel="noopener">View on current site</a></p>
       </div>
-      <p class="prose" style="margin-top:36px">Older workshop links stay archived. Active speaker series show under Events when they run.</p>
     </div>
+  </section>
+  </div>
+  <section class="section tab-footnote">
+    <div class="section-inner">
+      <p class="prose">Older workshop links stay archived. Active speaker series show under Events when they run.</p>
+    </div>
+  </section>
   </main>
 
   <footer>
@@ -109,5 +133,6 @@
     </div>
   </footer>
   <script src="nav.js" defer></script>
+  <script src="tabs.js" defer></script>
 </body>
 </html>

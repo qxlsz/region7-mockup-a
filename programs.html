@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
@@ -40,6 +39,7 @@
     </div>
   </header>
 
+  <main>
   <section class="page-hero">
     <div class="page-hero-inner">
       <p class="eyebrow">Programs</p>
@@ -48,9 +48,19 @@
     </div>
   </section>
 
-  <main class="section">
+  <nav class="tabbar" aria-label="Programs" data-tabbar>
+    <div class="tabbar-inner" role="tablist" aria-label="Programs">
+      <a class="tab" role="tab" id="tab-devotion" href="#devotion" aria-controls="panel-devotion" aria-selected="true" tabindex="0">Devotion</a>
+      <a class="tab" role="tab" id="tab-service" href="#service" aria-controls="panel-service" aria-selected="false" tabindex="-1">Service</a>
+      <a class="tab" role="tab" id="tab-sse" href="#sse" aria-controls="panel-sse" aria-selected="false" tabindex="-1">SSE</a>
+      <a class="tab" role="tab" id="tab-young-adults" href="#young-adults" aria-controls="panel-young-adults" aria-selected="false" tabindex="-1">Young Adults</a>
+    </div>
+  </nav>
+  <noscript><style>.tab-panel[hidden] { display: block; }</style></noscript>
+  <div class="tab-panel" role="tabpanel" id="panel-devotion" aria-labelledby="tab-devotion" data-hash="devotion">
+  <section class="section">
     <div class="section-inner">
-      <div class="card-grid-4">
+      <div class="tab-stub">
         <article class="card">
           <span class="tag">Devotion</span>
           <h3>Devotion</h3>
@@ -61,6 +71,15 @@
             <li>Regional devotion events</li>
           </ul>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/region7new/devotion.html" target="_blank" rel="noopener">View on current site</a></p>
+      </div>
+    </div>
+  </section>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="panel-service" aria-labelledby="tab-service" data-hash="service" hidden>
+  <section class="section">
+    <div class="section-inner">
+      <div class="tab-stub">
         <article class="card">
           <span class="tag">Service</span>
           <h3>Service</h3>
@@ -71,19 +90,40 @@
             <li>Day on the Beach and similar seva</li>
           </ul>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/region7new/service.html" target="_blank" rel="noopener">View on current site</a></p>
+      </div>
+    </div>
+  </section>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="panel-sse" aria-labelledby="tab-sse" data-hash="sse" hidden>
+  <section class="section">
+    <div class="section-inner">
+      <div class="tab-stub">
         <article class="card">
           <span class="tag">SSE</span>
           <h3>Sai Spiritual Education</h3>
           <p>Values-based learning for children and youth. Stories, song, and service build character.</p>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/region7new/sse.html" target="_blank" rel="noopener">View on current site</a></p>
+      </div>
+    </div>
+  </section>
+  </div>
+  <div class="tab-panel" role="tabpanel" id="panel-young-adults" aria-labelledby="tab-young-adults" data-hash="young-adults" hidden>
+  <section class="section">
+    <div class="section-inner">
+      <div class="tab-stub">
         <article class="card">
           <span class="tag">YA</span>
           <h3>Young Adults</h3>
           <p>Fellowship, service, and spiritual growth for young adults. See Events for current dates.</p>
           <a class="card-link" href="events.html">See current events →</a>
         </article>
+        <p class="tab-live">The full page is on the current site for now. <a href="https://www.region7saicenters.org/region7new/saiya.html" target="_blank" rel="noopener">View on current site</a></p>
       </div>
     </div>
+  </section>
+  </div>
   </main>
 
   <footer>
@@ -123,5 +163,6 @@
     </div>
   </footer>
   <script src="nav.js" defer></script>
+  <script src="tabs.js" defer></script>
 </body>
 </html>
