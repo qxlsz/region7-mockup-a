@@ -21,11 +21,13 @@
     return c.info[0] || '';
   }
 
-  var map = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true, zoomSnap: 0.25 });
-  /* OpenStreetMap tiles, softened to the site's teal palette in CSS (.r7-tiles). CARTO now needs an API key. */
+  /* zoomSnap 1: whole zoom levels only, so tiles show at their own pixel size (fractional zoom scales tiles and blurs them) */
+  var map = L.map(el, { scrollWheelZoom: false, zoomControl: true, attributionControl: true, zoomSnap: 1 });
+  /* OpenStreetMap standard tiles in full color, no CSS filter. detectRetina loads sharper tiles on high-density screens.
+     (CARTO basemaps now return "API key required", so they are not used.) */
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19, className: 'r7-tiles',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    maxZoom: 19, detectRetina: true, className: 'r7-tiles',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
   }).addTo(map);
 
   var markers = {}, pts = [];
@@ -46,6 +48,8 @@
   fit();
   /* About page: the map sits in the Sai Centers tab; re-measure when that tab is shown */
   document.addEventListener("tab:shown", function (e) { if (e.detail && e.detail.panel && e.detail.panel.contains(el)) setTimeout(fit, 30); });
+  window.addEventListener('resize', function () { setTimeout(fit, 60); });
+  window.addEventListener('hashchange', function () { setTimeout(fit, 60); });
   map.on('click', function () { map.scrollWheelZoom.enable(); });
   map.on('mouseout', function () { map.scrollWheelZoom.disable(); });
 
