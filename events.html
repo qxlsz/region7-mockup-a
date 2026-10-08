@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <header class="site-header">
+  <header class="site-header">
     <div class="header-inner">
       <div class="brand">
         <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
@@ -39,87 +38,115 @@
     </div>
   </header>
 
+  <main>
   <section class="page-hero">
     <div class="page-hero-inner">
-      <p class="eyebrow">Events · 2026</p>
-      <h1>What is coming up</h1>
-      <p class="lead">Current and yearly Region 7 gatherings. The August retreat is past; GAB details live on the GAB site.</p>
+      <p class="eyebrow">Events</p>
+      <h1>Regional events</h1>
+      <p class="lead">Upcoming dates from our regional calendar, and the events our region holds each year.</p>
     </div>
   </section>
 
-  <main class="section">
-    <div class="section-inner">
-      <div class="split">
-        <div>
-          <div class="section-head ribbon-head">
-            <h2 class="ribbon"><span>Featured in 2026</span></h2>
-            <p>Dates and places we checked.</p>
-          </div>
-          <ul class="timeline">
-            <li>
-              <div class="when">Nov 14–15, 2026 · Coming up</div>
-              <h3>Global Akhanda Bhajans</h3>
-              <p>Regional akhanda bhajan. Schedule, venue, and signup on the GAB site.</p>
-              <a href="https://gab.region7saicenters.org/">GAB site →</a>
-            </li>
-            <li>
-              <div class="when">Fri Aug 21 to Sun Aug 23, 2026 · Past</div>
-              <h3>43rd Annual Regional Retreat</h3>
-              <p>Be The Spiritual Athlete Inside. Monte Toyon Camp, Aptos. Concluded August 2026.</p>
-              <a href="https://region7saicenters.org/region7new/retreat/2026/">Retreat archive →</a>
-            </li>
-            <li>
-              <div class="when">Calendar</div>
-              <h3>Full regional calendar</h3>
-              <p>Space for the regional calendar. Centers can add local dates here later.</p>
-            </li>
-          </ul>
-        </div>
-        <aside>
-          <div class="side-panel">
-            <h3>Need support?</h3>
-            <p>SaiCares (1-857-DIAL-SAI) offers a non-emergency listening line for devotees.</p>
-            <a class="btn btn-outline" href="initiatives.html">SaiCares details</a>
-          </div>
-        </aside>
-      </div>
-    </div>
-  </main>
-
-  <section class="section section-alt">
+  <section class="section" id="upcoming">
     <div class="section-inner">
       <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Yearly gatherings</span></h2>
-        <p>These return each year. Dates change.</p>
+        <h2 class="ribbon"><span>Upcoming events</span></h2>
+        <p>The next events from the regional calendar. Past dates drop off on their own.</p>
       </div>
-      <div class="card-grid-2">
-        <article class="card">
-          <h3>Women's Mini Retreat</h3>
-          <p>A day of talks, activities, and friendship for women from all centers.</p>
+      <div class="event-list js-upcoming" data-count="8" id="events-upcoming">
+        <article class="event-row">
+          <div class="event-date"><span class="month">Oct</span><span class="day">20</span></div>
+          <div><p class="next-label">Oct 20, 2026</p><h3>Avatar Declaration Day</h3><p>We mark Avatar Declaration Day with devotion and study across centers.</p></div>
         </article>
-        <article class="card">
-          <h3>i to I Speaker Series</h3>
-          <p>Stories of personal change. Watch Events for the next date.</p>
+        <article class="event-row">
+          <div class="event-date"><span class="month">Nov</span><span class="day">14–15</span></div>
+          <div><p class="next-label">Nov 14–15, 2026</p><h3>Global Akhanda Bhajans</h3><p>Regional 24-hour akhanda bhajan at Aria University, Milpitas.</p></div><a class="btn btn-sm btn-outline" href="https://gab.region7saicenters.org/" target="_blank" rel="noopener">GAB site</a>
         </article>
-        <article class="card">
-          <h3>Young Adult activities</h3>
-          <p>YA retreats and meetups when scheduled. Links point to current news, not old pages.</p>
+        <article class="event-row">
+          <div class="event-date"><span class="month">Nov</span><span class="day">23</span></div>
+          <div><p class="next-label">Nov 23, 2026</p><h3>Swami's Birthday</h3><p>Centers and the region celebrate Sri Sathya Sai Baba's Birthday each year.</p></div>
         </article>
-        <article class="card">
-          <h3>Day on the Beach</h3>
-          <p>A seva day that supports people with special needs: kayaking, beach chairs, and fun together.</p>
+        <article class="event-row">
+          <div class="event-date"><span class="month">Dec</span><span class="day">25</span></div>
+          <div><p class="next-label">Dec 25, 2026</p><h3>Christmas</h3><p>Centers celebrate Christmas with carols, devotion, and service.</p></div>
         </article>
-        <article class="card">
-          <h3>Avatar Declaration Day</h3>
-          <p>We mark Avatar Declaration Day with devotion and study.</p>
+        <article class="event-row">
+          <div class="event-date"><span class="month">Mar</span><span class="day">6</span></div>
+          <div><p class="next-label">Mar 6, 2027</p><h3>Maha Shivaratri</h3><p>A night of prayer and devotional singing for Maha Shivaratri.</p></div>
         </article>
-        <article class="card">
-          <h3>Swami's Birthday</h3>
-          <p>Centers and the region celebrate Sri Sathya Sai Baba's Birthday each year.</p>
+        <article class="event-row">
+          <div class="event-date"><span class="month">Apr</span><span class="day">24</span></div>
+          <div><p class="next-label">Apr 24, 2027</p><h3>Mahasamadhi Aradhana Day</h3><p>We remember Swami on His Mahasamadhi day with prayer, devotion, and service.</p></div>
+        </article>
+        <article class="event-row">
+          <div class="event-date"><span class="month">May</span><span class="day">6</span></div>
+          <div><p class="next-label">May 6, 2027</p><h3>Easwaramma Day</h3><p>We honor Mother Easwaramma, Swami's mother, with devotion and service to others.</p></div>
+        </article>
+        <article class="event-row">
+          <div class="event-date"><span class="month">May</span><span class="day">20</span></div>
+          <div><p class="next-label">May 20, 2027</p><h3>Buddha Purnima</h3><p>We remember the Buddha's message of peace and compassion.</p></div>
+        </article>
+      </div>
+      <p class="tab-note">As of <span class="js-asof">Oct 7, 2026</span>.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="yearly">
+    <div class="section-inner">
+      <div class="section-head ribbon-head">
+        <h2 class="ribbon"><span>Yearly regional events</span></h2>
+        <p>Events our region holds every year, as described on the live Events page.</p>
+      </div>
+      <div class="ev-list">
+        <article class="ev-feature ev-noimg" id="ev-regional-sse-art-presentation">
+          
+          <div class="ev-text live-prose"><h3>Regional SSE Art Presentation</h3><div class="flow"><p class="doc-missing">Video no longer available (removed on YouTube)</p><br/> <strong>Pictures of the activities our SSE children in region 7 have done during the story time class. </strong></div></div>
+        </article>
+        <article class="ev-feature" id="ev-educational-sai-parenting-series">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/sse-1.jpg" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Educational &amp; Sai Parenting Series</h3><p> During month of May through June 2020, Region 7 SSE wing had organized Sai Parenting Workshops &amp; Presentations as part of Unity is Divinity Series. You can access all the sessions from <a href="#p-saiparentingseries">Educational &amp; Sai Parenting Series - 2020</a>.<br/> </p>
+<div class="linked-pages"><p class="linked-label">Pages linked above</p><div class="disclosure-list"><details class="disclosure subpage" id="p-saiparentingseries"><summary><span class="d-title">Educational &amp; Sai Parenting Series - 2020</span><span class="doc-type">Page</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary><div class="d-body live-prose"><h3 class="sub-head">Guest Speakers</h3> <div class="flow"><p class="doc-missing">Video no longer available (removed on YouTube)</p></div> <strong>Educational &amp; Sai Parenting Series #4 - Presentation by Malini Gaadepally (June 20th). </strong> Regional Online Events       <div class="flow"><p class="doc-missing">Video no longer available (removed on YouTube)</p></div> <strong>Educational &amp; Sai Parenting Series #3 - Presentation by Suzanne Slyman (June 13th). </strong> Download <a href="https://www.region7saicenters.org/region7new/docs/Teens%20and%20COVID.Part1.docx" rel="noopener" target="_blank">Handout-1</a>, <a href="https://www.region7saicenters.org/region7new/docs/Teens%20and%20COVID.Part2%20.docx" rel="noopener" target="_blank">Handout-2</a>, <a href="https://www.region7saicenters.org/region7new/docs/Parenting%20in%20the%20Time%20of%20COVID19.pdf" rel="noopener" target="_blank">Handout-3</a> <br/> Regional Online Events       <div class="flow"><p class="doc-missing">Video no longer available (removed on YouTube)</p></div> <strong>Educational &amp; Sai Parenting Series #2 - Presentation by Nirmala &amp; Vikram Jayaraman (June 6th). </strong> <p><a href="https://www.region7saicenters.org/region7new/docs/TechHandout.pdf" rel="noopener" target="_blank">CLICK HERE</a> to download the Handout.<br/> Regional Online Events</p> <div class="flow"><p class="doc-missing">Video no longer available (removed on YouTube)</p></div> <strong>Educational &amp; Sai Parenting Series #1 by Dr. Soumya Panchanathan (May 16th) </strong> <p>Regional Online Events</p></div></details></div></div></div>
+        </article>
+        <article class="ev-feature" id="ev-women-s-mini-retreat">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/wmr.png" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Women&#x27;s Mini Retreat</h3><p> Once a year our Region has been hosting Women’s Mini Retreat where women from all centers get together and hear and participate in engaging and inspiring spiritual activities just for women. Unlike previous years, in 2016, we will be exploring a new format to spiritually delve deeper in three successive ways. Each part will focus on one aspect of spiritual growth (Inspiration, Introspection, and Influence), and our plan is to have one event for each of these three areas, for a three-part WMR series in total. It is our hope that the new format will also enhance our women’s empowerment and continue to build a unique and nurturing place within our region for our sisters. </p></div>
+        </article>
+        <article class="ev-feature" id="ev-sai-reflection-day-mahasamadhi-and-easwaramma-day">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/srd.png" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Sai Reflection Day - MahaSamadhi and Easwaramma Day</h3><p class="tab-note">These Sai Reflection Day details (Sunday, April 29) are from an earlier year, as shown on the live page.</p><p>With immense grace and blessings from our beloved Bhagawan Sri Sathya Sai Baba, our Region 7 Sai Centers are coming together for Sai Reflection day - observing Mahasamadhi Day and celebrating Easwaramma Day together. We cordially invite all SAI families to participate in this day long spiritual event and enjoy the experience sharing and talk by our Guest speaker, Dr. T. Ravi Kumar, Associate Professor Sathya Sai Institute of Higher Learning, Brindavan Campus. Please visit the event website for details – <a href="https://www.region7saicenters.org/saireflectionday/index.html" rel="noopener" target="_blank"> Sai Reflection Day</a>. Kindly click here to register and confirm your attendance. Thank you. </p><p> Date: Sunday, April 29 Time: 9:00 AM to 3:30 PM Venue: Mission San Jose High School Auditorium Address: <a href="https://www.google.com/maps/place/41717+Palm+Ave,+Fremont,+CA+94539/@37.5444113,-121.9364694,17z/data=!3m1!4b1!4m5!3m4!1s0x808fc131b1ebc531:0x28a98f7d698582e6!8m2!3d37.5444113!4d-121.9342807" rel="noopener" target="_blank"> 41717 Palm Ave, Fremont, CA 94539 </a> </p></div>
+        </article>
+        <article class="ev-feature" id="ev-i-to-i-transformation-speaker-series">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/dev-1.jpg" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>i to I Transformation Speaker Series</h3><p>Multiple speaker series - experience sharing by Swami's Devotees. </p></div>
+        </article>
+        <article class="ev-feature" id="ev-ya-retreat">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/yaretreat.png" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>YA Retreat</h3><p> A day long retreat by and for YA's. All YAs, SSE Group 4 Students, YA Advisors are invited to attend. </p></div>
+        </article>
+        <article class="ev-feature" id="ev-day-on-the-beach">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/beach.png" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Day On the Beach</h3><p> Day on the Beach, the highlight of each year, where people with special needs and volunteers team up to share a full day of kayaking, outrigger, canoeing, SCUBA diving, beach wheelchair rides, and life-changing memories. Sai Organization volunteers to provide food and snacks for this event. </p></div>
+        </article>
+        <article class="ev-feature" id="ev-regional-retreat">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/retreat.jpg" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Regional Retreat</h3><p> A two day spiritual retreat and satsang with inspiring speaker sessions, fun filled SSE camp and motivating workshops with speakers. </p></div>
+        </article>
+        <article class="ev-feature" id="ev-avatar-declaration-day">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/ya-1.jpg" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Avatar Declaration Day</h3><p>Celebrate Avatar Declaration Day. </p><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/avatardeclaration/" rel="noopener" target="_blank">Read more</a></div>
+        </article>
+        <article class="ev-feature" id="ev-global-akhanda-bhajans">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/gab-2015.JPG" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Global Akhanda Bhajans</h3><p>24 hour global devotional singing (akhanda bhajan) by Sai devotees all over the world. </p><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/gab/" rel="noopener" target="_blank">Read more</a></div>
+        </article>
+        <article class="ev-feature" id="ev-swami-s-birthday-celebrations">
+          <div class="ev-photo"><img src="https://www.region7saicenters.org/region7new/images/birthday_events.jpg" alt="" loading="lazy" /></div>
+          <div class="ev-text live-prose"><h3>Swami&#x27;s Birthday Celebrations</h3><p> Celebrations of Sri Sathya Sai Baba's Birthday.</p><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/birthday/index.html" rel="noopener" target="_blank">Read more</a></div>
         </article>
       </div>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="footer-logos" aria-label="SSIO related links">
@@ -158,5 +185,9 @@
     </div>
   </footer>
   <script src="nav.js" defer></script>
+  <script src="events-data.js" defer></script>
+  <script src="events.js" defer></script>
+  <script src="tabs.js" defer></script>
+  <script src="media.js" defer></script>
 </body>
 </html>

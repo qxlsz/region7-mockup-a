@@ -1,4 +1,4 @@
-/* Region 7 Home: date-driven "News and updates" featured event and "Upcoming events" (next 3).
+/* Region 7 Home (and .js-upcoming lists on other pages): date-driven "News and updates" featured event and "Upcoming events" (next 3).
    Data: window.R7_EVENTS from events-data.js (built from tools/events.json).
    Rules: dated events drop off after their end date; recurring (month/day) events roll to next year.
    Test a date with ?today=YYYY-MM-DD. */
@@ -65,4 +65,18 @@
   }
   var asof = document.getElementById('events-asof');
   if (asof) asof.textContent = MON[t.getMonth()] + ' ' + t.getDate() + ', ' + t.getFullYear();
+
+  /* Other pages (Events, Programs): any .js-upcoming list shows the next data-count events, same rules. */
+  Array.prototype.forEach.call(document.querySelectorAll('.js-upcoming'), function (box) {
+    var list = upcoming(t, +box.getAttribute('data-count') || 3);
+    box.innerHTML = list.map(function (x) {
+      var ev = x.ev;
+      var link = ev.link ? '<a class="btn btn-sm btn-outline" href="' + esc(ev.link) + '" target="_blank" rel="noopener">' + esc(ev.linkLabel || 'Event site') + '</a>' : '';
+      return '<article class="event-row"><div class="event-date"><span class="month">' + MON[x.s.getMonth()] + '</span><span class="day">' + badgeDay(x.s, x.e) + '</span></div>' +
+        '<div><p class="next-label">' + range(x.s, x.e) + '</p><h3>' + esc(ev.title) + '</h3><p>' + esc(ev.text) + '</p></div>' + link + '</article>';
+    }).join('');
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.js-asof'), function (el) {
+    el.textContent = MON[t.getMonth()] + ' ' + t.getDate() + ', ' + t.getFullYear();
+  });
 })();
