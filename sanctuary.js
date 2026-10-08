@@ -39,6 +39,9 @@
   });
   Array.prototype.forEach.call(document.querySelectorAll("dialog.rd-dialog"), function (d) {
     d.addEventListener("close", function () { if (!document.querySelector("dialog.rd-dialog[open]")) root.classList.remove("rd-lock"); });
+    /* C23: a #link to an element inside the pop-up made the browser scroll the pop-up box itself, so its title and Close button went out of view.
+       Only the body scrolls; keep the box at the top. */
+    d.addEventListener("scroll", function () { if (d.scrollTop) d.scrollTop = 0; });
   });
   if (!document.querySelector("[data-tabbar]")) {
     var fromHash = function () {
