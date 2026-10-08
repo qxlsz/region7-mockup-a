@@ -2482,3 +2482,57 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .cat { width: auto; flex: none; white-space: nowrap; padding: 9px 14px; font-size: 0.92rem; }
   .cat-title { font-size: 1.08rem; }
 }
+
+/* C8: intro photo column stretches to the height of the text or quote column, so top and bottom edges line up */
+.split-photo.tab-intro { align-items: stretch; }
+.tab-intro .intro-side { display: flex; flex-direction: column; gap: 22px; }
+.tab-intro .intro-side > .photo { position: relative; flex: 1 1 auto; min-height: 300px; aspect-ratio: auto; height: auto; }
+.tab-intro .intro-side > .photo-slider { aspect-ratio: auto; }
+.tab-intro .intro-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.tab-intro .intro-photo picture { display: contents; }
+.tab-intro .intro-photo.saicares-photo { background: #faf3f8; }
+.tab-intro .prose { display: flex; flex-direction: column; }
+.tab-intro .prose > .quote-panel { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; }
+.split-photo.tab-intro .prose > p:first-child, .split-photo.tab-intro .prose > .intro-title:first-child { margin-top: -6px; }
+.tab-intro .prose > p:last-child { margin-bottom: -6px; }
+.tab-intro .intro-side > .banner-photo { min-height: 0; }
+.intro-below { margin-top: 32px; }
+.card.intro-card.intro-below { max-width: none; width: 100%; }
+.quote-panel-wide { display: block; padding: 30px 40px; }
+.quote-panel-wide .qb-item blockquote { font-size: 1.08rem; max-width: 60em; }
+.intro-card.intro-below ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); column-gap: 28px; }
+@media (max-width: 960px) {
+  .tab-intro .intro-side > .photo { flex: none; min-height: 0; aspect-ratio: 445 / 341; }
+  .tab-intro .intro-photo.banner-photo { aspect-ratio: 998 / 387; }
+  .tab-intro .intro-photo.saicares-photo { aspect-ratio: 1489 / 1414; }
+  .tab-intro .prose > p:last-child { margin-bottom: 0; }
+}
+
+/* C8: yearly events as compact two-column cards (photo on top, short text, the rest under Read more) */
+.ev-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.ev-feature, .ev-feature.card { display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 0; overflow: hidden; }
+.ev-feature .ev-photo img { aspect-ratio: 16 / 9; border-radius: 0; }
+.ev-feature .ev-text { padding: 18px 22px 20px; font-size: 0.96rem; }
+.ev-feature .ev-text h3 { font-size: 1.1rem; margin: 0 0 8px; }
+.ev-feature .ev-text p { margin: 0 0 10px; }
+.ev-more { margin-top: 2px; }
+.ev-more > summary { list-style: none; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; color: var(--teal); font-weight: 600; font-size: 0.92rem; }
+.ev-more > summary::-webkit-details-marker { display: none; }
+.ev-more > summary .d-chevron { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.2; transition: transform 0.2s ease; }
+.ev-more[open] > summary .d-chevron { transform: rotate(180deg); }
+.ev-more[open] > summary span::after { content: ""; }
+.ev-more-body { margin-top: 10px; }
+.ev-text .ev-video { margin: 4px 0 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+.ev-text .ev-video > summary { padding: 10px 14px; }
+.ev-text .ev-video .d-body { padding: 0 14px 12px; }
+@media (max-width: 860px) { .ev-list { grid-template-columns: minmax(0, 1fr); } }
+/* compact: photo on the left of each card, filling its height */
+.ev-feature, .ev-feature.card { display: grid; grid-template-columns: 200px minmax(0, 1fr); align-items: stretch; }
+.ev-feature.ev-noimg, .ev-feature.card.ev-noimg { grid-template-columns: minmax(0, 1fr); }
+.ev-feature .ev-photo { position: relative; min-height: 180px; }
+.ev-feature .ev-photo img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+.ev-feature .ev-text { padding: 16px 18px 16px; }
+@media (max-width: 520px) {
+  .ev-feature, .ev-feature.card { grid-template-columns: minmax(0, 1fr); }
+  .ev-feature .ev-photo { min-height: 0; aspect-ratio: 16 / 9; }
+}
