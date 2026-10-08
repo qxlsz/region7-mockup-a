@@ -3269,42 +3269,55 @@ html.rd-lock { overflow: hidden; }
 @media (max-width: 760px) { .sanctuary .rd-q.rd-q-solo { grid-column: auto; } }
 
 /* =====================================================================
-   C16 MOBILE MENU (Raj: menu from the three-line button; names centered like the GAB 2026 site)
-   GAB pattern: the panel opens down from the header (about .35s ease), links centered in one column, Jost,
-   hamburger turns into an X, page scroll locked. Sanctuary look: ivory with a soft gold-light glow, thin gold
-   dividers, active page in teal with a small gold marker. Sits above the map and everything else on the page.
+   C17 MOBILE MENU: a rounded card under the header, timed like the GAB 2026 menu
+   GAB values ported: menu opens in .35s ease (Bootstrap collapse) and closes in .32s ease; hamburger to X: outer bars
+   .2s, crossing bars .25s, back to bars .28s ease (in parallel with the close); link tap: close starts, page fades out
+   in 180ms ease, then navigates; next page fades in (180ms). No link stagger (GAB has none).
+   Done with transform + opacity only (no height/top animation), so it stays smooth on phones.
    ===================================================================== */
 html.nav-lock { overflow: hidden; }
+.nav-scrim { display: none; }
 @media (max-width: 960px) {
-  .site-header.is-nav-open { background: #fbf7ef; border-bottom-color: rgba(201, 138, 43, .25); }
+  .nav-scrim { display: block; position: fixed; inset: 0; z-index: 1090; background: rgba(3, 30, 28, .32); opacity: 0; visibility: hidden; transition: opacity .32s ease, visibility 0s linear .32s; -webkit-tap-highlight-color: transparent; }
+  .nav-scrim.is-on { opacity: 1; visibility: visible; transition: opacity .35s ease, visibility 0s; }
   .site-header.is-nav-open .header-inner { flex-wrap: nowrap; }
   .site-header nav.primary, .site-header.is-nav-open nav.primary {
-    display: block; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; order: initial; flex: none; width: auto;
-    height: calc(100vh - var(--menu-top, 64px) + 2px); height: calc(100dvh - var(--menu-top, 64px) + 2px);
-    padding: 20px 24px 48px; overflow-y: auto; overscroll-behavior: contain;
-    background: radial-gradient(130% 55% at 50% 0%, rgba(243, 223, 184, .6), rgba(243, 223, 184, 0) 72%), #fbf7ef;
-    border-top: 1px solid rgba(201, 138, 43, .22);
-    visibility: hidden; opacity: 0; clip-path: inset(0 0 100% 0);
-    transition: clip-path .35s ease, opacity .3s ease, visibility 0s linear .35s;
+    display: block; position: absolute; top: calc(100% + 8px); left: 12px; right: 12px; z-index: 5; order: initial; flex: none; width: auto; height: auto;
+    max-height: calc(100vh - var(--menu-top, 64px) - 24px); max-height: calc(100dvh - var(--menu-top, 64px) - 24px); overflow-y: auto; overscroll-behavior: contain;
+    padding: 8px 0; border-radius: 20px; border: 1px solid rgba(201, 138, 43, .28);
+    background: radial-gradient(120% 70% at 50% 0%, rgba(243, 223, 184, .55), rgba(243, 223, 184, 0) 70%), #fbf7ef;
+    box-shadow: 0 18px 40px rgba(5, 47, 45, .18), 0 2px 6px rgba(5, 47, 45, .06);
+    transform-origin: 50% 0; transform: translateY(-10px) scale(.97); opacity: 0; visibility: hidden; pointer-events: none;
+    transition: transform .32s ease, opacity .32s ease, visibility 0s linear .32s; will-change: transform, opacity;
   }
-  .site-header.is-nav-open nav.primary { visibility: visible; opacity: 1; clip-path: inset(0 0 0 0); transition: clip-path .35s ease, opacity .2s ease, visibility 0s; }
-  .site-header nav.primary ul { display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0; max-width: 360px; margin: 0 auto; padding: 0; list-style: none; }
-  .site-header nav.primary li { text-align: center; border-bottom: 1px solid rgba(201, 138, 43, .24); opacity: 0; transform: translateY(-8px); transition: opacity .3s ease, transform .3s ease; }
-  .site-header nav.primary li:last-child { border-bottom: 0; }
-  .site-header.is-nav-open nav.primary li { opacity: 1; transform: none; }
-  .site-header.is-nav-open nav.primary li:nth-child(2) { transition-delay: .03s; } .site-header.is-nav-open nav.primary li:nth-child(3) { transition-delay: .06s; }
-  .site-header.is-nav-open nav.primary li:nth-child(4) { transition-delay: .09s; } .site-header.is-nav-open nav.primary li:nth-child(5) { transition-delay: .12s; }
-  .site-header.is-nav-open nav.primary li:nth-child(6) { transition-delay: .15s; } .site-header.is-nav-open nav.primary li:nth-child(7) { transition-delay: .18s; }
-  .site-header nav.primary a { position: relative; display: block; padding: 17px 12px; border-radius: 0; background: transparent; font-family: var(--font); font-size: 21px; font-weight: 500; line-height: 1.25; letter-spacing: .01em; color: #042f2e; text-align: center; text-decoration: none; }
-  .site-header nav.primary a:hover, .site-header nav.primary a:focus-visible { color: #0f766e; background: transparent; text-decoration: none; }
-  .site-header nav.primary a:focus-visible { outline: 2px solid #0f766e; outline-offset: -4px; border-radius: 10px; }
+  .site-header.is-nav-open nav.primary { transform: none; opacity: 1; visibility: visible; pointer-events: auto; transition: transform .35s ease, opacity .35s ease, visibility 0s; }
+  .site-header nav.primary ul { display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0; margin: 0; padding: 0; list-style: none; }
+  .site-header nav.primary li { position: relative; text-align: center; }
+  .site-header nav.primary li + li::before { content: ""; position: absolute; top: 0; left: 28px; right: 28px; height: 1px; background: rgba(201, 138, 43, .22); }
+  .site-header nav.primary a { position: relative; display: block; margin: 0 8px; padding: 13px 12px; border-radius: 14px; background: transparent; font-family: var(--font); font-size: 19px; font-weight: 500; line-height: 1.25; letter-spacing: .01em; color: #042f2e; text-align: center; text-decoration: none; -webkit-tap-highlight-color: transparent; transition: background-color .18s ease, color .18s ease; }
+  .site-header nav.primary a:hover { color: #0f766e; background: transparent; text-decoration: none; }
+  .site-header nav.primary a:active { background: rgba(15, 118, 110, .08); color: #0f766e; }
+  .site-header nav.primary a:focus-visible { outline: 2px solid #0f766e; outline-offset: -3px; }
   .site-header nav.primary a[aria-current="page"] { color: #0f766e; font-weight: 600; background: transparent; }
-  .site-header nav.primary a[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: 8px; width: 24px; height: 3px; margin-left: -12px; border-radius: 3px; background: #c98a2b; }
+  .site-header nav.primary a[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: 7px; width: 22px; height: 3px; margin-left: -11px; border-radius: 3px; background: #c98a2b; }
+  /* hamburger to X, GAB style: outer bars shrink to the middle and fade (.2s), the middle bar and its twin cross (.25s); back .28s ease */
+  .site-header .nav-toggle { -webkit-tap-highlight-color: transparent; transition: background-color .18s ease; }
   .site-header .nav-toggle:hover { background: rgba(201, 138, 43, .12); }
-  .site-header .hamburger span { transition: transform .3s ease, opacity .2s ease; }
+  .site-header .nav-toggle:active { background: rgba(15, 118, 110, .1); }
+  .site-header .hamburger span { transform-origin: 50% 50%; transition: transform .28s ease, opacity .28s ease; }
+  .site-header .hamburger span:nth-child(2) { position: relative; }
+  .site-header .hamburger span:nth-child(2)::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: inherit; transition: transform .28s ease; }
+  .site-header.is-nav-open .hamburger span:nth-child(1) { transform: translateY(7px) scaleX(0); opacity: 0; transition: transform .2s ease, opacity .2s ease; }
+  .site-header.is-nav-open .hamburger span:nth-child(3) { transform: translateY(-7px) scaleX(0); opacity: 0; transition: transform .2s ease, opacity .2s ease; }
+  .site-header.is-nav-open .hamburger span:nth-child(2) { opacity: 1; transform: rotate(45deg); transition: transform .25s ease; }
+  .site-header.is-nav-open .hamburger span:nth-child(2)::after { transform: rotate(-90deg); transition: transform .25s ease; }
 }
+/* page fade between pages (GAB: body opacity 180ms ease) */
+body { transition: opacity 180ms ease; }
+body.r7-page-enter, body.r7-page-leave { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
-  .site-header nav.primary, .site-header nav.primary li, .site-header .hamburger span { transition: none !important; }
+  body { transition-duration: 0ms; }
+  .site-header nav.primary, .nav-scrim, .site-header .hamburger span, .site-header .hamburger span::after { transition: none !important; }
 }
 
 /* =====================================================================
@@ -3342,4 +3355,17 @@ html.nav-lock { overflow: hidden; }
   .sanctuary .rd-tile-t { font-size: 1.14rem; line-height: 1.18; }
   .sanctuary .rd-tile-b { font-size: .86rem; line-height: 1.36; }
   .sanctuary .rd-tile-m { max-width: 92px; font-size: .62rem; letter-spacing: .06em; }
+}
+
+/* C17 yearly events: cards without an activity photo are text cards with a small icon above the title (normal flow, never over text) */
+.sanctuary .sx-yearly .ev-feature.ev-no-photo, .sanctuary .sx-yearly .ev-feature.ev-no-photo:nth-child(even) { grid-template-columns: minmax(0, 1fr); }
+.sanctuary .sx-yearly .ev-feature.ev-no-photo > .ev-text { grid-column: 1 !important; max-width: 760px; }
+.sx-yearly .ev-ico-sm { display: inline-grid; place-items: center; width: 40px; height: 40px; margin: 0 0 14px; border-radius: 50%; background: rgba(15, 118, 110, .08); border: 1px solid rgba(201, 138, 43, .3); color: var(--teal); }
+.sx-yearly .ev-ico-sm .ico { width: 20px; height: 20px; }
+@media (max-width: 760px) { .sx-yearly .ev-ico-sm { width: 36px; height: 36px; margin-bottom: 12px; } .sx-yearly .ev-ico-sm .ico { width: 18px; height: 18px; } }
+@media (max-width: 760px) {
+  /* photo cards: photo on top, text below (an earlier rule kept both in row 1, so the photo had no width and never loaded) */
+  .sanctuary .sx-yearly .ev-feature.ev-has-photo > .ev-photo { grid-column: 1 !important; grid-row: 1 !important; width: 100%; }
+  .sanctuary .sx-yearly .ev-feature.ev-has-photo > .ev-text { grid-column: 1 !important; grid-row: 2 !important; }
+  .sanctuary .sx-yearly .ev-feature.ev-has-photo .ev-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; }
 }
