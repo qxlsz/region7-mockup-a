@@ -3267,3 +3267,79 @@ html.rd-lock { overflow: hidden; }
 .sanctuary .sx-yearly .ev-feature:not(:has(.ev-photo)) .ev-text, .sanctuary .sx-yearly .ev-feature .ev-text { padding: 0; background: none; border: 0; border-radius: 0; }
 .sanctuary .rd-band-cite { margin: var(--s2) 0 0; color: var(--gold-lt); font-size: .92rem; letter-spacing: .04em; }
 @media (max-width: 760px) { .sanctuary .rd-q.rd-q-solo { grid-column: auto; } }
+
+/* =====================================================================
+   C16 MOBILE MENU (Raj: menu from the three-line button; names centered like the GAB 2026 site)
+   GAB pattern: the panel opens down from the header (about .35s ease), links centered in one column, Jost,
+   hamburger turns into an X, page scroll locked. Sanctuary look: ivory with a soft gold-light glow, thin gold
+   dividers, active page in teal with a small gold marker. Sits above the map and everything else on the page.
+   ===================================================================== */
+html.nav-lock { overflow: hidden; }
+@media (max-width: 960px) {
+  .site-header.is-nav-open { background: #fbf7ef; border-bottom-color: rgba(201, 138, 43, .25); }
+  .site-header.is-nav-open .header-inner { flex-wrap: nowrap; }
+  .site-header nav.primary, .site-header.is-nav-open nav.primary {
+    display: block; position: absolute; top: 100%; left: 0; right: 0; z-index: 5; order: initial; flex: none; width: auto;
+    height: calc(100vh - var(--menu-top, 64px) + 2px); height: calc(100dvh - var(--menu-top, 64px) + 2px);
+    padding: 20px 24px 48px; overflow-y: auto; overscroll-behavior: contain;
+    background: radial-gradient(130% 55% at 50% 0%, rgba(243, 223, 184, .6), rgba(243, 223, 184, 0) 72%), #fbf7ef;
+    border-top: 1px solid rgba(201, 138, 43, .22);
+    visibility: hidden; opacity: 0; clip-path: inset(0 0 100% 0);
+    transition: clip-path .35s ease, opacity .3s ease, visibility 0s linear .35s;
+  }
+  .site-header.is-nav-open nav.primary { visibility: visible; opacity: 1; clip-path: inset(0 0 0 0); transition: clip-path .35s ease, opacity .2s ease, visibility 0s; }
+  .site-header nav.primary ul { display: flex; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 0; max-width: 360px; margin: 0 auto; padding: 0; list-style: none; }
+  .site-header nav.primary li { text-align: center; border-bottom: 1px solid rgba(201, 138, 43, .24); opacity: 0; transform: translateY(-8px); transition: opacity .3s ease, transform .3s ease; }
+  .site-header nav.primary li:last-child { border-bottom: 0; }
+  .site-header.is-nav-open nav.primary li { opacity: 1; transform: none; }
+  .site-header.is-nav-open nav.primary li:nth-child(2) { transition-delay: .03s; } .site-header.is-nav-open nav.primary li:nth-child(3) { transition-delay: .06s; }
+  .site-header.is-nav-open nav.primary li:nth-child(4) { transition-delay: .09s; } .site-header.is-nav-open nav.primary li:nth-child(5) { transition-delay: .12s; }
+  .site-header.is-nav-open nav.primary li:nth-child(6) { transition-delay: .15s; } .site-header.is-nav-open nav.primary li:nth-child(7) { transition-delay: .18s; }
+  .site-header nav.primary a { position: relative; display: block; padding: 17px 12px; border-radius: 0; background: transparent; font-family: var(--font); font-size: 21px; font-weight: 500; line-height: 1.25; letter-spacing: .01em; color: #042f2e; text-align: center; text-decoration: none; }
+  .site-header nav.primary a:hover, .site-header nav.primary a:focus-visible { color: #0f766e; background: transparent; text-decoration: none; }
+  .site-header nav.primary a:focus-visible { outline: 2px solid #0f766e; outline-offset: -4px; border-radius: 10px; }
+  .site-header nav.primary a[aria-current="page"] { color: #0f766e; font-weight: 600; background: transparent; }
+  .site-header nav.primary a[aria-current="page"]::after { content: ""; position: absolute; left: 50%; bottom: 8px; width: 24px; height: 3px; margin-left: -12px; border-radius: 3px; background: #c98a2b; }
+  .site-header .nav-toggle:hover { background: rgba(201, 138, 43, .12); }
+  .site-header .hamburger span { transition: transform .3s ease, opacity .2s ease; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-header nav.primary, .site-header nav.primary li, .site-header .hamburger span { transition: none !important; }
+}
+
+/* =====================================================================
+   C16 COMPACT RESOURCE TILES (Raj: mobile tiles were huge, a dark icon block on its own row, two cards per screen)
+   Small light icon, title + one clear line, count + arrow. Phones: one row per tile, about 80-96px tall, 12px gap.
+   ===================================================================== */
+.sanctuary .rd-tile { min-height: 0; padding: 26px 28px 24px; border-radius: 18px; }
+.sanctuary .rd-tiles-12 > [style*="--span:12"], .sanctuary .rd-tiles-12 > [style*="--span:6"] { min-height: 0; }
+.sanctuary .rd-tile-ico { width: 40px; height: 40px; border-radius: 50%; margin-bottom: 18px; background: rgba(15, 118, 110, .08); color: var(--teal); border: 1px solid rgba(201, 138, 43, .28); }
+.sanctuary .rd-tile-ico .ico { width: 20px; height: 20px; }
+.sanctuary .rd-tile-t { font-size: 1.4rem; }
+.sanctuary .rd-tile-b { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; font-size: .95rem; }
+.sanctuary .rd-doc .rd-tile-b { -webkit-line-clamp: 3; }
+.sanctuary .rd-tile-m { margin-top: 18px; }
+@media (max-width: 640px) {
+  .sanctuary .rd-tiles, .sanctuary .rd-tiles-12 { gap: 12px; }
+  .sanctuary .rd-tile:not(.rd-doc) { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; grid-template-areas: "ico k m" "ico t m" "ico b m"; grid-template-rows: auto auto 1fr; column-gap: 14px; row-gap: 2px; align-items: start; min-height: 80px; padding: 14px 14px 14px 16px; border-radius: 16px; }
+  .sanctuary .rd-tile:not(.rd-doc):hover { transform: none; }
+  .sanctuary .rd-tile-ico { grid-area: ico; align-self: center; width: 36px; height: 36px; margin: 0; }
+  .sanctuary .rd-tile-ico .ico { width: 18px; height: 18px; }
+  .sanctuary .rd-tile-k { grid-area: k; margin: 0; font-size: .66rem; letter-spacing: .14em; }
+  .sanctuary .rd-tile-t { grid-area: t; font-size: 1.22rem; line-height: 1.2; }
+  .sanctuary .rd-tile-b { grid-area: b; margin: 2px 0 0; font-size: .88rem; line-height: 1.4; }
+  .sanctuary .rd-tile-m { grid-area: m; align-self: center; flex-direction: column; align-items: flex-end; justify-content: center; gap: 4px; width: auto; max-width: 78px; margin: 0; font-size: .64rem; letter-spacing: .08em; line-height: 1.25; text-align: right; }
+  .sanctuary .rd-tile-m .rd-tile-arr { width: 18px; height: 18px; flex: none; }
+  /* PDF cards: same small icon on the left, View / Download under the text */
+  .sanctuary .rd-doc { display: grid; grid-template-columns: 36px minmax(0, 1fr); grid-template-areas: "ico k" "ico t" "ico b" "ico a"; column-gap: 14px; row-gap: 2px; align-items: start; padding: 14px 16px; border-radius: 16px; }
+  .sanctuary .rd-doc .rd-tile-ico { align-self: start; margin-top: 2px; }
+  .sanctuary .rd-doc .rd-tile-t { font-size: 1.18rem; }
+  .sanctuary .rd-doc .rd-tile-b { -webkit-line-clamp: 2; }
+  .sanctuary .rd-doc .rd-doc-acts { grid-area: a; margin: 8px 0 0; }
+}
+@media (max-width: 640px) {
+  .sanctuary .rd-tile:not(.rd-doc) { row-gap: 0; min-height: 76px; padding: 12px 12px 12px 14px; column-gap: 12px; }
+  .sanctuary .rd-tile-t { font-size: 1.14rem; line-height: 1.18; }
+  .sanctuary .rd-tile-b { font-size: .86rem; line-height: 1.36; }
+  .sanctuary .rd-tile-m { max-width: 92px; font-size: .62rem; letter-spacing: .06em; }
+}
