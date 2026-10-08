@@ -56,6 +56,7 @@
   if (!bar) {
     var go = function () {
       var el = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el && el.closest && el.closest("dialog.rd-dialog")) return;   /* sanctuary.js opens the pop-up */
       if (el) {
         openTo(el);
         var hd = document.querySelector(".site-header");
@@ -115,6 +116,14 @@
     var i = hashes.indexOf(h);
     if (i >= 0) return show(i, { scroll: scroll });
     var el = h && document.getElementById(h);
+    var dlg = el && el.closest && el.closest("dialog.rd-dialog");
+    if (dlg && window.R7Dlg) {   /* C15: the target sits in a pop-up (Sanctuary resource tiles): show its tab, then open it there */
+      var di = hashes.indexOf(dlg.getAttribute("data-tab") || "");
+      show(di >= 0 ? di : (current < 0 ? 0 : current), {});
+      window.R7Dlg.open(dlg, el);
+      return;
+    }
+    if (window.R7Dlg) window.R7Dlg.closeAll();
     if (el) {
       for (var k = 0; k < panels.length; k++) {
         if (panels[k].contains(el)) return show(k, { target: el });

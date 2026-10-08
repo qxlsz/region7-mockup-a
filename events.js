@@ -41,7 +41,7 @@
   var t = today();
   var next = upcoming(t, 3);
   if (!next.length) return;
-  var featuredId = next[0].ev.id;
+  var featuredId = document.getElementById('news-next') ? next[0].ev.id : null;   /* Home no longer has the featured row (c15) */
 
   var row = document.getElementById('news-next');
   if (row) {

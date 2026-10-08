@@ -20,15 +20,15 @@
     img.addEventListener("load", done, { once: true });
     img.addEventListener("error", done, { once: true });
   }
-  Array.prototype.forEach.call(document.querySelectorAll("main img"), fadeImg);
+  Array.prototype.forEach.call(document.querySelectorAll("main img"), function (img) { if (!img.closest(".sx-hero")) fadeImg(img); });
 
   var SEL = [".section-head", ".card", ".event-row", ".split-media", ".cat-groups", ".cats", ".link-card", ".ev-feature",
              ".contact-row .member", ".team-row .member", ".img-grid", ".photo-row", ".quote-panel", ".thought", ".disclosure-list",
-             ".center-card2", ".leaflet-frame", ".tla-item", ".doc-card", ".timeline-item"].join(",");
+             ".center-card2", ".leaflet-frame", ".tla-item", ".doc-card", ".timeline-item", "[data-reveal]"].join(",");
   if (!("IntersectionObserver" in window)) return;
   var items = [];
   Array.prototype.forEach.call(document.querySelectorAll("main " + SEL), function (el) {
-    if (el.closest(".hero") || el.closest("details:not([open])") || el.parentElement.closest(".r7-reveal")) return;
+    if (el.closest(".hero") || el.closest(".sx-hero") || el.closest("dialog") || el.closest("details:not([open])") || el.parentElement.closest(".r7-reveal")) return;
     el.classList.add("r7-reveal"); items.push(el);
   });
   var io = new IntersectionObserver(function (entries) {

@@ -1,806 +1,666 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About · Region 7 Sai Centers</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>About · Region 7 Sai Centers</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet"/>
+<link data-sanctuary-font="" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/><link href="styles.css" rel="stylesheet"/>
 </head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <div class="brand">
-        <a href="index.html" class="brand-logo-link" aria-label="Region 7 Sai Centers home">
-          <img src="images/new_logo2.png" alt="" class="brand-logo" width="48" height="50" />
-        </a>
-        <a href="index.html" class="brand-text">
-          <strong>Region 7 Sai Centers</strong>
-          <span>Northern California and Nevada</span>
-        </a>
-      </div>
-      <button class="nav-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="hamburger" aria-hidden="true"><span></span><span></span><span></span></span>
-      </button>
-      <nav class="primary" id="primary-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" aria-current="page">About</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="initiatives.html">Initiatives</a></li>
-          <li><a href="events.html">Events</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<body class="sanctuary">
+<header class="site-header">
+<div class="header-inner">
+<div class="brand">
+<a aria-label="Region 7 Sai Centers home" class="brand-logo-link" href="index.html">
+<img alt="" class="brand-logo" height="50" src="images/new_logo2.png" width="48"/>
+</a>
+<a class="brand-text" href="index.html">
+<strong>Region 7 Sai Centers</strong>
+<span>Northern California and Nevada</span>
+</a>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
+<span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+</button>
+<nav aria-label="Primary" class="primary" id="primary-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a aria-current="page" href="about.html">About</a></li>
+<li><a href="programs.html">Programs</a></li>
+<li><a href="initiatives.html">Initiatives</a></li>
+<li><a href="events.html">Events</a></li>
+<li><a href="media.html">Media</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main>
 
-  <main>
-  <section class="hero hero-page">
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-inner">
-      <div class="hero-text">
-        <span class="hero-kicker">About</span>
-        <h1>About</h1>
-        <span class="hero-orn"><svg class="lotus-line" viewBox="0 0 220 28" aria-hidden="true" focusable="false"><path d="M2 18 H84" /><path d="M136 18 H218" /><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z" /><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z" /><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z" /><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z" /><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z" /></svg></span>
-        <p class="lead">Sri Sathya Sai Baba, our region, the Sai Organization, resources for officers, and our Sai Centers.</p>
-      </div>
-    </div>
-  </section>
-
-  <nav class="tabbar" aria-label="About sections" data-tabbar>
-    <div class="tabbar-inner" role="tablist" aria-label="About sections">
-      <a class="tab" role="tab" id="tab-baba" href="#baba" aria-controls="panel-baba" aria-selected="true" tabindex="0">Sri Sathya Sai Baba</a>
-      <a class="tab" role="tab" id="tab-region7" href="#region7" aria-controls="panel-region7" aria-selected="false" tabindex="-1">USA Region 7</a>
-      <a class="tab" role="tab" id="tab-organization" href="#organization" aria-controls="panel-organization" aria-selected="false" tabindex="-1">Sai Organization</a>
-      <a class="tab" role="tab" id="tab-resources" href="#resources" aria-controls="panel-resources" aria-selected="false" tabindex="-1">SSIO Resources</a>
-      <a class="tab" role="tab" id="tab-centers" href="#centers" aria-controls="panel-centers" aria-selected="false" tabindex="-1">Sai Centers</a>
-    </div>
-  </nav>
-  <noscript><style>.tab-panel[hidden] { display: block; }</style></noscript>
-  <div class="tab-panel" role="tabpanel" id="panel-baba" aria-labelledby="tab-baba" data-hash="baba">
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Who is Sathya Sai Baba?</span></h2>
-      </div>
-      <div class="split-media split-photo">
-        <div class="photo photo-slider" data-photo-slider>
-          <img src="images/about/ch-3.jpg" alt="Sri Sathya Sai Baba" class="is-on" />
-          <img src="images/about/ch-4.jpg" alt="Sri Sathya Sai Baba" />
-          <button class="ps-btn ps-prev" type="button" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
-          <button class="ps-btn ps-next" type="button" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg></button>
-        </div>
-        <div class="prose">
-          <p>For more than 85 years, Sathya Sai Baba walked among us, sharing His divine message that can best be summed up in the words, "Love All Serve All". During His lifetime, He became one of the most revered spiritual teachers in the world, encouraging all of humanity to reconnect with the essential and eternal human values of Truth (Sathya), Right Conduct (Dharma), Peace (Santhi), Love (Prema) and Nonviolence (Ahimsa) in everyday living.</p>
-          <p>He is also known as Sri Sathya Sai Baba, Sai Baba, Swami, Bhagavan, or simply as Baba to millions of people throughout the world. His followers come from all ages, faiths, and races and meet regularly for devotional programs, to study His teachings, and to engage in service activities in order to practice His message of Love and Peace to unite all mankind.</p>
-          <p class="doc-link"><a href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" target="_blank" rel="noopener"><span>Read the brochure: A Brief Introduction to Sathya Sai Baba and His Teachings (PDF)</span></a></p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="timeline">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>The life of Sri Sathya Sai Baba</span></h2>
-        <p>Select a year, use the arrows, or swipe on your phone.</p>
-      </div>
-      <!-- timeline:start -->
-        <div class="tla" data-tla tabindex="0" aria-label="Timeline. Use the arrow keys, swipe, or select a year.">
-          <div class="tla-years" role="tablist">
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1926" data-i="0">1926</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1940" data-i="1">1940</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1950" data-i="2">1950</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1957" data-i="3">1957</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1958" data-i="4">1958</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1966" data-i="5">1966</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1968" data-i="6">1968</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1972" data-i="7">1972</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1975" data-i="8">1975</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1976" data-i="9">1976</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1980" data-i="10">1980</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1981" data-i="11">1981</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-1985" data-i="12">1985</button>
-            <button type="button" role="tab" class="tla-year" aria-controls="tla-2011" data-i="13">2011</button>
-          </div>
-          <div class="tla-stage">
-            <div class="tla-track">
-            <article class="tla-slide" id="tla-1926" role="tabpanel" aria-label="1926">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1.png')"></div>
-                <img src="images/about/1.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">01 / 14</span>
-                <h3 class="tla-big">1926</h3>
-                <p>Sathya Sai Baba is Born.</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1940" role="tabpanel" aria-label="1940">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/2.png')"></div>
-                <img src="images/about/2.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">02 / 14</span>
-                <h3 class="tla-big">1940</h3>
-                <p>Divine Declaration.</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1950" role="tabpanel" aria-label="1950">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/3.png')"></div>
-                <img src="images/about/3.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">03 / 14</span>
-                <h3 class="tla-big">1950</h3>
-                <p>Prasanthi Nilayam inaugurated on HIS 28th birthday</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1957" role="tabpanel" aria-label="1957">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1957.png')"></div>
-                <img src="images/about/1957.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">04 / 14</span>
-                <h3 class="tla-big">1957</h3>
-                <p>Sathya Sai Baba inaugurates a hospital behind Prasanthi Nilayam</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1958" role="tabpanel" aria-label="1958">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1958.png')"></div>
-                <img src="images/about/1958.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">05 / 14</span>
-                <h3 class="tla-big">1958</h3>
-                <p>Inauguration of Sanathana Sarathi</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1966" role="tabpanel" aria-label="1966">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1966.png')"></div>
-                <img src="images/about/1966.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">06 / 14</span>
-                <h3 class="tla-big">1966</h3>
-                <p>Sri Sathya Sai Bal Vikas started</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1968" role="tabpanel" aria-label="1968">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1968.png')"></div>
-                <img src="images/about/1968.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">07 / 14</span>
-                <h3 class="tla-big">1968</h3>
-                <p>Inauguration of First World Conference and Women's College at Anantapur</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1972" role="tabpanel" aria-label="1972">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1972.png')"></div>
-                <img src="images/about/1972.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">08 / 14</span>
-                <h3 class="tla-big">1972</h3>
-                <p>Inauguration of Smt. Eswaramma High School at Puttaparthi</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1975" role="tabpanel" aria-label="1975">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1975.png')"></div>
-                <img src="images/about/1975.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">09 / 14</span>
-                <h3 class="tla-big">1975</h3>
-                <p>Second World Conference held at Prashanthi Nilayam on Sathya Sai Baba’s 50th birthday celebrations. Inauguration of Sarva Dharma Aikya Stupa</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1976" role="tabpanel" aria-label="1976">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1976.png')"></div>
-                <img src="images/about/1976.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">10 / 14</span>
-                <h3 class="tla-big">1976</h3>
-                <p>Inauguration of the Sri Sathya Sai Hospital at Whitefield, Bangalore</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1980" role="tabpanel" aria-label="1980">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1980.png')"></div>
-                <img src="images/about/1980.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">11 / 14</span>
-                <h3 class="tla-big">1980</h3>
-                <p>Third World Conference held at Prashanthi Nilayam on Sathya Sai Baba’s 55th birthday celebrations</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1981" role="tabpanel" aria-label="1981">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1981.png')"></div>
-                <img src="images/about/1981.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">12 / 14</span>
-                <h3 class="tla-big">1981</h3>
-                <p>Sri Sathya Sai University Puttaparthi launched</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-1985" role="tabpanel" aria-label="1985">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/1985.png')"></div>
-                <img src="images/about/1985.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">13 / 14</span>
-                <h3 class="tla-big">1985</h3>
-                <p>60th Birthday of Sathya Sai Baba</p>
-              </div>
-            </article>
-            <article class="tla-slide" id="tla-2011" role="tabpanel" aria-label="2011">
-              <div class="tla-media">
-                <div class="tla-blur" style="background-image:url('images/about/2011.png')"></div>
-                <img src="images/about/2011.png" alt="" width="150" height="150" loading="eager" />
-              </div>
-              <div class="tla-body">
-                <span class="tla-count">14 / 14</span>
-                <h3 class="tla-big">2011</h3>
-                <p>Mahasamadhi</p>
-              </div>
-            </article>
-            </div>
-          </div>
-          <div class="tla-nav">
-            <button type="button" class="tla-btn tla-prev" aria-label="Previous year"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
-            <div class="tla-progress" aria-hidden="true"><span></span></div>
-            <button type="button" class="tla-btn tla-next" aria-label="Next year"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg></button>
-          </div>
-        </div>
-      <!-- timeline:end -->
-    </div>
-  </section>
-  </div>
-  <div class="tab-panel" role="tabpanel" id="panel-region7" aria-labelledby="tab-region7" data-hash="region7" hidden>
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Region 7 at a glance</span></h2>
-      </div>
-        <ul class="facts">
-          <li><span>States</span><strong>California, Nevada</strong></li>
-          <li><span>Sai Centers</span><strong>18</strong></li>
-          <li><span>Groups</span><strong>3</strong></li>
-          <li><span>Wings</span><strong>Devotion, SSE, Service, YA</strong></li>
-          <li><span>Yearly Events</span><strong>7</strong></li>
-        </ul>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="team">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Regional officers</span></h2>
-        <p>How the regional team is organized: leadership, the wings, Young Adults, and support roles.</p>
-      </div>
-      <div class="team">
-        <div class="team-tier tier-lead">
-          <p class="tier-label">Regional leadership</p>
-          <ul class="team-row"><li class="member member-lead"><span class="member-initials" aria-hidden="true">LV</span><span class="member-text"><strong>Lakshmi Vyakaran</strong><span>President</span></span></li><li class="member member-lead"><span class="member-initials" aria-hidden="true">MB</span><span class="member-text"><strong>Mohan Bhyravabhotla</strong><span>Vice President</span></span></li></ul>
-        </div>
-        <div class="team-tier">
-          <p class="tier-label">Wing coordinators</p>
-          <ul class="team-row team-row-3"><li class="member"><span class="member-initials" aria-hidden="true">SS</span><span class="member-text"><strong>Sandhya Srikant</strong><span>Devotion Coordinator</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">LR</span><span class="member-text"><strong>Lata Ramesh</strong><span>SSE Coordinator</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">AG</span><span class="member-text"><strong>Asha Giridharan</strong><span>Service Coordinator</span></span></li></ul>
-        </div>
-        <div class="team-tier">
-          <p class="tier-label">Young Adults</p>
-          <div class="team-split">
-            <div><p class="sub-label">Representatives</p><ul class="team-row team-row-2"><li class="member"><span class="member-initials" aria-hidden="true">MR</span><span class="member-text"><strong>Madhumitha Ramasubramanian</strong><span>YA Representative - Female</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">KS</span><span class="member-text"><strong>Kshitij Srivastava</strong><span>YA Representative - Male</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">AR</span><span class="member-text"><strong>Aneesh Ramgopal</strong><span>YA Representative - Devotion</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">KA</span><span class="member-text"><strong>Kryshana Ananthan</strong><span>YA Representative - Service</span></span></li></ul></div>
-            <div><p class="sub-label">Advisors</p><ul class="team-row team-row-1"><li class="member"><span class="member-initials" aria-hidden="true">GM</span><span class="member-text"><strong>Geetha Mohan</strong><span>YA Advisor - Female</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">SK</span><span class="member-text"><strong>Sunil Kasturi</strong><span>YA Advisor - Male</span></span></li></ul></div>
-          </div>
-        </div>
-        <div class="team-tier">
-          <p class="tier-label">Regional support</p>
-          <div class="team-support">
-            <div><p class="sub-label">Medical</p><ul class="team-list"><li class="member"><span class="member-initials" aria-hidden="true">JP</span><span class="member-text"><strong>Dr. Joe Phaneuf</strong><span>Medical Director</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">PN</span><span class="member-text"><strong>Dr. Priya Nand</strong><span>Medical Director</span></span></li></ul></div>
-            <div><p class="sub-label">Web</p><ul class="team-list"><li class="member"><span class="member-initials" aria-hidden="true">BN</span><span class="member-text"><strong>Balamurugan Natarajan</strong><span>Web Master</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">PS</span><span class="member-text"><strong>Pavan Kumar Sura</strong><span>Web Master</span></span></li><li class="member"><span class="member-initials" aria-hidden="true">JP</span><span class="member-text"><strong>Jagan Pandarinathan</strong><span>Web Master</span></span></li></ul></div>
-            <div><p class="sub-label">Media</p><ul class="team-list"><li class="member"><span class="member-initials" aria-hidden="true">MM</span><span class="member-text"><strong>Maneesha Munshi</strong><span>Media</span></span></li></ul></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Sai Centers in Region 7</span></h2>
-      </div>
-      <div class="card callout">
-        <p>See every Sai Center and Group on one map, with meeting times and addresses.</p>
-        <a class="btn btn-teal" href="about.html#centers">Find a Sai Center</a>
-      </div>
-    </div>
-  </section>
-  </div>
-  <div class="tab-panel" role="tabpanel" id="panel-organization" aria-labelledby="tab-organization" data-hash="organization" hidden>
-  <section class="section">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>The Sathya Sai Organization</span></h2>
-        <p>Centers in over 126 countries. Open to all, with no fees.</p>
-      </div>
-      <div class="split-media org-intro">
-        <div class="prose prose-lg">
-          <p>There are Sathya Sai Baba centers in various cities across the United States and in over 126 countries around the world. There are 16 Sai centers in the Bay Area. All are welcome, regardless of race, creed, economic status or religious orientation. There is no membership fee to join. The organization undertakes devotional, educational and service activities to further one’s spiritual growth. Members meet regularly in order to study and discuss the teachings of Sathya Sai Baba and to engage in group devotional singing, meditation, and prayer (Devotion). Many centers have a children’s program (Sai Spiritual Education). Center members also plan and implement a variety of community service projects (Service). In addition, there is an active Young Adult Program in many centers. There is never any solicitation or fee charged for any of the functions that a center conducts. Please contact the regional team or a center near you for additional information.</p>
-        </div>
-        <figure class="video-figure">
-        <div class="video-frame"><iframe src="https://player.vimeo.com/video/63301962?portrait=0" title="Purpose of the Sai Organization" loading="lazy" allow="fullscreen; picture-in-picture" allowfullscreen></iframe></div>
-          <figcaption>Video: Swami on the purpose of the Sai Organization.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="quote-band" aria-label="Words of Sathya Sai Baba">
-    <div class="section-inner quote-band-inner">
-          <figure class="qb-item"><blockquote>The main objective of the Sathya Sai Organization ... is to help you recognize the divinity inherent in you. So, your duty is to emphasize the One, to experience the One in all you do or speak. Do not give importance to differences of religion, sect, status, or color. Have the feeling of oneness permeate all your acts. Only those who do so have a place in this Organization; the rest can withdraw.</blockquote><figcaption>Baba</figcaption></figure>
-          <figure class="qb-item"><p class="q-lead">The Sai Organization charter states that every member should undertake spiritual discipline as an integral part of daily life and to abide by the following guidelines</p><blockquote><span class="q-line">There is only one Caste, the Caste of Humanity;</span><span class="q-line">There is only one Religion, the Religion of Love;</span><span class="q-line">There is only one Language, the Language of the Heart;</span><span class="q-line">There is only One God, and He is Omnipresent.</span></blockquote><figcaption>Sathya Sai Baba</figcaption></figure>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="guidelines">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Guidelines and manuals</span></h2>
-        <p>Select a document to see what it is, then View or Download it.</p>
-      </div>
-        <div class="disclosure-list">
-          <details class="disclosure">
-            <summary><span class="d-title">USA Region 7 Brochure</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Brochure (PDF): an introduction to the Sai Centers of USA Region 7.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/usareg7orgbrochure.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/usareg7orgbrochure.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">A Brief Introduction to Sathya Sai Baba and HIS Teachings</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Brochure (PDF): a short introduction to Sathya Sai Baba and His teachings.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">Newcomer's Guide</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Booklet (PDF): a guide for people who are new to Sai Centers.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/061004NewcomersBooklet.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/061004NewcomersBooklet.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">International Sai Center Guidelines</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Guidelines (PDF): how Sai Centers work around the world.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/Guidelines2012Sep.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/Guidelines2012Sep.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">USA Sai Center Service Guidelines</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Guidelines (PDF): how USA Sai Centers plan and do service.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/06dec03ServiceGuidelines.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/06dec03ServiceGuidelines.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">USA Young Adults Guidelines</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Manual (PDF): a reference for local Young Adult groups.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Sai_Young_Adults_Local_Group_Reference_Manual.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Sai_Young_Adults_Local_Group_Reference_Manual.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">USA SSE Guidelines</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Guidelines (PDF): Sai Spiritual Education for children in USA centers.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/110819SSEGuidelines.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/110819SSEGuidelines.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-          <details class="disclosure">
-            <summary><span class="d-title">Guidelines for USA Sai Websites</span><span class="doc-type">PDF</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <p>Guidelines (PDF): rules for USA Sai Center websites.</p>
-              <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/guidelinesusonly.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/guidelinesusonly.pdf" target="_blank" rel="noopener" download>Download</a></div>
-            </div>
-          </details>
-        </div>
-    </div>
-  </section>
-  </div>
-  <div class="tab-panel" role="tabpanel" id="panel-resources" aria-labelledby="tab-resources" data-hash="resources" hidden>
-  <section class="section" id="resources">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Resources</span></h2>
-        <p>Videos, discourses, and tools for center officers. Open a group to see its items.</p>
-      </div>
-        <div class="disclosure-list">
-          <details class="disclosure disclosure-group">
-            <summary><span class="d-title">Videos</span><span class="d-count">2 items</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <ul class="item-list">
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Overview and Structure of SSIO (Sathya Sai International Organization)</span><span class="doc-type">Video</span><p>Video on Vimeo: Overview and Structure of Sathya Sai International Organization, from Aparna Murali.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://vimeo.com/201492215" target="_blank" rel="noopener">Watch</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">SSIO Outreach and Objectives Introductory Video</span><span class="doc-type">Video</span><p>Video on Vimeo: Overview and Structure of Sathya Sai International Organization, from Aparna Murali.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://vimeo.com/196080141" target="_blank" rel="noopener">Watch</a></div>
-              </li>
-              </ul>
-            </div>
-          </details>
-          <details class="disclosure disclosure-group">
-            <summary><span class="d-title">Select Swami's Discourses</span><span class="d-count">7 items</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <ul class="item-list">
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">The Heart of the Organization</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 November 1968.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968November21.The%20heart%20of%20the%20organisation.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968November21.The%20heart%20of%20the%20organisation.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Call to Sai Samithi Members</span><span class="doc-type">PDF</span><p>Message (PDF): Divine Message of August 1981.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Message.1981August.Call%20to%20Sai%20Samithi%20members.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Message.1981August.Call%20to%20Sai%20Samithi%20members.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">The Fingers Five</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 November 1981.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November21.The%20fingers%20five.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November21.The%20fingers%20five.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Lessons on Seva Sadhana</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 19 November 1981.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November19.Lessons%20on%20seva%20sadhana.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November19.Lessons%20on%20seva%20sadhana.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Why Organize</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 29 March 1976.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1976March29.Why%20organise.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1976March29.Why%20organise.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Death - A Welcome Voyage</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 23 February 1968.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968.February23.Death%20A%20welcome%20voyage.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968.February23.Death%20A%20welcome%20voyage.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Sai Organization Must Promote Faith in God</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 April 1967.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1967April21.Sai%20Orgs%20Must%20Promote%20Faith%20in%20God.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1967April21.Sai%20Orgs%20Must%20Promote%20Faith%20in%20God.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              </ul>
-            </div>
-          </details>
-          <details class="disclosure disclosure-group">
-            <summary><span class="d-title">Communication Module</span><span class="d-count">5 items</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <ul class="item-list">
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">References for Loving and Effective Communication</span><span class="doc-type">PDF</span><p>References (PDF): sources on loving and effective communication.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/References%20for%20Loving%20and%20Effective%20Communication%20.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/References%20for%20Loving%20and%20Effective%20Communication%20.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Communications Workshop by Dr Joe Phaneuf</span><span class="doc-type">PDF</span><p>Workshop (PDF): communication workshop notes by Dr. Joe Phaneuf.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/DrJoePhaneufCommunicationsWorkshop.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/DrJoePhaneufCommunicationsWorkshop.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Communication Tips</span><span class="doc-type">PDF</span><p>Module (PDF): loving and effective communication, Module 7.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/SSIYLP%20Module%207%20Loving%20and%20Effective%20Communication%20FINAL.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/SSIYLP%20Module%207%20Loving%20and%20Effective%20Communication%20FINAL.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Advaita in Practice Poster</span><span class="doc-type">PDF</span><p>Poster (PDF): Advaita in practice.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/Advaita.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/Advaita.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Business Card template for Communication Tips by Sathya Sai Baba</span><span class="doc-type">PDF</span><p>Template (PDF): a business card with communication tips by Sathya Sai Baba.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/Communication%20Tips%20by%20Sathya%20Sai%20Baba.pdf" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/Communication%20Tips%20by%20Sathya%20Sai%20Baba.pdf" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              </ul>
-            </div>
-          </details>
-          <details class="disclosure disclosure-group">
-            <summary><span class="d-title">Historic and Significant Letters from Swami</span><span class="d-count">1 item</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <ul class="item-list">
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Sathya Sai Speaks</span><span class="doc-type">ZIP</span><p>Letters (ZIP): historic and significant letters from Swami, in one download.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.region7saicenters.org/region7new/docs/Historic_and_Significant_Letters_from_Swami.zip" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              </ul>
-            </div>
-          </details>
-          <details class="disclosure disclosure-group">
-            <summary><span class="d-title">Official Logo</span><span class="d-count">2 items</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-            <div class="d-body">
-              <ul class="item-list">
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Logo of the Sathya Sai International Organization</span><span class="doc-type">Web page</span><p>Official Logo: the SSIO logo page on sathyasai.org.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.sathyasai.org/ssio-logo" target="_blank" rel="noopener">View</a></div>
-              </li>
-              <li class="item-row">
-                <div class="item-main"><span class="item-title">Download Logo</span><span class="doc-type">PNG</span><p>Official Logo (PNG): the SSIO logo in English.</p></div>
-                <div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.sathyasai.org/sites/default/files/pages/organisation/logo/ssio-logo-english.png" target="_blank" rel="noopener">View</a><a class="btn btn-sm btn-outline" href="https://www.sathyasai.org/sites/default/files/pages/organisation/logo/ssio-logo-english.png" target="_blank" rel="noopener" download>Download</a></div>
-              </li>
-              </ul>
-            </div>
-          </details>
-        </div>
-    </div>
-  </section>
-  </div>
-  <div class="tab-panel" role="tabpanel" id="panel-centers" aria-labelledby="tab-centers" data-hash="centers" hidden>
-  <section class="section" id="map">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Centers on the map</span></h2>
-      </div>
-      <div class="leaflet-frame"><div id="centers-map" role="region" aria-label="Map of Sai Centers in Region 7"></div></div>
-      <p class="map-note">Select a teal pin to see the center, its address, and directions. 15 centers and 5 groups.</p>
-    </div>
-  </section>
-
-  <section class="section section-alt" id="list">
-    <div class="section-inner">
-      <div class="section-head ribbon-head">
-        <h2 class="ribbon"><span>Centers and groups</span></h2>
-        <p>Meeting times, addresses, and service activities for each center.</p>
-      </div>
-        <div class="centers-grid2">
-          <article class="center-card2" id="central-san-jose">
-            <div class="cc-head"><h3>Central San Jose</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Central San Jose</p>
-            <ul class="cc-info"><li>Devotional Service: Sundays - 5 PM to 6:15 PM</li><li>Location: Center for Spiritual Living, 1195 Clark St, San Jose, CA</li><li>Sai Spiritual Education: Sundays - 3 PM to 4:30 PM (September to June)</li><li>For Service and Other Activities check center communication</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3111366,-121.8913987" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="central-san-jose">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circles</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Weekly food services at San Jose Homefirst &amp; Sunnyvale shelters</li><li>Weekly tutoring at San Jose Family shelter and Morgan Hill library</li><li>STEM summer course</li><li>Back to School kits</li></ul></div><div class="act-group"><p>Elder Care</p><ul><li>Monthly convalescent home singing (SSE)</li><li>Center grandparents service</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Cleanup of Parks in San Jose</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter and care kits distribution</li><li>Halloween costume collection drive</li><li>Habitat for Humanity</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Caroling at multiple locations</li><li>Christmas play by Morgan Hill tutoring kids</li><li>93-day house bhajans for Swami’s birthday</li></ul></div><div class="act-group"><p>Study circles</p><ul><li>Sai Parenting &amp; Gita Vahini</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="elk-grove">
-            <div class="cc-head"><h3>Elk Grove</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Elk Grove</p>
-            <ul class="cc-info"><li>Location: 7495 Elder Creek Rd, Sacramento, CA</li><li>Please call (916) 317-5564 or email elkgrove_sai@yahoo.com for directions and parking instructions.</li><li>Devotion: Thursdays 7:30 pm to 9:15 pm</li><li>SSE: Sundays 10:30 am - 11:30 am</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5106237,-121.4161808" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="elk-grove">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li></ul><div class="act-group"><p>Environment Services</p><ul><li>Tree Planting and Reforestation (Sacramento Tree Foundation)</li><li>Elk Grove Creek Cleanup (Sacramento Area Creeks Council)</li><li>Wildlife Care Association of Sacramento Facility Maintenance</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Cold weather kits distribution to local homeless population</li></ul></div><div class="act-group"><p>Education</p><ul><li>Toys, School, Medical supplies (Children&#x27;s Receiving Home of Sacramento)</li><li>Operation Backpack - School backpacks and supplies for disadvantaged children</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="evergreen">
-            <div class="cc-head"><h3>Evergreen</h3><span class="doc-type">Group</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Group of Evergreen</p>
-            <ul class="cc-info"><li>Location: 3208 Vernazza Ave, San Jose, CA 95135</li><li>Meeting Time: Thursdays 7:00 pm to 8:00 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3150295,-121.7715236" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="evergreen">Show on map</button></div>
-          </article>
-          <article class="center-card2" id="fremont">
-            <div class="cc-head"><h3>Fremont</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Fremont</p>
-            <ul class="cc-info"><li>Location: 40086 Paseo Padre Pkwy, Fremont, CA</li><li>Meeting Time: Sundays 3 pm to 5:15 pm</li><li>3 to 4 pm - Study Circle, SSE, Parenting Circle</li><li>4:15 to 5:15 pm - Devotional Singing</li><li>2nd and 4th Thursday house bhajans virtual via zoom</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5455262,-121.980857" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="fremont">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Light Meditation</li><li>Study circle</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food</p><ul><li>Sandwich preparation and distribution (monthly)</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary, Hayward (weekly)</li><li>Ad-hoc projects with schools in Hayward, San Leandro, San Lorenzo</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Community gardens</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="fresno">
-            <div class="cc-head"><h3>Fresno</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Fresno</p>
-            <ul class="cc-info"><li>Location: 9647 N. Willey Court Fresno, CA 93720</li><li>Meeting Time: Thursdays 6:30 pm to 8 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.876437,-119.743644" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="fresno">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circle</li><li>Community service activities</li></ul><div class="act-group"><p>Animal Service</p><ul><li>Donations to animal shelter for Swami’s Birthday and Mahasamadhi</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>Akhanda Bhajans</li><li>Celebrate Guru Purnima, Swami’s birthday, Shivarathri, New Years Day</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="marin">
-            <div class="cc-head"><h3>Marin</h3><span class="doc-type">Group</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Group of Marin</p>
-            <ul class="cc-info"><li>Location: Sausalito CA 94965</li><li>Please call 415-272-3806 to confirm location</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li><li>Note: Occasionally we meet on a different day of the week. Please call to confirm</li></ul>
-            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="marin">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li></ul><div class="act-group"><p>Food Service</p><ul><li>Support St Vincent Dining Hall in San Rafael (Organization provides meals twice a day every day)</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Greeting cards for any organization in Marin including Serving Shelters, Nursing homes, Halfway houses</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="monterey-peninsula">
-            <div class="cc-head"><h3>Monterey Peninsula</h3><span class="doc-type">Group</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Group of Monterey Peninsula</p>
-            <ul class="cc-info"><li>Location: 25881 Rancho Alto Drive Carmel, CA 93923</li><li>Meeting Time: Thursdays 7:00 pm to 8:30 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.525145,-121.808468" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="monterey-peninsula">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study Circles</li><li>Community service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Lunch for homeless men in ihelp program at local church (3rd thursdays)</li><li>Lunch service for Gathering for women - homeless (3rd week)</li></ul></div><div class="act-group"><p>Devotion</p><ul><li>Weekly study circle - Bhagawad Gita: A walkthrough for Westerners</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="tracy-mountain-house">
-            <div class="cc-head"><h3>Tracy/Mountain House</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Tracy/Mountain House</p>
-            <ul class="cc-info"><li>Location: Sri Sathya Sai Baba Abode of Supreme Peace @ 244 W Grant Line Rd, Tracy, CA 95376</li><li>Meeting Time: Every Sunday: 4:20 pm - SSE/ Study Circle. 5:30 pm - Devotional Singing</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7540512,-121.4283601" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="tracy-mountain-house">Show on map</button></div>
-          </article>
-          <article class="center-card2" id="oakland">
-            <div class="cc-head"><h3>Oakland</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Oakland</p>
-            <ul class="cc-info"><li>Location: Oakland, CA 94602</li><li>Please call 510-914-8904 to confirm location</li><li>Meeting Time: Sundays 6:25 pm to 7:50 pm</li></ul>
-            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="oakland">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Prayers and Singing</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Bagged lunches (weekly) for East Bay Community Recovery Project, serving those struggling with homelessness, addiction and/or mental health issues</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Multi-Culturally Friendly Format</p><ul><li>We offer our love through unison, mostly English language devotional songs and prayers</li><li>We also include devotional music from around the world, including, of course, our beloved Indian style Bhajans</li><li>On special occasions we follow our program with a potluck dinner</li><li>We are pet friendly, and Go-Ji is a regular member of our Center</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="peninsula">
-            <div class="cc-head"><h3>Peninsula</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Peninsula</p>
-            <ul class="cc-info"><li>Location: Lodge Building - 40 Twin Pines Lane Belmont, CA 94002</li><li>SSE: All Sundays (except summer months) 02:45 pm to 03:45 pm</li><li>Study Circle: 1st and 3rd Sundays: 03:00 pm to 03:55 pm</li><li>Devotional Program: All Sundays: 4:00 pm to 5:15 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5168177,-122.2776792" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="peninsula">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich distribution to homeless in San Francisco (weekly)</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Career</p><ul><li>Job search coaching at LifeMoves Network Shelter (monthly)</li></ul></div><div class="act-group"><p>Environment Care</p><ul><li>Local park cleanup</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Devonshire Oaks Nursing Center</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter kits - Blankets Collection and Distribution to Homeless in San Francisco</li><li>Habitat for Humanity - Santa Rosa Fire Rebuild</li><li>Hygiene Care Kits for Homeless</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="reno-nv">
-            <div class="cc-head"><h3>Reno, NV</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Reno, NV</p>
-            <ul class="cc-info"><li>Location: Reno, NV 89511</li><li>Please call (573) 368-9172 to confirm location</li><li>Meeting Time: Sundays 6 pm to 7:30 pm</li></ul>
-            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="reno-nv">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner service at Ronald McDonald Home (monthly)</li><li>MS Walk</li></ul></div><div class="act-group"><p>Education</p><ul><li>Backpack Project - School supplies for 600-1000 backpacks</li><li>School beautification project</li><li>School cleaning</li></ul></div><div class="act-group"><p>Community</p><ul><li>Adopt a family</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="sacramento">
-            <div class="cc-head"><h3>Sacramento</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Sacramento</p>
-            <ul class="cc-info"><li>Location: Sai Seva Sadan, 3079 Kilgore Rd, Suite A, Rancho Cordova, CA 95670</li><li>Meeting Time: Sundays 2 pm to 5 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5913216,-121.2702503" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="sacramento">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner Services at Salvation Army, St. John Womens Shelter (monthly)</li></ul></div><div class="act-group"><p>Career</p><ul><li>Computer skills training (Job search, Resume writing, MS office, Google) at St. John Womens Shelter</li></ul></div><div class="act-group"><p>Living</p><ul><li>Care Kits and Winter kits (blankets) distribution</li></ul></div><div class="act-group"><p>Education</p><ul><li>Back to School drive - Backpack Distribution (192)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>EarthDay - Park Cleaning</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Christmas Caroling at Next Move</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="san-bruno">
-            <div class="cc-head"><h3>San Bruno</h3><span class="doc-type">Group</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Group of San Bruno</p>
-            <ul class="cc-info"><li>Contact details: 650-504-8584</li></ul>
-            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-bruno">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food preparation and serving</li><li>Samaritan House Shelter</li><li>Safe Harbor Shelter</li><li>First Step Shelter for Families (Shelter Network)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Clean up at City of San Bruno</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="san-francisco">
-            <div class="cc-head"><h3>San Francisco</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of San Francisco</p>
-            <ul class="cc-info"><li>Location: 573 South Van Ness Ave San Francisco, CA 94110</li><li>Meeting: Thursdays 7 pm to 9:15 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7639754,-122.417283" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-francisco">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich service for homeless in streets of San Francisco (weekly)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Toiletries and Sundries for battered women shelter</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="san-jose">
-            <div class="cc-head"><h3>San Jose</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of San Jose</p>
-            <ul class="cc-info"><li>1st &amp; 3rd Sundays (3:30PM to 5PM) at 1170 Kern Ave, Sunnyvale, CA 94085 (Shiv Durga Temple)</li><li>2nd Sundays (2:45PM to 4:30PM) at 6502 Springpath Ln, San Jose, CA 95120</li><li>Special Festivals at Shiv Durga Temple and Shirdi Sai Darbar Temple</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3823586,-121.9971944" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="san-jose">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service (Bhajans)</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Breakfast service at San Jose Home Shelter (Family Supportive Housing at King Road, San Jose)</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li></ul></div><div class="act-group"><p>Community</p><ul><li>Outreach activities at devotional and service locations (VVGC Ganapathi Temple, Shiv Durga Temple, Shirdi Sai Darbar), libraries and stores</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="santa-cruz">
-            <div class="cc-head"><h3>Santa Cruz</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Santa Cruz</p>
-            <ul class="cc-info"><li>Location: Shambhala Center 920 41st Ave Santa Cruz, CA 95062</li><li>Meeting Time: Sundays 5:30 pm to 7 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.9654708,-121.9643504" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="santa-cruz">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Sandwich and clothing distribution to the homeless</li><li>Singing Seva at Sunshine Villa Senior Living</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Donations to Recuperative Care Center</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li><li>Sandwich, Fruit &amp; Snacks for homeless</li><li>Food serving at Day on the Beach</li></ul></div><div class="act-group"><p>Living</p><ul><li>Clothing drive for Homeless</li><li>Winter kits for homeless</li><li>First aid kits / hygiene kits</li></ul></div><div class="act-group"><p>Medical</p><ul><li>Ashland Free Medical Clinic volunteering</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Senior Home Singing - Sunshine Villa</li></ul></div><div class="act-group"><p>Disaster relief</p><ul><li>Disaster relief support - Kerala</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="santa-rosa">
-            <div class="cc-head"><h3>Santa Rosa</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Santa Rosa</p>
-            <ul class="cc-info"><li>Location: Santa Rosa 95403</li><li>Please call 707-849-3151 to confirm location</li><li>Meeting Time: Sundays 7 pm to 8:30 pm</li></ul>
-            <div class="doc-actions"><button type="button" class="btn btn-sm btn-soft" data-show-on-map="santa-rosa">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Preparation and Serving at a local homeless shelter</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Crafts and Knitting Projects</li><li>Winter Projects</li><li>Knitting and distributing beanies, scarf and socks for the homeless</li></ul></div><div class="act-group"><p>Animal Care</p><ul><li>Making and delivering animal toys at the Animal Rescue Shelter</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="stockton">
-            <div class="cc-head"><h3>Stockton</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Stockton</p>
-            <ul class="cc-info"><li>Location: 4809 Bridgewater Circle Stockton, CA 95219</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.979984,-121.365378" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="stockton">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Homeless feeding at St. Marys dining hall, Stockton (monthly)</li></ul></div><div class="act-group"><p>Community</p><ul><li>Volunteering at building of Shiva Vishnu temple, Stockton</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>House bhajans (once in 2 months)</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="tri-valley">
-            <div class="cc-head"><h3>Tri-Valley</h3><span class="doc-type">Center</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Center of Tri-Valley</p>
-            <ul class="cc-info"><li>Meeting Time: Sundays 9:30 am - 12 noon</li><li>Devotional Singing &amp; Study Circle: 9:30 am to 12 noon;</li><li>Location: 4036 Ghiotti ct, Pleasanton, CA</li><li>SSE: 11 am to 12 noon;</li><li>Location: 4444 Sandalwood Dr, Pleasanton, CA</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.6944225,-121.8916298" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="tri-valley">Show on map</button></div>
-            <details class="disclosure disclosure-inline">
-              <summary><span class="d-title">Activities and service</span><svg class="d-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg></summary>
-              <div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circles</li><li>Sai Spiritual Education (SSE)</li><li>Community Service</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich preparation and distribution at Modesto Shelter (Monthly - 3rd Saturday)</li><li>Dinner service at Modesto Shelter (Bi-Weekly - 1st and 3rd Saturdays)</li><li>Dinner service at Fremont Homeless Shelter (Monthly - 2nd Sunday)</li><li>Dinner service at San Leandro (Monthly - 2nd Saturday)</li><li>Lunch service at Concord Shelter (Monthly - 2nd Sunday)</li><li>Breakfast service at Stockton Shelter (Monthly - 2nd Saturday)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Hygiene kits, Care packs, Winter kits for homeless (Oakland/Berkeley, April Showers, Concord shelter)</li><li>Food, paper products, Fruits - Livermore Shepherds gate Shelter</li><li>Soap and Shampoo making and distribution</li><li>Ad-hoc projects and services for special occasions</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary School, Hayward (weekly)</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Carols at Modesto Homeless Shelter- SSE kids</li></ul></div><div class="act-group"><p>Environmental</p><ul><li>Parks &amp; trails cleanup at Tri-Valley Area</li><li>Vegetable garden service at Hayward school</li></ul></div><div class="act-group"><p>Animal care</p><ul><li>Pet toys &amp; blankets for animal shelter</li></ul></div></div>
-            </details>
-          </article>
-          <article class="center-card2" id="west-san-jose">
-            <div class="cc-head"><h3>West San Jose</h3><span class="doc-type">Group</span></div>
-            <p class="cc-full">Sri Sathya Sai Baba Group of West San Jose</p>
-            <ul class="cc-info"><li>Location: 55558 Castle Glen Avenue, San Jose 95129</li><li>Devotion: Every other month-Saturday 4:30 to 6 pm</li><li>Service: Saturdays 9:00 am</li></ul>
-            <div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3025664,-122.0017583" target="_blank" rel="noopener">Directions</a><button type="button" class="btn btn-sm btn-soft" data-show-on-map="west-san-jose">Show on map</button></div>
-          </article>
-        </div>
-    </div>
-  </section>
-  </div>
-  </main>
-
-  <footer>
-    <div class="footer-logos" aria-label="SSIO related links">
-      <div class="footer-logos-inner">
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai International Organization">
-          <img src="images/ssioot.png" width="52" height="52" alt="Sathya Sai International Organization" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Unity">
-          <img src="images/ssuot.png" width="52" height="52" alt="Sathya Sai Unity" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Human Rights">
-          <img src="images/sshrot.png" width="52" height="52" alt="Sathya Sai Human Rights" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Cast">
-          <img src="images/saicastot.png" width="52" height="52" alt="Sai Cast" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sai Love in Action">
-          <img src="images/sailoveinactionot.png" width="52" height="52" alt="Sai Love in Action" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sri Sathya Sai Books and Publications">
-          <img src="images/ssbptot.png" width="52" height="52" alt="Sri Sathya Sai Books and Publications" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Radio Sai">
-          <img src="images/raiosaiot.png" width="52" height="52" alt="Radio Sai" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Educare">
-          <img src="images/educareot.png" width="52" height="52" alt="Educare" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Sathya Sai Vidya Vahini">
-          <img src="images/ssvvot.png" width="52" height="52" alt="Sathya Sai Vidya Vahini" />
-        </a>
-        <a href="https://www.sathyasai.org/" target="_blank" rel="noopener" title="Preport">
-          <img src="images/preportot.png" width="52" height="52" alt="Preport" />
-        </a>
-      </div>
-    </div>
-  </footer>
-  <script src="nav.js" defer></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-  <script src="centers-data.js" defer></script>
-  <script src="centers-map.js" defer></script>
-  <script src="tabs.js" defer></script>
-  <script src="about.js" defer></script>
-  <script src="timeline.js" defer></script>
-  <script src="anim.js" defer></script>
+<nav aria-label="About sections" class="tabbar" data-tabbar="">
+<div aria-label="About sections" class="tabbar-inner" role="tablist">
+<a aria-controls="panel-baba" aria-selected="true" class="tab" href="#baba" id="tab-baba" role="tab" tabindex="0">Sri Sathya Sai Baba</a>
+<a aria-controls="panel-region7" aria-selected="false" class="tab" href="#region7" id="tab-region7" role="tab" tabindex="-1">USA Region 7</a>
+<a aria-controls="panel-organization" aria-selected="false" class="tab" href="#organization" id="tab-organization" role="tab" tabindex="-1">Sai Organization</a>
+<a aria-controls="panel-resources" aria-selected="false" class="tab" href="#resources" id="tab-resources" role="tab" tabindex="-1">SSIO Resources</a>
+<a aria-controls="panel-centers" aria-selected="false" class="tab" href="#centers" id="tab-centers" role="tab" tabindex="-1">Sai Centers</a>
+</div>
+</nav>
+<noscript><style>.tab-panel[hidden] { display: block; }</style></noscript>
+<div aria-labelledby="tab-baba" class="tab-panel" data-hash="baba" id="panel-baba" role="tabpanel"><section class="sx-hero">
+<picture class="sx-hero-pic"><source media="(max-width: 760px)" srcset="images/sanctuary/about-baba-m.webp" type="image/webp"/><source media="(max-width: 760px)" srcset="images/sanctuary/about-baba-m.jpg"/><source srcset="images/sanctuary/about-baba-2000.webp" type="image/webp"/><img alt="Sri Sathya Sai Baba" fetchpriority="high" height="1343" src="images/sanctuary/about-baba-2000.jpg" style="--pos:57% 50%" width="2000"/></picture>
+<div aria-hidden="true" class="sx-hero-shade"></div>
+<div class="rd-wrap sx-hero-in">
+<p class="rd-eyebrow">About</p>
+<h1 class="sx-long">Sri Sathya Sai Baba</h1>
+<p class="rd-hero-lead">Love All, Serve All. His life, His message, and key moments from 1926 to 2011.</p>
+<figure class="rd-hero-q"><blockquote>There is only one Language, the Language of the Heart.</blockquote><figcaption>Sathya Sai Baba</figcaption></figure>
+</div>
+</section><section class="rd-sec rd-what"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>His message</span></p><h2>Who is Sathya Sai Baba?</h2></header><div class="rd-split" data-reveal="">
+<figure class="rd-split-media"><div class="photo photo-slider" data-photo-slider="">
+<img alt="Sri Sathya Sai Baba" class="is-on" src="images/about/ch-3.jpg"/>
+<img alt="Sri Sathya Sai Baba" src="images/about/ch-4.jpg"/>
+<button aria-label="Previous photo" class="ps-btn ps-prev" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button aria-label="Next photo" class="ps-btn ps-next" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div></figure>
+<div class="rd-split-text"><p>For more than 85 years, Sathya Sai Baba walked among us, sharing His divine message that can best be summed up in the words, "Love All Serve All". During His lifetime, He became one of the most revered spiritual teachers in the world, encouraging all of humanity to reconnect with the essential and eternal human values of Truth (Sathya), Right Conduct (Dharma), Peace (Santhi), Love (Prema) and Nonviolence (Ahimsa) in everyday living.</p><p>He is also known as Sri Sathya Sai Baba, Sai Baba, Swami, Bhagavan, or simply as Baba to millions of people throughout the world. His followers come from all ages, faiths, and races and meet regularly for devotional programs, to study His teachings, and to engage in service activities in order to practice His message of Love and Peace to unite all mankind.</p><p class="doc-link"><a href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" rel="noopener" target="_blank"><span>Read the brochure: A Brief Introduction to Sathya Sai Baba and His Teachings (PDF)</span></a></p></div>
+</div></div></section><section class="rd-sec rd-take"><div class="rd-wrap"><header class="rd-head rd-center" data-reveal=""><p class="rd-kicker"><svg aria-hidden="true" class="rd-lotus" focusable="false" viewbox="0 0 220 28"><path d="M2 18 H84"></path><path d="M136 18 H218"></path><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z"></path><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z"></path><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z"></path><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z"></path><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z"></path></svg><span>Human values</span></p><h2>Five values for everyday living</h2></header><div class="rd-cards rd-values" data-n="5"><article class="rd-card" data-reveal=""><span class="rd-medal"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg></span><h3>Truth</h3><p>Sathya</p></article><article class="rd-card" data-reveal=""><span class="rd-medal"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M12 3v18M5 21h14M6 7h12M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"></path></svg></span><h3>Right Conduct</h3><p>Dharma</p></article><article class="rd-card" data-reveal=""><span class="rd-medal"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M3 21c3-1 5-3 6-6M9 15c4 1 9-1 11-6l2-3h-4c-1-2-3-3-5-2-3 1-4 4-4 7"></path><path d="M13 7c-2-2-5-3-8-2 0 3 2 6 5 7"></path></svg></span><h3>Peace</h3><p>Santhi</p></article><article class="rd-card" data-reveal=""><span class="rd-medal"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"></path></svg></span><h3>Love</h3><p>Prema</p></article><article class="rd-card" data-reveal=""><span class="rd-medal"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M12 7.5a4.5 4.5 0 1 1 4.5 4.5M12 7.5A4.5 4.5 0 1 0 7.5 12M12 7.5V9m-4.5 3a4.5 4.5 0 1 0 4.5 4.5M7.5 12H9m7.5 0a4.5 4.5 0 1 1-4.5 4.5m4.5-4.5H15m-3 4.5V15"></path><circle cx="12" cy="12" r="3"></circle></svg></span><h3>Nonviolence</h3><p>Ahimsa</p></article></div></div></section><section class="rd-sec sx-timeline" id="timeline"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>Key milestones</span></p><h2>The life of Sri Sathya Sai Baba</h2><p class="rd-sub-lead">Select a year, use the arrows, or swipe on your phone.</p></header>      <!-- timeline:start -->
+<div aria-label="Timeline. Use the arrow keys, swipe, or select a year." class="tla" data-tla="" tabindex="0">
+<div class="tla-years" role="tablist">
+<button aria-controls="tla-1926" class="tla-year" data-i="0" role="tab" type="button">1926</button>
+<button aria-controls="tla-1940" class="tla-year" data-i="1" role="tab" type="button">1940</button>
+<button aria-controls="tla-1950" class="tla-year" data-i="2" role="tab" type="button">1950</button>
+<button aria-controls="tla-1957" class="tla-year" data-i="3" role="tab" type="button">1957</button>
+<button aria-controls="tla-1958" class="tla-year" data-i="4" role="tab" type="button">1958</button>
+<button aria-controls="tla-1966" class="tla-year" data-i="5" role="tab" type="button">1966</button>
+<button aria-controls="tla-1968" class="tla-year" data-i="6" role="tab" type="button">1968</button>
+<button aria-controls="tla-1972" class="tla-year" data-i="7" role="tab" type="button">1972</button>
+<button aria-controls="tla-1975" class="tla-year" data-i="8" role="tab" type="button">1975</button>
+<button aria-controls="tla-1976" class="tla-year" data-i="9" role="tab" type="button">1976</button>
+<button aria-controls="tla-1980" class="tla-year" data-i="10" role="tab" type="button">1980</button>
+<button aria-controls="tla-1981" class="tla-year" data-i="11" role="tab" type="button">1981</button>
+<button aria-controls="tla-1985" class="tla-year" data-i="12" role="tab" type="button">1985</button>
+<button aria-controls="tla-2011" class="tla-year" data-i="13" role="tab" type="button">2011</button>
+</div>
+<div class="tla-stage">
+<div class="tla-track">
+<article aria-label="1926" class="tla-slide" id="tla-1926" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">01 / 14</span>
+<h3 class="tla-big">1926</h3>
+<p>Sathya Sai Baba is Born.</p>
+</div>
+</article>
+<article aria-label="1940" class="tla-slide" id="tla-1940" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/2.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/2.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">02 / 14</span>
+<h3 class="tla-big">1940</h3>
+<p>Divine Declaration.</p>
+</div>
+</article>
+<article aria-label="1950" class="tla-slide" id="tla-1950" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/3.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/3.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">03 / 14</span>
+<h3 class="tla-big">1950</h3>
+<p>Prasanthi Nilayam inaugurated on HIS 28th birthday</p>
+</div>
+</article>
+<article aria-label="1957" class="tla-slide" id="tla-1957" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1957.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1957.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">04 / 14</span>
+<h3 class="tla-big">1957</h3>
+<p>Sathya Sai Baba inaugurates a hospital behind Prasanthi Nilayam</p>
+</div>
+</article>
+<article aria-label="1958" class="tla-slide" id="tla-1958" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1958.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1958.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">05 / 14</span>
+<h3 class="tla-big">1958</h3>
+<p>Inauguration of Sanathana Sarathi</p>
+</div>
+</article>
+<article aria-label="1966" class="tla-slide" id="tla-1966" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1966.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1966.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">06 / 14</span>
+<h3 class="tla-big">1966</h3>
+<p>Sri Sathya Sai Bal Vikas started</p>
+</div>
+</article>
+<article aria-label="1968" class="tla-slide" id="tla-1968" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1968.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1968.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">07 / 14</span>
+<h3 class="tla-big">1968</h3>
+<p>Inauguration of First World Conference and Women's College at Anantapur</p>
+</div>
+</article>
+<article aria-label="1972" class="tla-slide" id="tla-1972" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1972.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1972.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">08 / 14</span>
+<h3 class="tla-big">1972</h3>
+<p>Inauguration of Smt. Eswaramma High School at Puttaparthi</p>
+</div>
+</article>
+<article aria-label="1975" class="tla-slide" id="tla-1975" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1975.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1975.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">09 / 14</span>
+<h3 class="tla-big">1975</h3>
+<p>Second World Conference held at Prashanthi Nilayam on Sathya Sai Baba’s 50th birthday celebrations. Inauguration of Sarva Dharma Aikya Stupa</p>
+</div>
+</article>
+<article aria-label="1976" class="tla-slide" id="tla-1976" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1976.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1976.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">10 / 14</span>
+<h3 class="tla-big">1976</h3>
+<p>Inauguration of the Sri Sathya Sai Hospital at Whitefield, Bangalore</p>
+</div>
+</article>
+<article aria-label="1980" class="tla-slide" id="tla-1980" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1980.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1980.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">11 / 14</span>
+<h3 class="tla-big">1980</h3>
+<p>Third World Conference held at Prashanthi Nilayam on Sathya Sai Baba’s 55th birthday celebrations</p>
+</div>
+</article>
+<article aria-label="1981" class="tla-slide" id="tla-1981" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1981.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1981.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">12 / 14</span>
+<h3 class="tla-big">1981</h3>
+<p>Sri Sathya Sai University Puttaparthi launched</p>
+</div>
+</article>
+<article aria-label="1985" class="tla-slide" id="tla-1985" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/1985.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/1985.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">13 / 14</span>
+<h3 class="tla-big">1985</h3>
+<p>60th Birthday of Sathya Sai Baba</p>
+</div>
+</article>
+<article aria-label="2011" class="tla-slide" id="tla-2011" role="tabpanel">
+<div class="tla-media">
+<div class="tla-blur" style="background-image:url('images/about/2011.png')"></div>
+<img alt="" height="150" loading="eager" src="images/about/2011.png" width="150"/>
+</div>
+<div class="tla-body">
+<span class="tla-count">14 / 14</span>
+<h3 class="tla-big">2011</h3>
+<p>Mahasamadhi</p>
+</div>
+</article>
+</div>
+</div>
+<div class="tla-nav">
+<button aria-label="Previous year" class="tla-btn tla-prev" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<div aria-hidden="true" class="tla-progress"><span></span></div>
+<button aria-label="Next year" class="tla-btn tla-next" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M9 5l7 7-7 7"></path></svg></button>
+</div>
+</div>      <!-- timeline:end -->
+</div></section><section class="rd-band" data-reveal=""><div class="rd-wrap rd-band-in"><span class="rd-band-orn"><svg aria-hidden="true" class="rd-lotus" focusable="false" viewbox="0 0 220 28"><path d="M2 18 H84"></path><path d="M136 18 H218"></path><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z"></path><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z"></path><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z"></path><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z"></path><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z"></path></svg></span><p class="rd-band-q">Love All Serve All</p></div></section></div>
+<div aria-labelledby="tab-region7" class="tab-panel" data-hash="region7" hidden="" id="panel-region7" role="tabpanel"><section class="sx-hero">
+<picture class="sx-hero-pic"><source media="(max-width: 760px)" srcset="images/sanctuary/about-region7-m.webp" type="image/webp"/><source media="(max-width: 760px)" srcset="images/sanctuary/about-region7-m.jpg"/><source srcset="images/sanctuary/about-region7-2000.webp" type="image/webp"/><img alt="Sri Sathya Sai Baba" height="2964" loading="lazy" src="images/sanctuary/about-region7-2000.jpg" style="--pos:50% 0%" width="1958"/></picture>
+<div aria-hidden="true" class="sx-hero-shade"></div>
+<div class="rd-wrap sx-hero-in">
+<p class="rd-eyebrow">About</p>
+<h1>USA Region 7</h1>
+<p class="rd-hero-lead">Sai Centers in California and Nevada, and the regional team that serves them.</p>
+<figure class="rd-hero-q"><blockquote>There is only one Caste, the Caste of Humanity.</blockquote><figcaption>Sathya Sai Baba</figcaption></figure>
+</div>
+</section><section class="rd-sec sx-glance"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>At a glance</span></p><h2>Region 7 at a glance</h2></header><ul class="facts">
+<li><span>States</span><strong>California, Nevada</strong></li>
+<li><span>Sai Centers</span><strong>18</strong></li>
+<li><span>Groups</span><strong>3</strong></li>
+<li><span>Wings</span><strong>Devotion, SSE, Service, YA</strong></li>
+<li><span>Yearly Events</span><strong>7</strong></li>
+</ul></div></section><section class="rd-sec sx-team" id="team"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>Our team</span></p><h2>Regional officers</h2><p class="rd-sub-lead">How the regional team is organized: leadership, the wings, Young Adults, and support roles.</p></header><div class="team">
+<div class="team-tier tier-lead">
+<p class="tier-label">Regional leadership</p>
+<ul class="team-row"><li class="member member-lead"><span aria-hidden="true" class="member-initials">LV</span><span class="member-text"><strong>Lakshmi Vyakaran</strong><span>President</span></span></li><li class="member member-lead"><span aria-hidden="true" class="member-initials">MB</span><span class="member-text"><strong>Mohan Bhyravabhotla</strong><span>Vice President</span></span></li></ul>
+</div>
+<div class="team-tier">
+<p class="tier-label">Wing coordinators</p>
+<ul class="team-row team-row-3"><li class="member"><span aria-hidden="true" class="member-initials">SS</span><span class="member-text"><strong>Sandhya Srikant</strong><span>Devotion Coordinator</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">LR</span><span class="member-text"><strong>Lata Ramesh</strong><span>SSE Coordinator</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">AG</span><span class="member-text"><strong>Asha Giridharan</strong><span>Service Coordinator</span></span></li></ul>
+</div>
+<div class="team-tier">
+<p class="tier-label">Young Adults</p>
+<div class="team-split">
+<div><p class="sub-label">Representatives</p><ul class="team-row team-row-2"><li class="member"><span aria-hidden="true" class="member-initials">MR</span><span class="member-text"><strong>Madhumitha Ramasubramanian</strong><span>YA Representative - Female</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">KS</span><span class="member-text"><strong>Kshitij Srivastava</strong><span>YA Representative - Male</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">AR</span><span class="member-text"><strong>Aneesh Ramgopal</strong><span>YA Representative - Devotion</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">KA</span><span class="member-text"><strong>Kryshana Ananthan</strong><span>YA Representative - Service</span></span></li></ul></div>
+<div><p class="sub-label">Advisors</p><ul class="team-row team-row-1"><li class="member"><span aria-hidden="true" class="member-initials">GM</span><span class="member-text"><strong>Geetha Mohan</strong><span>YA Advisor - Female</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">SK</span><span class="member-text"><strong>Sunil Kasturi</strong><span>YA Advisor - Male</span></span></li></ul></div>
+</div>
+</div>
+<div class="team-tier">
+<p class="tier-label">Regional support</p>
+<div class="team-support">
+<div><p class="sub-label">Medical</p><ul class="team-list"><li class="member"><span aria-hidden="true" class="member-initials">JP</span><span class="member-text"><strong>Dr. Joe Phaneuf</strong><span>Medical Director</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">PN</span><span class="member-text"><strong>Dr. Priya Nand</strong><span>Medical Director</span></span></li></ul></div>
+<div><p class="sub-label">Web</p><ul class="team-list"><li class="member"><span aria-hidden="true" class="member-initials">BN</span><span class="member-text"><strong>Balamurugan Natarajan</strong><span>Web Master</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">PS</span><span class="member-text"><strong>Pavan Kumar Sura</strong><span>Web Master</span></span></li><li class="member"><span aria-hidden="true" class="member-initials">JP</span><span class="member-text"><strong>Jagan Pandarinathan</strong><span>Web Master</span></span></li></ul></div>
+<div><p class="sub-label">Media</p><ul class="team-list"><li class="member"><span aria-hidden="true" class="member-initials">MM</span><span class="member-text"><strong>Maneesha Munshi</strong><span>Media</span></span></li></ul></div>
+</div>
+</div>
+</div></div></section><section class="rd-sec rd-media"><div class="rd-wrap"><div class="rd-media-card rd-media-noimg" data-reveal="">
+<span class="rd-media-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+<div class="rd-media-text">
+<p class="rd-kicker"><span>Sai Centers</span></p>
+<h2>Sai Centers in Region 7</h2>
+<p>See every Sai Center and Group on one map, with meeting times and addresses.</p>
+<div class="rd-actions"><a class="rd-btn rd-btn-primary" href="about.html#centers"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Find a Sai Center</span></a></div>
+</div>
+</div></div></section></div>
+<div aria-labelledby="tab-organization" class="tab-panel" data-hash="organization" hidden="" id="panel-organization" role="tabpanel"><section class="sx-hero">
+<picture class="sx-hero-pic"><source media="(max-width: 760px)" srcset="images/sanctuary/about-organization-m.webp" type="image/webp"/><source media="(max-width: 760px)" srcset="images/sanctuary/about-organization-m.jpg"/><source srcset="images/sanctuary/about-organization-2000.webp" type="image/webp"/><img alt="Sri Sathya Sai Baba" height="1594" loading="lazy" src="images/sanctuary/about-organization-2000.jpg" style="--pos:50% 100%" width="2000"/></picture>
+<div aria-hidden="true" class="sx-hero-shade"></div>
+<div class="rd-wrap sx-hero-in">
+<p class="rd-eyebrow">About</p>
+<h1 class="sx-long">Sai Organization</h1>
+<p class="rd-hero-lead">Who we are, who is welcome, and the guidelines for our centers.</p>
+<figure class="rd-hero-q"><blockquote>Have the feeling of oneness permeate all your acts.</blockquote><figcaption>Sathya Sai Speaks IX</figcaption></figure>
+</div>
+</section><section class="rd-sec rd-what"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>Who we are</span></p><h2>The Sathya Sai Organization</h2><p class="rd-sub-lead">Centers in over 126 countries. Open to all, with no fees.</p></header><div class="rd-split" data-reveal="">
+<figure class="rd-split-media"><figure class="video-figure">
+<div class="video-frame"><iframe allow="fullscreen; picture-in-picture" allowfullscreen="" loading="lazy" src="https://player.vimeo.com/video/63301962?portrait=0" title="Purpose of the Sai Organization"></iframe></div>
+<figcaption>Video: Swami on the purpose of the Sai Organization.</figcaption>
+</figure></figure>
+<div class="rd-split-text"><p>There are Sathya Sai Baba centers in various cities across the United States and in over 126 countries around the world. There are 16 Sai centers in the Bay Area. All are welcome, regardless of race, creed, economic status or religious orientation. There is no membership fee to join. The organization undertakes devotional, educational and service activities to further one’s spiritual growth. Members meet regularly in order to study and discuss the teachings of Sathya Sai Baba and to engage in group devotional singing, meditation, and prayer (Devotion).</p><p>Many centers have a children’s program (Sai Spiritual Education). Center members also plan and implement a variety of community service projects (Service). In addition, there is an active Young Adult Program in many centers. There is never any solicitation or fee charged for any of the functions that a center conducts. Please contact the regional team or a center near you for additional information.</p></div>
+</div></div></section><section class="rd-sec rd-quotes"><div class="rd-wrap"><header class="rd-head rd-center" data-reveal=""><p class="rd-kicker"><svg aria-hidden="true" class="rd-lotus" focusable="false" viewbox="0 0 220 28"><path d="M2 18 H84"></path><path d="M136 18 H218"></path><path d="M110 4 C102 10 100 18 110 24 C120 18 118 10 110 4 Z"></path><path d="M110 24 C100 22 92 16 90 9 C98 10 105 15 110 24 Z"></path><path d="M110 24 C120 22 128 16 130 9 C122 10 115 15 110 24 Z"></path><path d="M110 24 C98 25 90 22 86 17 C95 16 103 19 110 24 Z"></path><path d="M110 24 C122 25 130 22 134 17 C125 16 117 19 110 24 Z"></path></svg><span>In Swami’s words</span></p><h2>Why we gather</h2></header><div class="rd-qgrid" data-n="2"><figure class="rd-q rd-q-feature" data-reveal=""><blockquote><span>The main objective of the Sathya Sai Organization ... is to help you recognize the divinity inherent in you. So, your duty is to emphasize the One, to experience the One in all you do or speak. Do not give importance to differences of religion, sect, status, or color. Have the feeling of oneness permeate all your acts. Only those who do so have a place in this Organization; the rest can withdraw.</span></blockquote><figcaption>Baba</figcaption></figure><figure class="rd-q rd-q-solo" data-reveal=""><p class="rd-q-lead">The Sai Organization charter states that every member should undertake spiritual discipline as an integral part of daily life and to abide by the following guidelines</p><blockquote><span>There is only one Caste, the Caste of Humanity;<br/>There is only one Religion, the Religion of Love;<br/>There is only one Language, the Language of the Heart;<br/>There is only One God, and He is Omnipresent.</span></blockquote><figcaption>Sathya Sai Baba</figcaption></figure></div></div></section><section class="rd-sec rd-res" id="guidelines"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>Documents</span></p><h2>Guidelines and manuals</h2><p class="rd-sub-lead">Select a document to see what it is, then View or Download it.</p></header><div class="rd-tiles rd-tiles-12 rd-docs" data-n="8"><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">USA Region 7 Brochure</h3><p class="rd-tile-b">Brochure (PDF): an introduction to the Sai Centers of USA Region 7.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/usareg7orgbrochure.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> USA Region 7 Brochure (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/usareg7orgbrochure.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> USA Region 7 Brochure (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">A Brief Introduction to Sathya Sai Baba and HIS Teachings</h3><p class="rd-tile-b">Brochure (PDF): a short introduction to Sathya Sai Baba and His teachings.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> A Brief Introduction to Sathya Sai Baba and HIS Teachings (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/usareg7swamibrochure.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> A Brief Introduction to Sathya Sai Baba and HIS Teachings (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">Newcomer's Guide</h3><p class="rd-tile-b">Booklet (PDF): a guide for people who are new to Sai Centers.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/061004NewcomersBooklet.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> Newcomer's Guide (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/061004NewcomersBooklet.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> Newcomer's Guide (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">International Sai Center Guidelines</h3><p class="rd-tile-b">Guidelines (PDF): how Sai Centers work around the world.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/Guidelines2012Sep.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> International Sai Center Guidelines (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/Guidelines2012Sep.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> International Sai Center Guidelines (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">USA Sai Center Service Guidelines</h3><p class="rd-tile-b">Guidelines (PDF): how USA Sai Centers plan and do service.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/06dec03ServiceGuidelines.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> USA Sai Center Service Guidelines (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/06dec03ServiceGuidelines.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> USA Sai Center Service Guidelines (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:4"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">USA Young Adults Guidelines</h3><p class="rd-tile-b">Manual (PDF): a reference for local Young Adult groups.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Sai_Young_Adults_Local_Group_Reference_Manual.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> USA Young Adults Guidelines (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Sai_Young_Adults_Local_Group_Reference_Manual.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> USA Young Adults Guidelines (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:6"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">USA SSE Guidelines</h3><p class="rd-tile-b">Guidelines (PDF): Sai Spiritual Education for children in USA centers.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/110819SSEGuidelines.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> USA SSE Guidelines (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/110819SSEGuidelines.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> USA SSE Guidelines (opens in a new tab)</span></a></p></article><article class="rd-tile rd-doc" data-reveal="" style="--span:6"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg></span><span class="rd-tile-k">PDF</span><h3 class="rd-tile-t">Guidelines for USA Sai Websites</h3><p class="rd-tile-b">Guidelines (PDF): rules for USA Sai Center websites.</p><p class="rd-doc-acts"><a class="rd-link" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/guidelinesusonly.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg><span>View</span><span class="sr-only"> Guidelines for USA Sai Websites (opens in a new tab)</span></a><a class="rd-link" download="" href="https://www.region7saicenters.org/saidocuments/Usa_Sai_Center_Resources/guidelinesusonly.pdf" rel="noopener" target="_blank"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="M7 10l5 5 5-5"></path><path d="M12 15V3"></path></svg><span>Download</span><span class="sr-only"> Guidelines for USA Sai Websites (opens in a new tab)</span></a></p></article></div></div></section></div>
+<div aria-labelledby="tab-resources" class="tab-panel" data-hash="resources" hidden="" id="panel-resources" role="tabpanel"><section class="sx-hero">
+<picture class="sx-hero-pic"><source media="(max-width: 760px)" srcset="images/sanctuary/about-resources-m.webp" type="image/webp"/><source media="(max-width: 760px)" srcset="images/sanctuary/about-resources-m.jpg"/><source srcset="images/sanctuary/about-resources-2000.webp" type="image/webp"/><img alt="Sri Sathya Sai Baba" height="2562" loading="lazy" src="images/sanctuary/about-resources-2000.jpg" style="--pos:50% 25%" width="1908"/></picture>
+<div aria-hidden="true" class="sx-hero-shade"></div>
+<div class="rd-wrap sx-hero-in">
+<p class="rd-eyebrow">About</p>
+<h1 class="sx-long">SSIO Officers Resources</h1>
+<p class="rd-hero-lead">Videos, Swami’s discourses, the communication module, letters, and the official logo for officers.</p>
+<figure class="rd-hero-q"><blockquote>Every activity must be rendered valid and worthwhile by its contribution to the discovery of Truth, both of the Self and of nature.</blockquote><figcaption>Sathya Sai Speaks, IX, p.56</figcaption></figure>
+</div>
+</section><section class="rd-sec rd-res" id="resources"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>For officers</span></p><h2>Resources</h2><p class="rd-sub-lead">Videos, discourses, and tools for center officers. Open a group to see its items.</p></header><div class="rd-tiles rd-tiles-12" data-n="5"><button class="rd-tile" data-dialog="dlg-res-videos" data-reveal="" style="--span:4" type="button"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><rect height="14" rx="2" width="15" x="2" y="5"></rect><path d="M23 7l-6 5 6 5z"></path></svg></span><span class="rd-tile-t">Videos</span><span class="rd-tile-b">Overview and Structure of SSIO (Sathya Sai International Organization), SSIO Outreach and Objectives Introductory Video</span><span class="rd-tile-m">2 items<svg aria-hidden="true" class="rd-tile-arr" focusable="false" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span></button><button class="rd-tile" data-dialog="dlg-res-select-swami-s-discourses" data-reveal="" style="--span:4" type="button"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span><span class="rd-tile-t">Select Swami's Discourses</span><span class="rd-tile-b">The Heart of the Organization, Call to Sai Samithi Members…</span><span class="rd-tile-m">7 items<svg aria-hidden="true" class="rd-tile-arr" focusable="false" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span></button><button class="rd-tile" data-dialog="dlg-res-communication-module" data-reveal="" style="--span:4" type="button"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg></span><span class="rd-tile-t">Communication Module</span><span class="rd-tile-b">References for Loving and Effective Communication, Communications Workshop by Dr Joe Phaneuf…</span><span class="rd-tile-m">5 items<svg aria-hidden="true" class="rd-tile-arr" focusable="false" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span></button><button class="rd-tile" data-dialog="dlg-res-historic-and-significant-letters-from-swami" data-reveal="" style="--span:6" type="button"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><path d="M22 6l-10 7L2 6"></path></svg></span><span class="rd-tile-t">Historic and Significant Letters from Swami</span><span class="rd-tile-b">Sathya Sai Speaks</span><span class="rd-tile-m">1 item<svg aria-hidden="true" class="rd-tile-arr" focusable="false" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span></button><button class="rd-tile" data-dialog="dlg-res-official-logo" data-reveal="" style="--span:6" type="button"><span class="rd-tile-ico"><svg aria-hidden="true" class="ico" focusable="false" viewbox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></span><span class="rd-tile-t">Official Logo</span><span class="rd-tile-b">Logo of the Sathya Sai International Organization, Download Logo</span><span class="rd-tile-m">2 items<svg aria-hidden="true" class="rd-tile-arr" focusable="false" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></span></button></div></div></section></div>
+<div aria-labelledby="tab-centers" class="tab-panel" data-hash="centers" hidden="" id="panel-centers" role="tabpanel"><section class="sx-hero sx-hero-centers">
+<picture class="sx-hero-pic"><source media="(max-width: 760px)" srcset="images/sanctuary/about-centers-m.webp" type="image/webp"/><source media="(max-width: 760px)" srcset="images/sanctuary/about-centers-m.jpg"/><source srcset="images/sanctuary/about-centers-2000.webp" type="image/webp"/><img alt="Sri Sathya Sai Baba" height="1350" loading="lazy" src="images/sanctuary/about-centers-2000.jpg" style="--pos:17% 50%" width="2000"/></picture>
+<div aria-hidden="true" class="sx-hero-shade"></div>
+<div class="rd-wrap sx-hero-in">
+<p class="rd-eyebrow">Sai Centers</p>
+<h1 class="sx-long">Find a Sai Center</h1>
+<p class="rd-hero-lead">20 Sai Centers and Groups in Northern California and Nevada. Everyone is welcome. Times can change, so please call ahead for a first visit.</p>
+<figure class="rd-hero-q"><blockquote>Keep good company. Visit places of worship and saintly people.</blockquote><figcaption>Sathya Sai Speaks 6:1</figcaption></figure>
+</div>
+</section><section class="rd-sec sx-map" id="map"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>Map</span></p><h2>Centers on the map</h2></header><div class="leaflet-frame"><div aria-label="Map of Sai Centers in Region 7" id="centers-map" role="region"></div></div><p class="map-note">Select a teal pin to see the center, its address, and directions. 15 centers and 5 groups.</p></div></section><section class="rd-sec sx-centers-list" id="list"><div class="rd-wrap"><header class="rd-head" data-reveal=""><p class="rd-kicker"><span>All centers</span></p><h2>Centers and groups</h2><p class="rd-sub-lead">Meeting times, addresses, and service activities for each center.</p></header><div class="centers-grid2">
+<article class="center-card2" id="central-san-jose">
+<div class="cc-head"><h3>Central San Jose</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Central San Jose</p>
+<ul class="cc-info"><li>Devotional Service: Sundays - 5 PM to 6:15 PM</li><li>Location: Center for Spiritual Living, 1195 Clark St, San Jose, CA</li><li>Sai Spiritual Education: Sundays - 3 PM to 4:30 PM (September to June)</li><li>For Service and Other Activities check center communication</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3111366,-121.8913987" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="central-san-jose" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circles</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Weekly food services at San Jose Homefirst &amp; Sunnyvale shelters</li><li>Weekly tutoring at San Jose Family shelter and Morgan Hill library</li><li>STEM summer course</li><li>Back to School kits</li></ul></div><div class="act-group"><p>Elder Care</p><ul><li>Monthly convalescent home singing (SSE)</li><li>Center grandparents service</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Cleanup of Parks in San Jose</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter and care kits distribution</li><li>Halloween costume collection drive</li><li>Habitat for Humanity</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Caroling at multiple locations</li><li>Christmas play by Morgan Hill tutoring kids</li><li>93-day house bhajans for Swami’s birthday</li></ul></div><div class="act-group"><p>Study circles</p><ul><li>Sai Parenting &amp; Gita Vahini</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="elk-grove">
+<div class="cc-head"><h3>Elk Grove</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Elk Grove</p>
+<ul class="cc-info"><li>Location: 7495 Elder Creek Rd, Sacramento, CA</li><li>Please call (916) 317-5564 or email elkgrove_sai@yahoo.com for directions and parking instructions.</li><li>Devotion: Thursdays 7:30 pm to 9:15 pm</li><li>SSE: Sundays 10:30 am - 11:30 am</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5106237,-121.4161808" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="elk-grove" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li></ul><div class="act-group"><p>Environment Services</p><ul><li>Tree Planting and Reforestation (Sacramento Tree Foundation)</li><li>Elk Grove Creek Cleanup (Sacramento Area Creeks Council)</li><li>Wildlife Care Association of Sacramento Facility Maintenance</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Cold weather kits distribution to local homeless population</li></ul></div><div class="act-group"><p>Education</p><ul><li>Toys, School, Medical supplies (Children's Receiving Home of Sacramento)</li><li>Operation Backpack - School backpacks and supplies for disadvantaged children</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="evergreen">
+<div class="cc-head"><h3>Evergreen</h3><span class="doc-type">Group</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Group of Evergreen</p>
+<ul class="cc-info"><li>Location: 3208 Vernazza Ave, San Jose, CA 95135</li><li>Meeting Time: Thursdays 7:00 pm to 8:00 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3150295,-121.7715236" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="evergreen" type="button">Show on map</button></div>
+</article>
+<article class="center-card2" id="fremont">
+<div class="cc-head"><h3>Fremont</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Fremont</p>
+<ul class="cc-info"><li>Location: 40086 Paseo Padre Pkwy, Fremont, CA</li><li>Meeting Time: Sundays 3 pm to 5:15 pm</li><li>3 to 4 pm - Study Circle, SSE, Parenting Circle</li><li>4:15 to 5:15 pm - Devotional Singing</li><li>2nd and 4th Thursday house bhajans virtual via zoom</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5455262,-121.980857" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="fremont" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Light Meditation</li><li>Study circle</li><li>Sai Spiritual Education (SSE)</li><li>Community service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food</p><ul><li>Sandwich preparation and distribution (monthly)</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary, Hayward (weekly)</li><li>Ad-hoc projects with schools in Hayward, San Leandro, San Lorenzo</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Community gardens</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="fresno">
+<div class="cc-head"><h3>Fresno</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Fresno</p>
+<ul class="cc-info"><li>Location: 9647 N. Willey Court Fresno, CA 93720</li><li>Meeting Time: Thursdays 6:30 pm to 8 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.876437,-119.743644" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="fresno" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study circle</li><li>Community service activities</li></ul><div class="act-group"><p>Animal Service</p><ul><li>Donations to animal shelter for Swami’s Birthday and Mahasamadhi</li><li>Breakfast for Fremont Homeless Shelter (weekly)</li><li>Dinner service at Warming Center, Fremont (winter)</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>Akhanda Bhajans</li><li>Celebrate Guru Purnima, Swami’s birthday, Shivarathri, New Years Day</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="marin">
+<div class="cc-head"><h3>Marin</h3><span class="doc-type">Group</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Group of Marin</p>
+<ul class="cc-info"><li>Location: Sausalito CA 94965</li><li>Please call 415-272-3806 to confirm location</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li><li>Note: Occasionally we meet on a different day of the week. Please call to confirm</li></ul>
+<div class="doc-actions"><button class="btn btn-sm btn-soft" data-show-on-map="marin" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li></ul><div class="act-group"><p>Food Service</p><ul><li>Support St Vincent Dining Hall in San Rafael (Organization provides meals twice a day every day)</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Greeting cards for any organization in Marin including Serving Shelters, Nursing homes, Halfway houses</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="monterey-peninsula">
+<div class="cc-head"><h3>Monterey Peninsula</h3><span class="doc-type">Group</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Group of Monterey Peninsula</p>
+<ul class="cc-info"><li>Location: 25881 Rancho Alto Drive Carmel, CA 93923</li><li>Meeting Time: Thursdays 7:00 pm to 8:30 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.525145,-121.808468" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="monterey-peninsula" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional service</li><li>Study Circles</li><li>Community service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Lunch for homeless men in ihelp program at local church (3rd thursdays)</li><li>Lunch service for Gathering for women - homeless (3rd week)</li></ul></div><div class="act-group"><p>Devotion</p><ul><li>Weekly study circle - Bhagawad Gita: A walkthrough for Westerners</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="tracy-mountain-house">
+<div class="cc-head"><h3>Tracy/Mountain House</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Tracy/Mountain House</p>
+<ul class="cc-info"><li>Location: Sri Sathya Sai Baba Abode of Supreme Peace @ 244 W Grant Line Rd, Tracy, CA 95376</li><li>Meeting Time: Every Sunday: 4:20 pm - SSE/ Study Circle. 5:30 pm - Devotional Singing</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7540512,-121.4283601" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="tracy-mountain-house" type="button">Show on map</button></div>
+</article>
+<article class="center-card2" id="oakland">
+<div class="cc-head"><h3>Oakland</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Oakland</p>
+<ul class="cc-info"><li>Location: Oakland, CA 94602</li><li>Please call 510-914-8904 to confirm location</li><li>Meeting Time: Sundays 6:25 pm to 7:50 pm</li></ul>
+<div class="doc-actions"><button class="btn btn-sm btn-soft" data-show-on-map="oakland" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Prayers and Singing</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Bagged lunches (weekly) for East Bay Community Recovery Project, serving those struggling with homelessness, addiction and/or mental health issues</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Multi-Culturally Friendly Format</p><ul><li>We offer our love through unison, mostly English language devotional songs and prayers</li><li>We also include devotional music from around the world, including, of course, our beloved Indian style Bhajans</li><li>On special occasions we follow our program with a potluck dinner</li><li>We are pet friendly, and Go-Ji is a regular member of our Center</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="peninsula">
+<div class="cc-head"><h3>Peninsula</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Peninsula</p>
+<ul class="cc-info"><li>Location: Lodge Building - 40 Twin Pines Lane Belmont, CA 94002</li><li>SSE: All Sundays (except summer months) 02:45 pm to 03:45 pm</li><li>Study Circle: 1st and 3rd Sundays: 03:00 pm to 03:55 pm</li><li>Devotional Program: All Sundays: 4:00 pm to 5:15 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.5168177,-122.2776792" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="peninsula" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich distribution to homeless in San Francisco (weekly)</li><li>Lunch not only provides nourishment but also a way to connect people in need with healthcare and other social services</li></ul></div><div class="act-group"><p>Career</p><ul><li>Job search coaching at LifeMoves Network Shelter (monthly)</li></ul></div><div class="act-group"><p>Environment Care</p><ul><li>Local park cleanup</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Devonshire Oaks Nursing Center</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Winter kits - Blankets Collection and Distribution to Homeless in San Francisco</li><li>Habitat for Humanity - Santa Rosa Fire Rebuild</li><li>Hygiene Care Kits for Homeless</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="reno-nv">
+<div class="cc-head"><h3>Reno, NV</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Reno, NV</p>
+<ul class="cc-info"><li>Location: Reno, NV 89511</li><li>Please call (573) 368-9172 to confirm location</li><li>Meeting Time: Sundays 6 pm to 7:30 pm</li></ul>
+<div class="doc-actions"><button class="btn btn-sm btn-soft" data-show-on-map="reno-nv" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner service at Ronald McDonald Home (monthly)</li><li>MS Walk</li></ul></div><div class="act-group"><p>Education</p><ul><li>Backpack Project - School supplies for 600-1000 backpacks</li><li>School beautification project</li><li>School cleaning</li></ul></div><div class="act-group"><p>Community</p><ul><li>Adopt a family</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="sacramento">
+<div class="cc-head"><h3>Sacramento</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Sacramento</p>
+<ul class="cc-info"><li>Location: Sai Seva Sadan, 3079 Kilgore Rd, Suite A, Rancho Cordova, CA 95670</li><li>Meeting Time: Sundays 2 pm to 5 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=38.5913216,-121.2702503" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="sacramento" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Dinner Services at Salvation Army, St. John Womens Shelter (monthly)</li></ul></div><div class="act-group"><p>Career</p><ul><li>Computer skills training (Job search, Resume writing, MS office, Google) at St. John Womens Shelter</li></ul></div><div class="act-group"><p>Living</p><ul><li>Care Kits and Winter kits (blankets) distribution</li></ul></div><div class="act-group"><p>Education</p><ul><li>Back to School drive - Backpack Distribution (192)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>EarthDay - Park Cleaning</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Christmas Caroling at Next Move</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="san-bruno">
+<div class="cc-head"><h3>San Bruno</h3><span class="doc-type">Group</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Group of San Bruno</p>
+<ul class="cc-info"><li>Contact details: 650-504-8584</li></ul>
+<div class="doc-actions"><button class="btn btn-sm btn-soft" data-show-on-map="san-bruno" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food preparation and serving</li><li>Samaritan House Shelter</li><li>Safe Harbor Shelter</li><li>First Step Shelter for Families (Shelter Network)</li></ul></div><div class="act-group"><p>Environment</p><ul><li>Clean up at City of San Bruno</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="san-francisco">
+<div class="cc-head"><h3>San Francisco</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of San Francisco</p>
+<ul class="cc-info"><li>Location: 573 South Van Ness Ave San Francisco, CA 94110</li><li>Meeting: Thursdays 7 pm to 9:15 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.7639754,-122.417283" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="san-francisco" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li><li>Young adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich service for homeless in streets of San Francisco (weekly)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Toiletries and Sundries for battered women shelter</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="san-jose">
+<div class="cc-head"><h3>San Jose</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of San Jose</p>
+<ul class="cc-info"><li>1st &amp; 3rd Sundays (3:30PM to 5PM) at 1170 Kern Ave, Sunnyvale, CA 94085 (Shiv Durga Temple)</li><li>2nd Sundays (2:45PM to 4:30PM) at 6502 Springpath Ln, San Jose, CA 95120</li><li>Special Festivals at Shiv Durga Temple and Shirdi Sai Darbar Temple</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3823586,-121.9971944" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="san-jose" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service (Bhajans)</li><li>Sai Spiritual Education (SSE)</li><li>Community Service activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Breakfast service at San Jose Home Shelter (Family Supportive Housing at King Road, San Jose)</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li></ul></div><div class="act-group"><p>Community</p><ul><li>Outreach activities at devotional and service locations (VVGC Ganapathi Temple, Shiv Durga Temple, Shirdi Sai Darbar), libraries and stores</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="santa-cruz">
+<div class="cc-head"><h3>Santa Cruz</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Santa Cruz</p>
+<ul class="cc-info"><li>Location: Shambhala Center 920 41st Ave Santa Cruz, CA 95062</li><li>Meeting Time: Sundays 5:30 pm to 7 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=36.9654708,-121.9643504" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="santa-cruz" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Sandwich and clothing distribution to the homeless</li><li>Singing Seva at Sunshine Villa Senior Living</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Donations to Recuperative Care Center</li><li>Food Preparation and Serving at Innvision and local homeless shelters</li><li>Sandwich, Fruit &amp; Snacks for homeless</li><li>Food serving at Day on the Beach</li></ul></div><div class="act-group"><p>Living</p><ul><li>Clothing drive for Homeless</li><li>Winter kits for homeless</li><li>First aid kits / hygiene kits</li></ul></div><div class="act-group"><p>Medical</p><ul><li>Ashland Free Medical Clinic volunteering</li></ul></div><div class="act-group"><p>Eldercare</p><ul><li>Senior Home Singing - Sunshine Villa</li></ul></div><div class="act-group"><p>Disaster relief</p><ul><li>Disaster relief support - Kerala</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="santa-rosa">
+<div class="cc-head"><h3>Santa Rosa</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Santa Rosa</p>
+<ul class="cc-info"><li>Location: Santa Rosa 95403</li><li>Please call 707-849-3151 to confirm location</li><li>Meeting Time: Sundays 7 pm to 8:30 pm</li></ul>
+<div class="doc-actions"><button class="btn btn-sm btn-soft" data-show-on-map="santa-rosa" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circle</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Food Preparation and Serving at a local homeless shelter</li></ul></div><div class="act-group"><p>Living Care</p><ul><li>Crafts and Knitting Projects</li><li>Winter Projects</li><li>Knitting and distributing beanies, scarf and socks for the homeless</li></ul></div><div class="act-group"><p>Animal Care</p><ul><li>Making and delivering animal toys at the Animal Rescue Shelter</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="stockton">
+<div class="cc-head"><h3>Stockton</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Stockton</p>
+<ul class="cc-info"><li>Location: 4809 Bridgewater Circle Stockton, CA 95219</li><li>Meeting Time: Fridays 7:30 pm to 9:30 pm</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.979984,-121.365378" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="stockton" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Community Service Activities</li></ul><div class="act-group"><p>Food Service</p><ul><li>Homeless feeding at St. Marys dining hall, Stockton (monthly)</li></ul></div><div class="act-group"><p>Community</p><ul><li>Volunteering at building of Shiva Vishnu temple, Stockton</li></ul></div><div class="act-group"><p>Devotional Service</p><ul><li>House bhajans (once in 2 months)</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="tri-valley">
+<div class="cc-head"><h3>Tri-Valley</h3><span class="doc-type">Center</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Center of Tri-Valley</p>
+<ul class="cc-info"><li>Meeting Time: Sundays 9:30 am - 12 noon</li><li>Devotional Singing &amp; Study Circle: 9:30 am to 12 noon;</li><li>Location: 4036 Ghiotti ct, Pleasanton, CA</li><li>SSE: 11 am to 12 noon;</li><li>Location: 4444 Sandalwood Dr, Pleasanton, CA</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.6944225,-121.8916298" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="tri-valley" type="button">Show on map</button></div>
+<details class="disclosure disclosure-inline">
+<summary><span class="d-title">Activities and service</span><svg aria-hidden="true" class="d-chevron" viewbox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></svg></summary>
+<div class="d-body"><ul class="act-tags"><li>Devotional Service</li><li>Study Circles</li><li>Sai Spiritual Education (SSE)</li><li>Community Service</li><li>Young Adult programs</li></ul><div class="act-group"><p>Food Service</p><ul><li>Sandwich preparation and distribution at Modesto Shelter (Monthly - 3rd Saturday)</li><li>Dinner service at Modesto Shelter (Bi-Weekly - 1st and 3rd Saturdays)</li><li>Dinner service at Fremont Homeless Shelter (Monthly - 2nd Sunday)</li><li>Dinner service at San Leandro (Monthly - 2nd Saturday)</li><li>Lunch service at Concord Shelter (Monthly - 2nd Sunday)</li><li>Breakfast service at Stockton Shelter (Monthly - 2nd Saturday)</li></ul></div><div class="act-group"><p>Living</p><ul><li>Hygiene kits, Care packs, Winter kits for homeless (Oakland/Berkeley, April Showers, Concord shelter)</li><li>Food, paper products, Fruits - Livermore Shepherds gate Shelter</li><li>Soap and Shampoo making and distribution</li><li>Ad-hoc projects and services for special occasions</li></ul></div><div class="act-group"><p>Education</p><ul><li>Math Academy for upper grade students at Southgate Elementary School, Hayward (weekly)</li></ul></div><div class="act-group"><p>Special</p><ul><li>Christmas Carols at Modesto Homeless Shelter- SSE kids</li></ul></div><div class="act-group"><p>Environmental</p><ul><li>Parks &amp; trails cleanup at Tri-Valley Area</li><li>Vegetable garden service at Hayward school</li></ul></div><div class="act-group"><p>Animal care</p><ul><li>Pet toys &amp; blankets for animal shelter</li></ul></div></div>
+</details>
+</article>
+<article class="center-card2" id="west-san-jose">
+<div class="cc-head"><h3>West San Jose</h3><span class="doc-type">Group</span></div>
+<p class="cc-full">Sri Sathya Sai Baba Group of West San Jose</p>
+<ul class="cc-info"><li>Location: 55558 Castle Glen Avenue, San Jose 95129</li><li>Devotion: Every other month-Saturday 4:30 to 6 pm</li><li>Service: Saturdays 9:00 am</li></ul>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=37.3025664,-122.0017583" rel="noopener" target="_blank">Directions</a><button class="btn btn-sm btn-soft" data-show-on-map="west-san-jose" type="button">Show on map</button></div>
+</article>
+</div></div></section></div>
+</main>
+<footer>
+<div aria-label="SSIO related links" class="footer-logos">
+<div class="footer-logos-inner">
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sathya Sai International Organization">
+<img alt="Sathya Sai International Organization" height="52" src="images/ssioot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sathya Sai Unity">
+<img alt="Sathya Sai Unity" height="52" src="images/ssuot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sathya Sai Human Rights">
+<img alt="Sathya Sai Human Rights" height="52" src="images/sshrot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sai Cast">
+<img alt="Sai Cast" height="52" src="images/saicastot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sai Love in Action">
+<img alt="Sai Love in Action" height="52" src="images/sailoveinactionot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sri Sathya Sai Books and Publications">
+<img alt="Sri Sathya Sai Books and Publications" height="52" src="images/ssbptot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Radio Sai">
+<img alt="Radio Sai" height="52" src="images/raiosaiot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Educare">
+<img alt="Educare" height="52" src="images/educareot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Sathya Sai Vidya Vahini">
+<img alt="Sathya Sai Vidya Vahini" height="52" src="images/ssvvot.png" width="52"/>
+</a>
+<a href="https://www.sathyasai.org/" rel="noopener" target="_blank" title="Preport">
+<img alt="Preport" height="52" src="images/preportot.png" width="52"/>
+</a>
+</div>
+</div>
+</footer>
+<dialog aria-labelledby="dlg-res-videos-t" class="rd-dialog" data-tab="resources" id="dlg-res-videos">
+<div class="rd-dialog-head"><div><p class="rd-dialog-kicker">SSIO Officers Resources</p><h2 id="dlg-res-videos-t">Videos</h2></div>
+<button aria-label="Close" class="rd-dialog-x" data-close="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div class="rd-dialog-body"><ul class="item-list">
+<li class="item-row">
+<div class="item-main"><span class="item-title">Overview and Structure of SSIO (Sathya Sai International Organization)</span><span class="doc-type">Video</span><p>Video on Vimeo: Overview and Structure of Sathya Sai International Organization, from Aparna Murali.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://vimeo.com/201492215" rel="noopener" target="_blank">Watch</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">SSIO Outreach and Objectives Introductory Video</span><span class="doc-type">Video</span><p>Video on Vimeo: Overview and Structure of Sathya Sai International Organization, from Aparna Murali.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://vimeo.com/196080141" rel="noopener" target="_blank">Watch</a></div>
+</li>
+</ul></div>
+</dialog><dialog aria-labelledby="dlg-res-select-swami-s-discourses-t" class="rd-dialog" data-tab="resources" id="dlg-res-select-swami-s-discourses">
+<div class="rd-dialog-head"><div><p class="rd-dialog-kicker">SSIO Officers Resources</p><h2 id="dlg-res-select-swami-s-discourses-t">Select Swami's Discourses</h2></div>
+<button aria-label="Close" class="rd-dialog-x" data-close="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div class="rd-dialog-body"><ul class="item-list">
+<li class="item-row">
+<div class="item-main"><span class="item-title">The Heart of the Organization</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 November 1968.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968November21.The%20heart%20of%20the%20organisation.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968November21.The%20heart%20of%20the%20organisation.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Call to Sai Samithi Members</span><span class="doc-type">PDF</span><p>Message (PDF): Divine Message of August 1981.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Message.1981August.Call%20to%20Sai%20Samithi%20members.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Message.1981August.Call%20to%20Sai%20Samithi%20members.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">The Fingers Five</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 November 1981.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November21.The%20fingers%20five.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November21.The%20fingers%20five.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Lessons on Seva Sadhana</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 19 November 1981.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November19.Lessons%20on%20seva%20sadhana.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1981November19.Lessons%20on%20seva%20sadhana.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Why Organize</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 29 March 1976.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1976March29.Why%20organise.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1976March29.Why%20organise.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Death - A Welcome Voyage</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 23 February 1968.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968.February23.Death%20A%20welcome%20voyage.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1968.February23.Death%20A%20welcome%20voyage.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Sai Organization Must Promote Faith in God</span><span class="doc-type">PDF</span><p>Discourse (PDF): Divine Discourse of 21 April 1967.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1967April21.Sai%20Orgs%20Must%20Promote%20Faith%20in%20God.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/discourses/Divine%20Discourse.1967April21.Sai%20Orgs%20Must%20Promote%20Faith%20in%20God.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+</ul></div>
+</dialog><dialog aria-labelledby="dlg-res-communication-module-t" class="rd-dialog" data-tab="resources" id="dlg-res-communication-module">
+<div class="rd-dialog-head"><div><p class="rd-dialog-kicker">SSIO Officers Resources</p><h2 id="dlg-res-communication-module-t">Communication Module</h2></div>
+<button aria-label="Close" class="rd-dialog-x" data-close="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div class="rd-dialog-body"><ul class="item-list">
+<li class="item-row">
+<div class="item-main"><span class="item-title">References for Loving and Effective Communication</span><span class="doc-type">PDF</span><p>References (PDF): sources on loving and effective communication.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/References%20for%20Loving%20and%20Effective%20Communication%20.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/References%20for%20Loving%20and%20Effective%20Communication%20.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Communications Workshop by Dr Joe Phaneuf</span><span class="doc-type">PDF</span><p>Workshop (PDF): communication workshop notes by Dr. Joe Phaneuf.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/DrJoePhaneufCommunicationsWorkshop.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/DrJoePhaneufCommunicationsWorkshop.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Communication Tips</span><span class="doc-type">PDF</span><p>Module (PDF): loving and effective communication, Module 7.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/SSIYLP%20Module%207%20Loving%20and%20Effective%20Communication%20FINAL.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/SSIYLP%20Module%207%20Loving%20and%20Effective%20Communication%20FINAL.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Advaita in Practice Poster</span><span class="doc-type">PDF</span><p>Poster (PDF): Advaita in practice.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/Advaita.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/Advaita.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Business Card template for Communication Tips by Sathya Sai Baba</span><span class="doc-type">PDF</span><p>Template (PDF): a business card with communication tips by Sathya Sai Baba.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.region7saicenters.org/region7new/docs/Communication%20Tips%20by%20Sathya%20Sai%20Baba.pdf" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/Communication%20Tips%20by%20Sathya%20Sai%20Baba.pdf" rel="noopener" target="_blank">Download</a></div>
+</li>
+</ul></div>
+</dialog><dialog aria-labelledby="dlg-res-historic-and-significant-letters-from-swami-t" class="rd-dialog" data-tab="resources" id="dlg-res-historic-and-significant-letters-from-swami">
+<div class="rd-dialog-head"><div><p class="rd-dialog-kicker">SSIO Officers Resources</p><h2 id="dlg-res-historic-and-significant-letters-from-swami-t">Historic and Significant Letters from Swami</h2></div>
+<button aria-label="Close" class="rd-dialog-x" data-close="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div class="rd-dialog-body"><ul class="item-list">
+<li class="item-row">
+<div class="item-main"><span class="item-title">Sathya Sai Speaks</span><span class="doc-type">ZIP</span><p>Letters (ZIP): historic and significant letters from Swami, in one download.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-outline" download="" href="https://www.region7saicenters.org/region7new/docs/Historic_and_Significant_Letters_from_Swami.zip" rel="noopener" target="_blank">Download</a></div>
+</li>
+</ul></div>
+</dialog><dialog aria-labelledby="dlg-res-official-logo-t" class="rd-dialog" data-tab="resources" id="dlg-res-official-logo">
+<div class="rd-dialog-head"><div><p class="rd-dialog-kicker">SSIO Officers Resources</p><h2 id="dlg-res-official-logo-t">Official Logo</h2></div>
+<button aria-label="Close" class="rd-dialog-x" data-close="" type="button"><svg aria-hidden="true" viewbox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></button></div>
+<div class="rd-dialog-body"><ul class="item-list">
+<li class="item-row">
+<div class="item-main"><span class="item-title">Logo of the Sathya Sai International Organization</span><span class="doc-type">Web page</span><p>Official Logo: the SSIO logo page on sathyasai.org.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.sathyasai.org/ssio-logo" rel="noopener" target="_blank">View</a></div>
+</li>
+<li class="item-row">
+<div class="item-main"><span class="item-title">Download Logo</span><span class="doc-type">PNG</span><p>Official Logo (PNG): the SSIO logo in English.</p></div>
+<div class="doc-actions"><a class="btn btn-sm btn-teal" href="https://www.sathyasai.org/sites/default/files/pages/organisation/logo/ssio-logo-english.png" rel="noopener" target="_blank">View</a><a class="btn btn-sm btn-outline" download="" href="https://www.sathyasai.org/sites/default/files/pages/organisation/logo/ssio-logo-english.png" rel="noopener" target="_blank">Download</a></div>
+</li>
+</ul></div>
+</dialog><script defer="" src="nav.js"></script><script defer="" src="sanctuary.js"></script>
+<script defer="" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script defer="" src="centers-data.js"></script>
+<script defer="" src="centers-map.js"></script>
+<script defer="" src="tabs.js"></script>
+<script defer="" src="about.js"></script>
+<script defer="" src="timeline.js"></script>
+<script defer="" src="anim.js"></script>
 </body>
 </html>
