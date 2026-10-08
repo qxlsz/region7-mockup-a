@@ -2223,3 +2223,17 @@ footer a:hover {
 /* Footer is logos only (no bottom note): no extra band under the logos */
 footer { padding-bottom: 0; }
 .footer-logos { border-bottom: 0; padding: 28px 28px 30px; }
+
+/* —— Back to About link (top of the hero on About sub-pages) —— */
+.back-link {
+  display: flex; width: fit-content; align-items: center; gap: 6px;
+  margin: 0 0 18px; padding: 4px 2px;
+  font-size: 0.86rem; font-weight: 500; line-height: 1.2;
+  color: #5eead4; text-decoration: none;
+  border-radius: 6px;
+}
+.back-link svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.back-link:hover { color: #ccfbf1; }
+.back-link:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.back-link:hover svg { transform: translateX(-2px); }
+.back-link:focus-visible { outline: 2px solid #99f6e4; outline-offset: 3px; }
