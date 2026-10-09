@@ -3587,3 +3587,11 @@ body.r7-page-enter, body.r7-page-leave { opacity: 0; }
 
 /* C25: city and state under a center name (SEO pass, Oct 8) */
 .cc-head h3 .cc-city { display: block; font-family: var(--font); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.01em; color: var(--teal-mid, var(--muted)); margin-top: 2px; }
+
+/* C26: Home hero quote in a small font (revamp doc, Oct 9) */
+.sanctuary .sx-hero-qsmall .rd-hero-q { max-width: 44rem; }
+.sanctuary .sx-hero-qsmall .rd-hero-q blockquote { font-size: 1.02rem; line-height: 1.55; }
+.sanctuary .sx-hero-qsmall .rd-hero-q figcaption { font-size: 0.8rem; }
+@media (max-width: 760px) { .sanctuary .sx-hero-qsmall .rd-hero-q blockquote { font-size: 0.95rem; } }
+/* C26: two YA coordinators and two advisors, so the two boxes are equal */
+@media (min-width: 761px) { .team-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
