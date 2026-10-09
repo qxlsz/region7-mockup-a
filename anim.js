@@ -20,7 +20,7 @@
     img.addEventListener("load", done, { once: true });
     img.addEventListener("error", done, { once: true });
   }
-  Array.prototype.forEach.call(document.querySelectorAll("main img"), function (img) { if (!img.closest(".sx-hero")) fadeImg(img); });
+  Array.prototype.forEach.call(document.querySelectorAll("main img"), function (img) { if (!img.closest(".sx-hero, [data-photo-slider], [data-tla]")) fadeImg(img); }   /* C29: slider photos are shown by their own slider, not by the fade */);
 
   var SEL = [".section-head", ".card", ".event-row", ".split-media", ".cat-groups", ".cats", ".link-card", ".ev-feature",
              ".contact-row .member", ".team-row .member", ".img-grid", ".photo-row", ".quote-panel", ".thought", ".disclosure-list",

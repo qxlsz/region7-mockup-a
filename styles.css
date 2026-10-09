@@ -3075,10 +3075,6 @@ html.rd-lock { overflow: hidden; }
 .sanctuary .rd-media-text a:not(.rd-btn) { color: var(--gold-lt); }
 .sanctuary .rd-split-text .doc-link a:hover, .sanctuary .rd-media-text a:not(.rd-btn):hover { text-decoration: underline; }
 /* About */
-.sanctuary .sx-glance .facts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3); margin: 0; padding: 0; list-style: none; }
-.sanctuary .sx-glance .facts li { padding: var(--s4) var(--s3); border-radius: 22px; background: #fffdf8; border: 1px solid rgba(154, 100, 24, .16); text-align: left; }
-.sanctuary .sx-glance .facts span { font-size: .76rem; font-weight: 600; letter-spacing: .16em; color: var(--gold-deep); margin-bottom: var(--s1); }
-.sanctuary .sx-glance .facts strong { font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: var(--teal-deep); line-height: 1.15; }
 .sx-team { background: linear-gradient(180deg, var(--paper-2), var(--paper)); }
 .sanctuary .member { background: #fffdf8; border: 1px solid rgba(154, 100, 24, .16); border-radius: 18px; }
 .sanctuary .member-initials { background: var(--gold-lt) !important; color: var(--teal-deep) !important; font-family: var(--serif); font-weight: 600; font-size: 1.1rem !important; }
@@ -3164,7 +3160,6 @@ html.rd-lock { overflow: hidden; }
 @media (max-width: 1024px) {
   .sanctuary .rd-tiles-12 > * { grid-column: span 6; }
   .sanctuary .rd-tiles-12 > :last-child:nth-child(odd) { grid-column: span 12; }
-  .sanctuary .sx-glance .facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .sanctuary .contact-row.cr-cols-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sx-hero-in > * { max-width: 460px; }
   .sanctuary #upcoming-events { grid-template-columns: minmax(0, 1fr); }
@@ -3186,8 +3181,6 @@ html.rd-lock { overflow: hidden; }
   .sanctuary .event-row .btn { grid-column: 2; justify-self: start; }
   .sanctuary .event-date { width: 60px; height: 60px; } .sanctuary .event-date .day { font-size: 1.2rem; }
   .sanctuary .event-row h3 { font-size: 1.3rem; }
-  .sanctuary .sx-glance .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .sanctuary .sx-glance .facts li:last-child:nth-child(odd) { grid-column: span 2; }
   .sanctuary .sx-yearly .ev-feature, .sanctuary .sx-yearly .ev-feature:nth-child(even) { grid-template-columns: minmax(0, 1fr); gap: var(--s4); }
   .sanctuary .sx-yearly .ev-feature > * { grid-column: auto !important; grid-row: auto !important; }
   .sanctuary .sx-yearly .ev-list { gap: var(--s8); }
@@ -3595,3 +3588,53 @@ body.r7-page-enter, body.r7-page-leave { opacity: 0; }
 @media (max-width: 760px) { .sanctuary .sx-hero-qsmall .rd-hero-q blockquote { font-size: 0.95rem; } }
 /* C26: two YA coordinators and two advisors, so the two boxes are equal */
 @media (min-width: 761px) { .team-split { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+
+/* C29: Officers Portal link under the officers list */
+.sanctuary .sx-portal { margin: var(--s4) 0 0; text-align: center; }
+
+/* C29: Baba sliders. Every slide shows, and each photo stands out from its background (Raj, Oct 9) */
+.sanctuary .photo-slider img:not(.is-on), .sanctuary .photo-slider img.r7-img.is-loaded:not(.is-on) { opacity: 0; }
+.sanctuary .photo-slider img.is-on { opacity: 1; z-index: 1; }
+.sanctuary .photo-slider .ps-btn { z-index: 2; }
+.sanctuary .photo-slider { background: var(--teal-deep); box-shadow: 0 0 0 1px rgba(4, 47, 46, .14), 0 14px 34px rgba(4, 47, 46, .20); }
+.sanctuary .tla-media { background: var(--teal-deep); }
+.sanctuary .tla-blur { opacity: .32; filter: blur(30px) saturate(.8) brightness(.55); }
+.sanctuary .tla-media img { border: 0; box-shadow: 0 18px 40px rgba(0, 0, 0, .45); background: none; }   /* C29: no cream mat around the photo */
+/* C29: the slider photos sit on top of each other inside the frame (a later rule had set them to position: relative, so slide 2 was below the frame) */
+.sanctuary .photo-slider { position: relative; overflow: hidden; }
+.sanctuary .photo-slider > img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; margin: 0; object-fit: cover; transition: opacity .6s ease; }
+
+/* C29: every photo fills its frame cleanly. No offset gold outlines, no mats, no backing colour showing (Raj, Oct 9) */
+.sanctuary .rd-split-media::before, .sanctuary .rd-flip .rd-split-media::before { display: none; }
+.sanctuary .rd-split-media .photo-slider { border-radius: 24px; overflow: hidden; }
+.sanctuary .rd-split-media .photo-slider > img { border-radius: 0; box-shadow: none; aspect-ratio: auto; }
+.sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo { border: 0; background: none; padding: 0; aspect-ratio: 4 / 3; border-radius: 10px; }
+.sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo img { width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; border-radius: 0; display: block; }
+.sanctuary .vf-play { background: none; }
+.sanctuary .vf-play > img, .sanctuary .d-body .vf-play > img, .sanctuary .subpage .vf-play > img { width: 100%; max-width: none; height: 100%; object-fit: cover; margin: 0; border-radius: 0; }
+.sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo { position: relative; overflow: hidden; }
+.sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo img { position: absolute; inset: 0; }
+.sanctuary .sx-yearly .ev-list.ev-live > .ev-row > .ev-photo > a { position: absolute; inset: 0; display: block; }
+.sanctuary .sx-yearly .ev-feature .ev-photo img { aspect-ratio: 4 / 3 !important; height: auto; max-height: none; object-fit: cover; }
+
+/* C30: "Region 7 at a glance" as a dark teal band (option A, Raj, Oct 9). Laptop: one even row. Phone: 4 + 3. */
+.sanctuary .rd-sec.sx-glance { padding-block: var(--s5); }
+.sanctuary .sx-glance .rd-head { margin-bottom: var(--s3); }
+.sanctuary .sx-glance .rd-head h2 { font-size: clamp(1.25rem, 2vw, 1.5rem); }
+.sanctuary .sx-glance .facts { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); margin: 0; padding: 22px 28px 24px; list-style: none; text-align: center;
+  border-radius: 20px; background: linear-gradient(135deg, #0b3b39, #062a29); box-shadow: 0 14px 34px rgba(4, 47, 46, .18); }
+.sanctuary .sx-glance .facts li { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0; padding: 2px 6px; background: none; border: 0; border-left: 1px solid rgba(217, 183, 122, .22); border-radius: 0; text-align: center; }
+.sanctuary .sx-glance .facts strong { order: -1; font-family: var(--serif); font-weight: 500; font-size: 1.9rem; line-height: 1; color: #e7c27d; }
+.sanctuary .sx-glance .facts span { margin: 0; font-size: .68rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255, 253, 248, .8); }
+.sanctuary .sx-glance .facts li:first-child { grid-column: 1 / -1; border: 0; padding: 0 0 14px; }
+.sanctuary .sx-glance .facts li:first-child span { display: none; }
+.sanctuary .sx-glance .facts li:first-child strong { font-family: var(--font); font-size: .72rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: #d9b77a; }
+.sanctuary .sx-glance .facts li:nth-child(2) { border-left: 0; }
+.sanctuary .sx-glance .facts li:nth-child(n+2) { order: 0; grid-column: auto; }
+@media (max-width: 760px) {
+  .sanctuary .sx-glance .facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 0; padding: 18px 6px; }
+  .sanctuary .sx-glance .facts li { flex: 0 0 25%; min-width: 0; border: 0; padding: 0; }
+  .sanctuary .sx-glance .facts li:first-child { flex-basis: 100%; padding-bottom: 0; }
+  .sanctuary .sx-glance .facts strong { font-size: 1.45rem; }
+  .sanctuary .sx-glance .facts span { font-size: .54rem; letter-spacing: .03em; white-space: nowrap; }
+}
